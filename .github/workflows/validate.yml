@@ -10,17 +10,24 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Check out source
+      - name: Check out registry
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check out TarLink validator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: drobilica/tarlink
+          ref: main
+          path: .tarlink
+
       - name: Set up Go
         uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
         with:
-          go-version-file: go.mod
-          cache: false
-      - name: Check formatting
-        run: test -z "$(gofmt -l internal)"
-      - name: Run validator
-        run: go test ./...
-      - name: Check generated index
-        run: go run ./cmd/generate-index --check
+          go-version-file: .tarlink/go.mod
+          cache-dependency-path: .tarlink/go.sum
+
+      - name: Validate manifests with TarLink
+        working-directory: .tarlink
+        run: go run ./cmd/tarlink registry validate "$GITHUB_WORKSPACE"

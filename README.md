@@ -1,62 +1,56 @@
-TarLink Registry contains reviewed declarative manifests for applications supported by TarLink.
-
 # TarLink Registry
 
-This repository contains a deliberately small, data-only registry for portable Linux amd64 applications. A manifest names one upstream archive, its SHA-256, and the relative executable that TarLink exposes after extraction. TarLink strips one common top-level directory from an archive, so Blender's executable is recorded as `blender`.
+This is the official declarative application registry for [TarLink](https://github.com/drobilica/tarlink). The repository is intentionally data-first:
 
-## Install TarLink
-
-Install the TarLink client from its Go module:
-
-```sh
-go install github.com/drobilica/tarlink/cmd/tarlink@latest
+```text
+apps/
+├── blender/manifest.yaml
+└── godot/manifest.yaml
 ```
 
-Then synchronize the reviewed registry, search it, and install an application:
+There is no registry-local parser, generated index, source-policy mirror, Go module, or install tooling. TarLink directly enumerates and validates `apps/<id>/manifest.yaml` with the same parser used for installation.
+
+## Use
+
+Install TarLink, then install an application. Registry bootstrap is automatic:
 
 ```sh
-tarlink registry sync
-tarlink search blender
+curl -fsSL https://raw.githubusercontent.com/drobilica/tarlink/main/install.sh | sh
 tarlink install blender
 ```
 
-The registry contains data only. It has no scripts, shell commands, hooks, installers, or arbitrary destination requests; the commands above are TarLink client commands for users, not registry content.
+Use `tarlink registry sync` only to force a refresh.
 
-## Included application
+## Applications
 
-Blender 5.2.0 is the sole entry. Its official binary archive is:
+- **Blender 5.2.0** uses the official Linux x64 `tar.xz` and the SHA-256 published in Blender's [`blender-5.2.0.sha256`](https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256).
+- **Godot 4.7.1** uses the official standard Linux x86_64 ZIP and the SHA-512 published in Godot's [`SHA512-SUMS.txt`](https://github.com/godotengine/godot/releases/download/4.7.1-stable/SHA512-SUMS.txt).
 
-`https://download.blender.org/release/Blender5.2/blender-5.2.0-linux-x64.tar.xz`
+Both current manifests target Linux amd64. TarLink itself also has an arm64 release binary, but an application remains unavailable until a matching declarative manifest design can represent its architecture without ambiguity.
 
-The authoritative upstream SHA-256 is `96f6c181a30f4950607839dc84d42a354b250d8a0231b098b59b7bc69c351c48`, published in Blender's [`blender-5.2.0.sha256`](https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256) file. The archive is a Linux x86_64 binary, not Blender's source archive.
+## Manifest contract
 
-## Deliberate omissions
+Manifests are strict schema v1 data. A release declares one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
 
-Godot 4.7.1 and BizHawk 2.11.1 are not represented by placeholder directories or manifests. [Godot's official binary release metadata](https://raw.githubusercontent.com/godotengine/godot-builds/main/releases/godot-4.7.1-stable.json) publishes SHA-512 for the Linux binary, while its SHA-256 asset is for the source archive. [BizHawk's 2.11.1 release](https://github.com/TASEmulators/BizHawk/releases/tag/2.11.1) publishes a Linux binary archive but no authoritative SHA-256 for that asset. Since this registry requires an authoritative binary SHA-256, both applications are omitted until upstream evidence satisfies that requirement.
+```yaml
+verification:
+  algorithm: sha256 | sha512
+  digest: <exact lowercase digest>
+  source: <authoritative upstream HTTPS checksum URL>
+```
 
-## Fixed manifest contract
+The algorithm must match what upstream publishes. MD5, SHA-1, substituted algorithms, source-archive hashes, mirrors without authoritative provenance, and invented or locally derived registry digests are not accepted.
 
-The only accepted top-level fields are `schema`, `id`, `name`, `summary`, `homepage`, `categories`, `platform`, `release`, `application`, and `desktop`. The nested fields are fixed as follows:
-
-- `platform`: `os: linux`, `arch: amd64`.
-- `categories`: one or more discovery categories from `game-development`, `emulation`, `graphics`, `development`, and `utilities`.
-- `release`: `version`, HTTPS `url`, lowercase 64-character `sha256`, and archive `tar.gz`, `tar.xz`, or `zip`.
-- `application`: one relative, canonical `executable` path.
-- `desktop`: `enabled`; desktop categories are required when enabled and may be omitted when disabled, using only `Development`, `Emulator`, `Game`, `Graphics`, or `Utility`.
-
-There are no hooks, commands, arguments, icons, or custom destinations. `policy/approved-sources.yaml` is the separate, strict source allowlist; it contains only `schema: 1` and an app-ID-to-list-of-narrow-HTTPS-prefixes mapping. `index/index.json` is deterministic and sorted by ID.
+Manifests cannot contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations. Unsupported applications remain unsupported rather than expanding the manifest into remote code execution.
 
 ## Validation
 
-The validator and index generator are developer tools with no install behavior. With Go installed, run:
+Use the TarLink client, which owns the only schema parser and validator:
 
 ```sh
-go run ./cmd/generate-index --check
-go test ./...
+tarlink registry validate .
 ```
 
-Validation strictly checks every `apps/<id>/manifest.yaml`, the approved source policy, and the generated index, including stale-index detection. A separate path-filtered workflow downloads Blender only when its manifest or source policy changes, verifies the declared SHA-256, and runs the bytes through TarLink's real safe extractor to confirm the executable. The dependency is `go.yaml.in/yaml/v3` v3.0.5.
+CI checks out TarLink and runs that exact operation. It does not maintain a second schema implementation.
 
-## License
-
-The registry is available under the Apache License 2.0. See `LICENSE` and `NOTICE`.
+The registry is licensed under Apache-2.0. See `LICENSE` and `NOTICE`.

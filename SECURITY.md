@@ -1,11 +1,7 @@
 # Security policy
 
-## Reporting a vulnerability
+Report suspected vulnerabilities through GitHub private vulnerability reporting or a private security advisory rather than a public issue. Include the affected manifest, impact, reproduction, and proposed mitigation when available.
 
-Please use GitHub's private vulnerability reporting or security advisory mechanism for a suspected security vulnerability; do not open a public issue. Include the affected manifest or validator path, a concise description, reproduction steps, and any proposed mitigation.
+The registry never installs software. It supplies strict declarative metadata to TarLink's parser and validator. Security reports involving substituted artifacts or digests, weak verification, non-authoritative sources, parser discrepancies, unsafe executable paths, or attempts to introduce command execution are in scope.
 
-Registry changes must remain data-only: manifests may describe an upstream archive and one extracted executable, but must not introduce hooks, commands, arguments, icons, or custom destinations. Please call out any change that could weaken archive, URL, checksum, or policy validation.
-
-## Scope
-
-The registry never installs software itself. Consumers should verify the pinned SHA-256 before extraction and expose only the declared relative executable.
+Registry entries must remain data-only and use authoritative HTTPS release and checksum infrastructure. TarLink verifies the declared SHA-256 or SHA-512 before extraction.
