@@ -13,9 +13,9 @@ release:
   version: 4.7.1
   url: https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_linux.x86_64.zip
   verification:
-    algorithm: sha512
-    digest: 4ccdab7a48eeccbe8819a2fc1f6262f8d72065d98601bcb3743fcbd7ebd39f373758a788ee3293a05ec5b2c48538266c437404312e372225cd2df273945a2de9
-    source: https://github.com/godotengine/godot/releases/download/4.7.1-stable/SHA512-SUMS.txt
+    algorithm: sha256
+    digest: c7ff14fd28472c8d4f193043de30278dcf7e5241a1dcf7566b02e27addaa33ba
+    source: https://api.github.com/repos/godotengine/godot/releases/tags/4.7.1-stable
   archive: zip
 application:
   executable: Godot_v4.7.1-stable_linux.x86_64

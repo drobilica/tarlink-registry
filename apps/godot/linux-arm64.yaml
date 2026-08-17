@@ -1,0 +1,26 @@
+schema: 1
+id: godot
+name: Godot
+summary: Open-source 2D and 3D game engine
+homepage: https://godotengine.org/
+categories:
+  - game-development
+  - development
+platform:
+  os: linux
+  arch: arm64
+release:
+  version: 4.7.1
+  url: https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_linux.arm64.zip
+  verification:
+    algorithm: sha256
+    digest: 8f527179cd4ae58b402fa265fe817dc505e5b6b14574f309efe57113be562ac1
+    source: https://api.github.com/repos/godotengine/godot/releases/tags/4.7.1-stable
+  archive: zip
+application:
+  executable: Godot_v4.7.1-stable_linux.arm64
+desktop:
+  enabled: true
+  categories:
+    - Development
+    - Game
