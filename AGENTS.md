@@ -44,4 +44,11 @@ Validate with TarLink itself:
 tarlink registry validate .
 ```
 
+### Development environment and Linux validation
+
+- Registry work may occur on Linux or macOS; detect the host OS before choosing validation.
+- Do not skip registry validation because the host is macOS. Use TarLink's validator locally, with Podman when Linux-specific validation is needed and available.
+- If Podman is unavailable, run host-compatible validation and rely on Ubuntu GitHub Actions for the remaining Linux checks.
+- Ubuntu GitHub Actions is the authoritative final integration validation environment. After pushing, inspect the run for the exact pushed commit and require it to pass; if it fails, fix, push again, and repeat.
+
 CI must continue using the pinned TarLink validator rather than a second schema implementation. If authoritative provenance or an exact supported artifact cannot be established, do not create the manifest.
