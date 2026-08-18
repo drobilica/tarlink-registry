@@ -1,0 +1,25 @@
+schema: 1
+id: banjo-recompiled
+name: "Banjo: Recompiled"
+summary: Native recompiled Banjo-Kazooie runtime
+homepage: https://github.com/BanjoRecomp/BanjoRecomp
+categories:
+  - games
+platform:
+  os: linux
+  arch: amd64
+release:
+  version: 1.0.2
+  url: https://github.com/BanjoRecomp/BanjoRecomp/releases/download/v1.0.2/BanjoRecompiled-v1.0.2-Linux-X64.tar.gz
+  verification:
+    algorithm: sha256
+    digest: a34a4d361221171ea638e0165301fff817c53b9cd46167c5affd37867cfc7ad0
+    source: https://api.github.com/repos/BanjoRecomp/BanjoRecomp/releases/assets/497090345
+  archive: tar.gz
+application:
+  executable: BanjoRecompiled
+desktop:
+  enabled: true
+  categories:
+    - Game
+  icon: assets/Banjo.svg

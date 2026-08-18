@@ -1,0 +1,25 @@
+schema: 1
+id: intellij-idea
+name: IntelliJ IDEA
+summary: Integrated development environment for Java and Kotlin
+homepage: https://www.jetbrains.com/idea
+categories:
+  - development
+platform:
+  os: linux
+  arch: arm64
+release:
+  version: 2026.2.1
+  url: https://download.jetbrains.com/idea/idea-2026.2.1-aarch64.tar.gz
+  verification:
+    algorithm: sha256
+    digest: 110bc988fa52a702e25a8d57cc50eb0150e8f64641fa70a633f9f3798bfab6eb
+    source: https://download.jetbrains.com/idea/idea-2026.2.1-aarch64.tar.gz.sha256
+  archive: tar.gz
+application:
+  executable: bin/idea
+desktop:
+  enabled: true
+  categories:
+    - Development
+  icon: bin/idea.svg

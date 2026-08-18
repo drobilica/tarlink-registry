@@ -1,0 +1,24 @@
+schema: 1
+id: k9s
+name: k9s
+summary: Terminal UI for Kubernetes clusters
+homepage: https://k9scli.io/
+categories:
+  - development
+  - utilities
+platform:
+  os: linux
+  arch: amd64
+release:
+  version: 0.51.0
+  url: https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_amd64.tar.gz
+  verification:
+    algorithm: sha256
+    digest: c3752ad51a5a4015a113819c4eeb6e55a4d0e4b8e652494797532f6fc8161dd7
+    source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
+  archive: tar.gz
+application:
+  executable: k9s
+desktop:
+  enabled: false
+  categories: []

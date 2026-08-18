@@ -28,6 +28,10 @@ Use `tarlink registry sync` only to force a refresh.
 
 - **Blender 5.2.0 (Linux amd64)** uses the official Linux x64 `tar.xz` and the SHA-256 published in Blender's [`blender-5.2.0.sha256`](https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256). Blender's official 5.2.0 release publishes no Linux arm64 artifact, so no arm64 manifest is provided.
 - **Godot 4.7.2 (Linux amd64 and arm64)** uses the official standard Linux ZIP for each architecture. The SHA-512 values are the exact entries in Godot's authoritative [`SHA512-SUMS.txt`](https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt).
+- **k9s 0.51.0 and Helm 4.2.4 (Linux amd64 and arm64)** use their official portable command-line archives and upstream SHA-256 checksum publications.
+- **IntelliJ IDEA, PyCharm, and GoLand 2026.2.1 (Linux amd64 and arm64)** use the official JetBrains portable archives, bundled launchers, icons, and upstream SHA-256 checksum publications.
+- **Xonotic 0.8.6 (Linux amd64)** uses the official portable ZIP and upstream SHA-512 publication.
+- **Banjo: Recompiled 1.0.2 (Linux amd64 and arm64)** and **Space Station Silicon Valley: Recompiled 0.2.0 (Linux amd64)** use official native archives containing runtimes only. Original game data is not distributed and must be supplied by the user where required.
 
 An application remains unavailable on an architecture when its official upstream release has no matching artifact; TarLink does not substitute another architecture or invent a digest.
 

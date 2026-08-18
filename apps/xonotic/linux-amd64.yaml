@@ -1,0 +1,25 @@
+schema: 1
+id: xonotic
+name: Xonotic
+summary: Free and fast arena-style first-person shooter
+homepage: https://xonotic.org/
+categories:
+  - games
+platform:
+  os: linux
+  arch: amd64
+release:
+  version: 0.8.6
+  url: https://dl.xonotic.org/xonotic-0.8.6.zip
+  verification:
+    algorithm: sha512
+    digest: cb39879e96f19abb2877588c2d50c5d3e64dd68153bec3dd1bebedf4d765e506afa419c28381d7005aed664cb1a042571c132b5b319e4308cab67745d996c2a6
+    source: https://dl.xonotic.org/xonotic-0.8.6.sha512
+  archive: zip
+application:
+  executable: xonotic-linux64-sdl
+desktop:
+  enabled: true
+  categories:
+    - Game
+  icon: misc/logos/xonotic_icon.svg

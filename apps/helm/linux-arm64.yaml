@@ -1,0 +1,24 @@
+schema: 1
+id: helm
+name: Helm
+summary: Package manager for Kubernetes
+homepage: https://helm.sh/
+categories:
+  - development
+  - utilities
+platform:
+  os: linux
+  arch: arm64
+release:
+  version: 4.2.4
+  url: https://get.helm.sh/helm-v4.2.4-linux-arm64.tar.gz
+  verification:
+    algorithm: sha256
+    digest: 564de2191b881e9f71b5606b25345821ea1682f06ab90499d3ab22b530176da1
+    source: https://get.helm.sh/helm-v4.2.4-linux-arm64.tar.gz.sha256sum
+  archive: tar.gz
+application:
+  executable: linux-arm64/helm
+desktop:
+  enabled: false
+  categories: []
