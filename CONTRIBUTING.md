@@ -4,8 +4,8 @@ Registry changes should remain small, reviewable data changes.
 
 1. Add or update exactly one `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml` for each supported architecture.
 2. Use an official portable Linux binary archive supported by TarLink.
-3. Use the exact SHA-256 digest that upstream publishes for that artifact.
-4. Record the exact lowercase digest and authoritative upstream HTTPS checksum source. Do not recalculate a different algorithm.
+3. Use the exact SHA-256 or SHA-512 digest that authoritative upstream publishes for that artifact.
+4. Record the exact lowercase digest and authoritative upstream HTTPS checksum source. Do not recalculate a different algorithm or substitute a GitHub-generated digest for an authoritative upstream SHA-512.
 5. Run `tarlink registry validate .`.
 6. In the pull request, link the upstream release page, artifact, and checksum publication.
 

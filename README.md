@@ -27,7 +27,7 @@ Use `tarlink registry sync` only to force a refresh.
 ## Applications
 
 - **Blender 5.2.0 (Linux amd64)** uses the official Linux x64 `tar.xz` and the SHA-256 published in Blender's [`blender-5.2.0.sha256`](https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256). Blender's official 5.2.0 release publishes no Linux arm64 artifact, so no arm64 manifest is provided.
-- **Godot 4.7.1 (Linux amd64 and arm64)** uses the official standard Linux ZIP for each architecture. The SHA-256 values are the per-asset `digest` values in Godot's [official GitHub release API metadata](https://api.github.com/repos/godotengine/godot/releases/tags/4.7.1-stable).
+- **Godot 4.7.2 (Linux amd64 and arm64)** uses the official standard Linux ZIP for each architecture. The SHA-512 values are the exact entries in Godot's authoritative [`SHA512-SUMS.txt`](https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt).
 
 An application remains unavailable on an architecture when its official upstream release has no matching artifact; TarLink does not substitute another architecture or invent a digest.
 
@@ -37,12 +37,12 @@ Manifests are strict schema v1 data. Each file declares exactly one Linux archit
 
 ```yaml
 verification:
-  algorithm: sha256
+  algorithm: sha256 | sha512
   digest: <exact lowercase digest>
   source: <authoritative upstream HTTPS checksum URL>
 ```
 
-The SHA-256 digest must be the exact lowercase value published by the authoritative upstream release/checksum metadata. MD5, SHA-1, SHA-512, substituted algorithms, source-archive hashes, mirrors without authoritative provenance, and invented or locally derived registry digests are not accepted.
+The digest must be the exact lowercase SHA-256 or SHA-512 value published by authoritative upstream release/checksum metadata. MD5, SHA-1, SHA-384, substituted algorithms, source-archive hashes, mirrors without authoritative provenance, and invented or locally derived registry digests are not accepted. If upstream publishes multiple supported algorithms, use its canonical or recommended checksum source.
 
 Manifests cannot contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations. Unsupported applications remain unsupported rather than expanding the manifest into remote code execution.
 

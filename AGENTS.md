@@ -17,7 +17,7 @@ This repository is the official TarLink application registry. Keep it declarativ
 - Manifests remain strict schema v1 files at `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml`.
 - Platform resolution is exact. Never add compatibility filenames, architecture fallback, or a manifest for an upstream platform that does not exist.
 - Use only authoritative upstream HTTPS release URLs and authoritative upstream checksum provenance.
-- Use the exact lowercase SHA-256 digest published by upstream. Never invent, locally derive, substitute, convert, or copy a digest from an untrusted mirror or different artifact.
+- Use the exact secure checksum published by authoritative upstream for the exact artifact: currently lowercase SHA-256 or SHA-512 only. Never invent, locally derive, substitute, convert, or copy a digest from an untrusted mirror or different artifact. If upstream publishes both supported algorithms, use its canonical or recommended source rather than choosing numerically.
 - Manifests must not contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations.
 - Keep shared metadata identical across platform manifests for the same application.
 - Unsupported applications or platforms remain unsupported rather than weakening the manifest or trust model.

@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 7c326440a26331c1039105e26aad59be027e4707
+          ref: a434984d3fa7cbf340649eb128ad86b774dd8071
           path: .tarlink
 
       - name: Set up Go

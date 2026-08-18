@@ -10,15 +10,15 @@ platform:
   os: linux
   arch: arm64
 release:
-  version: 4.7.1
-  url: https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_linux.arm64.zip
+  version: 4.7.2
+  url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.arm64.zip
   verification:
-    algorithm: sha256
-    digest: 8f527179cd4ae58b402fa265fe817dc505e5b6b14574f309efe57113be562ac1
-    source: https://api.github.com/repos/godotengine/godot/releases/tags/4.7.1-stable
+    algorithm: sha512
+    digest: dd59918da086bd49bde2f5450b5e567ff8650cbde9abbd7b8f4ca1197ff8c609baa38834666d032deafb47099078d7822279e2a0e06e5665745468f26533e7e2
+    source: https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt
   archive: zip
 application:
-  executable: Godot_v4.7.1-stable_linux.arm64
+  executable: Godot_v4.7.2-stable_linux.arm64
 desktop:
   enabled: true
   categories:
