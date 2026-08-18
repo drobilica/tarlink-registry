@@ -21,5 +21,6 @@ application:
   executable: blender
 desktop:
   enabled: true
+  icon: blender.svg
   categories:
     - Graphics
