@@ -1,0 +1,22 @@
+schema: 1
+id: r2modman
+name: r2modman
+summary: Mod manager for games using Thunderstore
+homepage: https://github.com/ebkr/r2modmanPlus
+categories:
+  - games
+platform:
+  os: linux
+  arch: amd64
+release:
+  version: 3.2.18
+  url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.tar.gz
+  verification:
+    algorithm: sha256
+    digest: 38950023f9cabb82b68c1f83a06641d13e1dff77c0b0bdb19c3454537fe45cd0
+    source: https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185221
+  archive: tar.gz
+application:
+  executable: r2modman
+desktop:
+  enabled: false
