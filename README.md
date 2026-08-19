@@ -46,6 +46,15 @@ verification:
   source: <authoritative upstream HTTPS checksum URL>
 ```
 
+Applications that need separately supplied original game content may declare:
+
+```yaml
+requirements:
+  - original-game-data
+```
+
+This metadata is informational only; TarLink does not manage that content.
+
 The digest must be the exact lowercase SHA-256 or SHA-512 value published by authoritative upstream release/checksum metadata. MD5, SHA-1, SHA-384, substituted algorithms, source-archive hashes, mirrors without authoritative provenance, and invented or locally derived registry digests are not accepted. If upstream publishes multiple supported algorithms, use its canonical or recommended checksum source.
 
 Manifests cannot contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations. Unsupported applications remain unsupported rather than expanding the manifest into remote code execution.
@@ -58,6 +67,8 @@ Use the TarLink client, which owns the only schema parser and validator:
 tarlink registry validate .
 ```
 
-CI checks out TarLink at a pinned validator commit and runs that exact operation. It does not maintain a second schema implementation.
+CI checks out TarLink at a pinned validator release commit and runs that exact
+operation. The pin must correspond to a published TarLink release capable of
+consuming this registry. It does not maintain a second schema implementation.
 
 The registry is licensed under Apache-2.0. See `LICENSE` and `NOTICE`.

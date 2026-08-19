@@ -52,3 +52,10 @@ tarlink registry validate .
 - Ubuntu GitHub Actions is the authoritative final integration validation environment. After pushing, inspect the run for the exact pushed commit and require it to pass; if it fails, fix, push again, and repeat.
 
 CI must continue using the pinned TarLink validator rather than a second schema implementation. If authoritative provenance or an exact supported artifact cannot be established, do not create the manifest.
+
+Use TarLink-provided tooling: structurally validate the entire registry on
+every change, and materialize only new or materially changed artifacts. Never
+execute third-party application binaries. `original-game-data` is informational
+metadata and is not a rejection reason. The validator pin must target a
+compatible published TarLink release. Do not add local scripts or tooling for
+these checks.

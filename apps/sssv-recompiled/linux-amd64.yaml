@@ -5,6 +5,8 @@ summary: Native recompiled Space Station Silicon Valley runtime
 homepage: https://github.com/Cellenseres/SSSV_Recomp
 categories:
   - games
+requirements:
+  - original-game-data
 platform:
   os: linux
   arch: amd64

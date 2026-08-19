@@ -5,6 +5,8 @@ summary: Native recompiled Banjo-Kazooie runtime
 homepage: https://github.com/BanjoRecomp/BanjoRecomp
 categories:
   - games
+requirements:
+  - original-game-data
 platform:
   os: linux
   arch: amd64

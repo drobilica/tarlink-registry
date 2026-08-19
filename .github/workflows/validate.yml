@@ -1,15 +1,30 @@
 name: Validate
 
-on:
-  push:
-  pull_request:
-
 permissions:
   contents: read
 
+concurrency:
+  group: registry-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: Optional application ID to materialize
+        required: false
+        type: string
+      full:
+        description: Materialize every registry artifact
+        required: false
+        default: false
+        type: boolean
+
 jobs:
-  validate:
-    runs-on: ubuntu-latest
+  structural:
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Check out registry
@@ -19,7 +34,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 68849efc28165404286ede69bb8ffc95800361ec
+          ref: 138be49a4ba28c6db8ffc54e244033e873aaf085
           path: .tarlink
 
       - name: Set up Go
@@ -31,3 +46,43 @@ jobs:
       - name: Validate manifests with TarLink
         working-directory: .tarlink
         run: go run ./cmd/tarlink registry validate "$GITHUB_WORKSPACE"
+
+  artifacts:
+    needs: structural
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event_name == 'pull_request' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out registry history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Check out TarLink validator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: drobilica/tarlink
+          ref: 138be49a4ba28c6db8ffc54e244033e873aaf085
+          path: .tarlink
+
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: .tarlink/go.mod
+          cache-dependency-path: .tarlink/go.sum
+
+      - name: Materialize selected artifacts
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          REQUESTED_APP: ${{ inputs.app }}
+          FULL_AUDIT: ${{ inputs.full }}
+        run: |
+          if [ "$FULL_AUDIT" = true ]; then
+            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --all-artifacts
+          elif [ -n "$REQUESTED_APP" ]; then
+            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --app "$REQUESTED_APP"
+          elif [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]; then
+            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --changed-from "$BASE_SHA"
+          else
+            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE"
+          fi
