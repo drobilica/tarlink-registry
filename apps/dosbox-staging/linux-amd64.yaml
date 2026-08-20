@@ -20,7 +20,9 @@ release:
     source: https://api.github.com/repos/dosbox-staging/dosbox-staging/releases/assets/264691684
   archive: tar.xz
 application:
-  executable: dosbox
+  executables:
+    - name: dosbox
+      path: dosbox
 desktop:
   enabled: true
   categories:

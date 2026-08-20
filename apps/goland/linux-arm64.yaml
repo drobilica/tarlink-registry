@@ -17,7 +17,9 @@ release:
     source: https://download.jetbrains.com/go/goland-2026.2.1-aarch64.tar.gz.sha256
   archive: tar.gz
 application:
-  executable: bin/goland
+  executables:
+    - name: goland
+      path: bin/goland
 desktop:
   enabled: true
   categories:

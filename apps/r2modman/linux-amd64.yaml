@@ -17,6 +17,8 @@ release:
     source: https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185221
   archive: tar.gz
 application:
-  executable: r2modman
+  executables:
+    - name: r2modman
+      path: r2modman
 desktop:
   enabled: false

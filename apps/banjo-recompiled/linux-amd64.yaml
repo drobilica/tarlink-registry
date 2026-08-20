@@ -19,7 +19,9 @@ release:
     source: https://api.github.com/repos/BanjoRecomp/BanjoRecomp/releases/assets/497090345
   archive: tar.gz
 application:
-  executable: BanjoRecompiled
+  executables:
+    - name: BanjoRecompiled
+      path: BanjoRecompiled
 desktop:
   enabled: true
   categories:

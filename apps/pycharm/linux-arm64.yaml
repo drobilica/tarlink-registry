@@ -17,7 +17,9 @@ release:
     source: https://download.jetbrains.com/python/pycharm-2026.2.1-aarch64.tar.gz.sha256
   archive: tar.gz
 application:
-  executable: bin/pycharm
+  executables:
+    - name: pycharm
+      path: bin/pycharm
 desktop:
   enabled: true
   categories:

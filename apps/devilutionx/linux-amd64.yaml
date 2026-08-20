@@ -19,6 +19,8 @@ release:
     source: https://api.github.com/repos/diasurgical/DevilutionX/releases/assets/310600306
   archive: tar.xz
 application:
-  executable: devilutionx
+  executables:
+    - name: devilutionx
+      path: devilutionx
 desktop:
   enabled: false

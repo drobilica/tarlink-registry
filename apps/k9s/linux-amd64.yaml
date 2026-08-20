@@ -18,7 +18,9 @@ release:
     source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
   archive: tar.gz
 application:
-  executable: k9s
+  executables:
+    - name: k9s
+      path: k9s
 desktop:
   enabled: false
   categories: []

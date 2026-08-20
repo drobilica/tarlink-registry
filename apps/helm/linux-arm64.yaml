@@ -18,7 +18,9 @@ release:
     source: https://get.helm.sh/helm-v4.2.4-linux-arm64.tar.gz.sha256sum
   archive: tar.gz
 application:
-  executable: linux-arm64/helm
+  executables:
+    - name: helm
+      path: linux-arm64/helm
 desktop:
   enabled: false
   categories: []

@@ -19,7 +19,9 @@ release:
     source: https://api.github.com/repos/Cellenseres/SSSV_Recomp/releases/assets/373093128
   archive: tar.gz
 application:
-  executable: SSSVRecompiled
+  executables:
+    - name: SSSVRecompiled
+      path: SSSVRecompiled
 desktop:
   enabled: true
   categories:

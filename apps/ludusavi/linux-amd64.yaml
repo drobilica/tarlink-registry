@@ -17,6 +17,8 @@ release:
     source: https://api.github.com/repos/mtkennerly/ludusavi/releases/assets/388940760
   archive: tar.gz
 application:
-  executable: ludusavi
+  executables:
+    - name: ludusavi
+      path: ludusavi
 desktop:
   enabled: false

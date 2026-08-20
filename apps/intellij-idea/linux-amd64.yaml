@@ -17,7 +17,9 @@ release:
     source: https://download.jetbrains.com/idea/idea-2026.2.1.tar.gz.sha256
   archive: tar.gz
 application:
-  executable: bin/idea
+  executables:
+    - name: idea
+      path: bin/idea
 desktop:
   enabled: true
   categories:
