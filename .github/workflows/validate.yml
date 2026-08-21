@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 854287b7f1829862ba70577a2e126b6391bb6877
+          ref: c9a4b9a8f3b902ed4792a7187ff19ae0c68f2582
           path: .tarlink
 
       - name: Set up Go
@@ -62,7 +62,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 854287b7f1829862ba70577a2e126b6391bb6877
+          ref: c9a4b9a8f3b902ed4792a7187ff19ae0c68f2582
           path: .tarlink
 
       - name: Set up Go
