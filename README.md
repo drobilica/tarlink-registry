@@ -1,6 +1,10 @@
 # TarLink Registry
 
-This is the official declarative application registry for [TarLink](https://github.com/drobilica/tarlink). The repository is intentionally data-first:
+The [official TarLink registry](https://github.com/drobilica/tarlink-registry) is a data-only catalog of portable Linux applications for [TarLink](https://github.com/drobilica/tarlink). TarLink owns the schema, parser, resolver, and installation policy; this repository contains only reviewable application manifests.
+
+## How it works
+
+Each application lives under `apps/<id>/` with one strict schema-v3 manifest per supported architecture:
 
 ```text
 apps/
@@ -11,77 +15,25 @@ apps/
     └── linux-arm64.yaml
 ```
 
-There is no registry-local parser, generated index, source-policy mirror, Go module, or install tooling. TarLink directly enumerates and validates `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml` with the same parser used for installation. Resolution is exact: the running Linux architecture selects the matching filename, and there is no fallback to another architecture.
+Platform resolution is exact: Linux amd64 selects `linux-amd64.yaml`, and Linux arm64 selects `linux-arm64.yaml`. There is no architecture fallback. The `apps/` directory and TarLink are the authoritative catalog; this README intentionally does not duplicate application names or versions.
 
-## Use
+Manifests are strict schema v3 and must declare an HTTPS release artifact, an accepted archive type (`tar.gz`, `tar.xz`, `zip`, or `appimage`), and exact lowercase SHA-256 or SHA-512 provenance from authoritative upstream release metadata. Unsupported applications remain unsupported rather than widening the declarative model. Manifests cannot contain commands, scripts, hooks, installers, environment variables, custom destinations, or arbitrary integrations.
 
-Install TarLink, then install an application. Registry bootstrap is automatic:
+## Use and contribute
+
+Install TarLink, then choose an application from this repository:
 
 ```sh
 curl -fsSL https://raw.githubusercontent.com/drobilica/tarlink/main/install.sh | sh
 tarlink install blender
 ```
 
-Use `tarlink registry sync` only to force a refresh.
-
-## Applications
-
-- **Blender 5.2.0 (Linux amd64)** uses the official Linux x64 `tar.xz` and the SHA-256 published in Blender's [`blender-5.2.0.sha256`](https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256). Blender's official 5.2.0 release publishes no Linux arm64 artifact, so no arm64 manifest is provided.
-- **Godot 4.7.2 (Linux amd64 and arm64)** uses the official standard Linux ZIP for each architecture. The SHA-512 values are the exact entries in Godot's authoritative [`SHA512-SUMS.txt`](https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt).
-- **k9s 0.51.0 and Helm 4.2.4 (Linux amd64 and arm64)** use their official portable command-line archives and upstream SHA-256 checksum publications.
-- **IntelliJ IDEA, PyCharm, and GoLand 2026.2.1 (Linux amd64 and arm64)** use the official JetBrains portable archives, bundled launchers, icons, and upstream SHA-256 checksum publications.
-- **Banjo: Recompiled 1.0.2 (Linux amd64 and arm64)** and **Space Station Silicon Valley: Recompiled 0.2.0 (Linux amd64)** use official native archives containing runtimes only. Original game data is not distributed and must be supplied by the user where required.
-- **Prism Launcher 11.0.3 (Linux amd64 and arm64)** uses the official self-contained AppImages for managing Minecraft instances, mods, and modpacks.
-- **NocturneRecomp 1.4.3 (Linux amd64 and arm64)** uses official native archives containing the Castlevania: Symphony of the Night runtime; original game data remains user-supplied.
-- **Zelda64Recompiled 1.2.2, Harvest Moon 64: Recompiled 1.2.1, and Mega Man 64 Recompiled 0.9.1 (Linux amd64)** use official two-layer archives. Their original game data remains user-supplied.
-
-An application remains unavailable on an architecture when its official upstream release has no matching artifact; TarLink does not substitute another architecture or invent a digest.
-
-## Manifest contract
-
-Manifests are strict schema v3 data. Each file declares exactly one Linux architecture matching its filename and a release history with explicit channel heads. Each approved release has one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
-
-```yaml
-release:
-  default-channel: stable
-  channels:
-    stable:
-      current: <approved-version>
-  releases:
-    - channel: stable
-      version: <approved-version>
-      nested-archive: # optional, exact inner archive in the outer output
-        path: <canonical-relative-path>
-        archive: tar.gz | tar.xz | zip
-      verification:
-        algorithm: sha256 | sha512
-        digest: <exact lowercase digest>
-        source: <authoritative upstream HTTPS checksum URL>
-```
-
-Applications that need separately supplied original game content may declare:
-
-```yaml
-requirements:
-  - original-game-data
-```
-
-This metadata is informational only; TarLink does not manage that content.
-
-The digest must be the exact lowercase SHA-256 or SHA-512 value published by authoritative upstream release/checksum metadata. MD5, SHA-1, SHA-384, substituted algorithms, source-archive hashes, mirrors without authoritative provenance, and invented or locally derived registry digests are not accepted. If upstream publishes multiple supported algorithms, use its canonical or recommended checksum source.
-
-Manifests cannot contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations. Unsupported applications remain unsupported rather than expanding the manifest into remote code execution.
-
-## Validation
-
-Use the TarLink client, which owns the only schema parser and validator:
+Validate the complete registry with TarLink's production validator:
 
 ```sh
 tarlink registry validate .
 ```
 
-CI checks out TarLink at a pinned validator release commit and runs that exact
-operation. The pin must correspond to a published TarLink release capable of
-consuming this registry. It does not maintain a second schema implementation.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow and evidence expected for an upstream release, artifact, and digest. TarLink's [registry research documentation](https://github.com/drobilica/tarlink/blob/main/docs/registry-research.md) explains how candidate evidence is gathered; research records do not belong in this data-only repository.
 
-The registry is licensed under Apache-2.0. See `LICENSE` and `NOTICE`.
+The registry is licensed under Apache-2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).

@@ -1,0 +1,24 @@
+schema: 3
+id: trenchbroom
+name: TrenchBroom
+summary: Level editor for Quake-engine games
+homepage: https://trenchbroom.github.io
+categories: [game-development, graphics]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "2026.1"}}
+  releases:
+    - channel: stable
+      version: "2026.1"
+      url: https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.1/TrenchBroom-Linux-x86_64-v2026.1-Release.zip
+      verification:
+        algorithm: sha256
+        digest: c92f325668ee5d4e8df375580926ef371013b5624255da3e47c22d134bdfcd2c
+        source: https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/451595061
+      archive: zip
+application:
+  executables:
+    - name: trenchbroom
+      path: TrenchBroom.AppImage
+desktop: {enabled: false}

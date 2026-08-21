@@ -1,0 +1,24 @@
+schema: 3
+id: pixelorama
+name: Pixelorama
+summary: Open-source pixel art drawing and animation software
+homepage: https://orama-interactive.github.io/Pixelorama
+categories: [game-development, graphics]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "1.2.1"}}
+  releases:
+    - channel: stable
+      version: "1.2.1"
+      url: https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.1/Pixelorama-Linux-64bit.tar.gz
+      verification:
+        algorithm: sha256
+        digest: 6c2434304a6af1f9558aa2809121a499ddad3437229611544739c6d0f803e747
+        source: https://api.github.com/repos/Orama-Interactive/Pixelorama/releases/assets/521122780
+      archive: tar.gz
+application:
+  executables:
+    - name: pixelorama
+      path: Pixelorama.x86_64
+desktop: {enabled: false}

@@ -1,0 +1,24 @@
+schema: 3
+id: tiled
+name: Tiled
+summary: General purpose tile map editor for game development
+homepage: https://www.mapeditor.org/
+categories: [game-development, graphics]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "1.12.2"}}
+  releases:
+    - channel: stable
+      version: "1.12.2"
+      url: https://github.com/mapeditor/tiled/releases/download/v1.12.2/Tiled-1.12.2_Linux_x86_64.AppImage
+      verification:
+        algorithm: sha256
+        digest: 5e0edbff61314f41af3c72c21ec006b363cf12047cc9cfb5bbd63a98bca3721c
+        source: https://api.github.com/repos/mapeditor/tiled/releases/assets/431107701
+      archive: appimage
+application:
+  executables:
+    - name: tiled
+      path: appimage
+desktop: {enabled: false}

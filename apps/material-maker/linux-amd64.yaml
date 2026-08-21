@@ -1,0 +1,27 @@
+schema: 3
+id: material-maker
+name: Material Maker
+summary: Procedural materials authoring tool for game development
+homepage: https://rodzill4.github.io/material-maker
+categories: [game-development, graphics]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "1.7"}}
+  releases:
+    - channel: stable
+      version: "1.7"
+      url: https://github.com/RodZill4/material-maker/releases/download/1.7/material_maker_1_7_linux.tar.gz
+      verification:
+        algorithm: sha256
+        digest: c8e3b6f1993540875d26fe49645c91511bba36cda0412c715bd13249f7141647
+        source: https://api.github.com/repos/RodZill4/material-maker/releases/assets/476408431
+      archive: tar.gz
+application:
+  executables:
+    - name: material-maker
+      path: material_maker.x86_64
+desktop:
+  enabled: true
+  categories: [Graphics, Development]
+  icon: examples/mm_icon.png
