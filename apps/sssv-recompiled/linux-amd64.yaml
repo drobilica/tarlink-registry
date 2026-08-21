@@ -1,23 +1,30 @@
-schema: 1
+schema: 2
 id: sssv-recompiled
 name: "Space Station Silicon Valley: Recompiled"
 summary: Native recompiled Space Station Silicon Valley runtime
 homepage: https://github.com/Cellenseres/SSSV_Recomp
 categories:
   - games
+  - recompilation
 requirements:
   - original-game-data
 platform:
   os: linux
   arch: amd64
 release:
-  version: 0.2.0
-  url: https://github.com/Cellenseres/SSSV_Recomp/releases/download/v0.2.0/SSSVRecompiled_v0.2.0_Linux.tar.gz
-  verification:
-    algorithm: sha256
-    digest: fd1dc25d490e3861ea6279a7dd2c28aa03ac7c506775be3c4817a6fe08b8201c
-    source: https://api.github.com/repos/Cellenseres/SSSV_Recomp/releases/assets/373093128
-  archive: tar.gz
+  default-channel: stable
+  channels:
+    stable:
+      current: "0.2.0"
+  releases:
+    - channel: stable
+      version: "0.2.0"
+      url: https://github.com/Cellenseres/SSSV_Recomp/releases/download/v0.2.0/SSSVRecompiled_v0.2.0_Linux.tar.gz
+      verification:
+        algorithm: sha256
+        digest: fd1dc25d490e3861ea6279a7dd2c28aa03ac7c506775be3c4817a6fe08b8201c
+        source: https://api.github.com/repos/Cellenseres/SSSV_Recomp/releases/assets/373093128
+      archive: tar.gz
 application:
   executables:
     - name: SSSVRecompiled

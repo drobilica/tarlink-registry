@@ -36,13 +36,21 @@ An application remains unavailable on an architecture when its official upstream
 
 ## Manifest contract
 
-Manifests are strict schema v1 data. Each file declares exactly one Linux architecture matching its filename, one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
+Manifests are strict schema v2 data. Each file declares exactly one Linux architecture matching its filename and a release history with explicit channel heads. Each approved release has one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
 
 ```yaml
-verification:
-  algorithm: sha256 | sha512
-  digest: <exact lowercase digest>
-  source: <authoritative upstream HTTPS checksum URL>
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: <approved-version>
+  releases:
+    - channel: stable
+      version: <approved-version>
+      verification:
+        algorithm: sha256 | sha512
+        digest: <exact lowercase digest>
+        source: <authoritative upstream HTTPS checksum URL>
 ```
 
 Applications that need separately supplied original game content may declare:

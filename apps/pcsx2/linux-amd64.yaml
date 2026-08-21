@@ -1,0 +1,51 @@
+schema: 2
+id: pcsx2
+name: PCSX2
+summary: PlayStation 2 emulator
+homepage: https://pcsx2.net/
+categories:
+  - emulation
+  - games
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: amd64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "2.6.3"
+    nightly:
+      current: "2.7.523"
+  releases:
+    - channel: stable
+      version: "2.6.3"
+      url: https://github.com/PCSX2/pcsx2/releases/download/v2.6.3/pcsx2-v2.6.3-linux-appimage-x64-Qt.AppImage
+      verification:
+        algorithm: sha256
+        digest: 8ce7de8613c17b00b01028a512dd1b81998b6626ebbe93a067e0eb20aeedd5bf
+        source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/347252753
+      archive: appimage
+    - channel: nightly
+      version: "2.7.519"
+      url: https://github.com/PCSX2/pcsx2/releases/download/v2.7.519/pcsx2-v2.7.519-linux-appimage-x64-Qt.AppImage
+      verification:
+        algorithm: sha256
+        digest: fc8492d0aa40973501aba9d1a9ea4672e2ee9ab82c7cc8e16d5d6d0021a34147
+        source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/507997552
+      archive: appimage
+    - channel: nightly
+      version: "2.7.523"
+      url: https://github.com/PCSX2/pcsx2/releases/download/v2.7.523/pcsx2-v2.7.523-linux-appimage-x64-Qt.AppImage
+      verification:
+        algorithm: sha256
+        digest: a45328bb50dcfb931e4588122e38aeef253995b37b421e932dd5ee8f513b3fa1
+        source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/520805190
+      archive: appimage
+application:
+  executables:
+    - name: pcsx2
+      path: appimage
+desktop:
+  enabled: false

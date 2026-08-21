@@ -1,0 +1,30 @@
+schema: 2
+id: openttd
+name: OpenTTD
+summary: Open source simulation game based upon Transport Tycoon Deluxe
+homepage: https://www.openttd.org/
+categories:
+  - games
+platform:
+  os: linux
+  arch: amd64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "15.3"
+  releases:
+    - channel: stable
+      version: "15.3"
+      url: https://cdn.openttd.org/openttd-releases/15.3/openttd-15.3-linux-generic-amd64.tar.xz
+      verification:
+        algorithm: sha256
+        digest: f49eb25d61b00f8f4d332fee02b530ad75552d1efb8f2bb01e7ca5e6540fe059
+        source: https://www.openttd.org/downloads/openttd-releases/latest
+      archive: tar.xz
+application:
+  executables:
+    - name: openttd
+      path: openttd
+desktop:
+  enabled: false

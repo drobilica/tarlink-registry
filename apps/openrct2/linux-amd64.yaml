@@ -1,0 +1,32 @@
+schema: 2
+id: openrct2
+name: OpenRCT2
+summary: Open source re-implementation of RollerCoaster Tycoon 2
+homepage: https://openrct2.org/
+categories:
+  - games
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: amd64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "0.5.4"
+  releases:
+    - channel: stable
+      version: "0.5.4"
+      url: https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.4/OpenRCT2-v0.5.4-linux-x86_64.AppImage
+      verification:
+        algorithm: sha256
+        digest: aec44e248dc88e50ed6c9897226053631f5b94bf99f45ccb85bae56d52e01688
+        source: https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/498826809
+      archive: appimage
+application:
+  executables:
+    - name: openrct2
+      path: appimage
+desktop:
+  enabled: false

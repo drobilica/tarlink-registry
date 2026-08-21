@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 id: pycharm
 name: PyCharm
 summary: Integrated development environment for Python
@@ -9,13 +9,19 @@ platform:
   os: linux
   arch: arm64
 release:
-  version: 2026.2.1
-  url: https://download.jetbrains.com/python/pycharm-2026.2.1-aarch64.tar.gz
-  verification:
-    algorithm: sha256
-    digest: d3de33f41005a808827b0d9e0a828d767eac2229fc5f8b84e12af2051950dbbd
-    source: https://download.jetbrains.com/python/pycharm-2026.2.1-aarch64.tar.gz.sha256
-  archive: tar.gz
+  default-channel: stable
+  channels:
+    stable:
+      current: "2026.2.1"
+  releases:
+    - channel: stable
+      version: "2026.2.1"
+      url: https://download.jetbrains.com/python/pycharm-2026.2.1-aarch64.tar.gz
+      verification:
+        algorithm: sha256
+        digest: d3de33f41005a808827b0d9e0a828d767eac2229fc5f8b84e12af2051950dbbd
+        source: https://download.jetbrains.com/python/pycharm-2026.2.1-aarch64.tar.gz.sha256
+      archive: tar.gz
 application:
   executables:
     - name: pycharm

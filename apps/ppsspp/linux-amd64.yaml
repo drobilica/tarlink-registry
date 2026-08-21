@@ -1,0 +1,33 @@
+schema: 2
+id: ppsspp
+name: PPSSPP
+summary: PlayStation Portable emulator
+homepage: https://www.ppsspp.org/
+categories:
+  - emulation
+  - games
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: amd64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "1.20.4"
+  releases:
+    - channel: stable
+      version: "1.20.4"
+      url: https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-v1.20.4-anylinux-x86_64.AppImage
+      verification:
+        algorithm: sha256
+        digest: 661c098e6b7f7610171a57b7c533ce8bba6f2312b71e76d61e850461973eba21
+        source: https://api.github.com/repos/hrydgard/PPSSPP/releases/assets/421813915
+      archive: appimage
+application:
+  executables:
+    - name: ppsspp
+      path: appimage
+desktop:
+  enabled: false

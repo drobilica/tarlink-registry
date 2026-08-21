@@ -1,0 +1,33 @@
+schema: 2
+id: melonds
+name: melonDS
+summary: Nintendo DS emulator
+homepage: https://melonds.kuribo64.net/
+categories:
+  - emulation
+  - games
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: amd64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "1.1"
+  releases:
+    - channel: stable
+      version: "1.1"
+      url: https://github.com/melonDS-emu/melonDS/releases/download/1.1/melonDS-1.1-ubuntu-x86_64.zip
+      verification:
+        algorithm: sha256
+        digest: 99465129f5413b2aad332e4377e523cf3cda905dc329d47dcb1ad01ce2cb3f66
+        source: https://api.github.com/repos/melonDS-emu/melonDS/releases/assets/317872324
+      archive: zip
+application:
+  executables:
+    - name: melonDS
+      path: melonDS
+desktop:
+  enabled: false

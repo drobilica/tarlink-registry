@@ -1,0 +1,30 @@
+schema: 2
+id: steam-rom-manager
+name: Steam ROM Manager
+summary: Bulk game importer and artwork manager for Steam
+homepage: https://github.com/SteamGridDB/steam-rom-manager
+categories:
+  - games
+platform:
+  os: linux
+  arch: arm64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "2.5.44"
+  releases:
+    - channel: stable
+      version: "2.5.44"
+      url: https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.5.44/Steam-ROM-Manager-2.5.44-arm64.AppImage
+      verification:
+        algorithm: sha256
+        digest: c8556ed3214b2fecc888df9edd27ca254206303998f32b1f9b7ae19b46b3189a
+        source: https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/assets/504257354
+      archive: appimage
+application:
+  executables:
+    - name: steam-rom-manager
+      path: appimage
+desktop:
+  enabled: false

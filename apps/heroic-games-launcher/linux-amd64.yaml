@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 id: heroic-games-launcher
 name: Heroic Games Launcher
 summary: Open source launcher for Epic, GOG, and Amazon games
@@ -9,13 +9,19 @@ platform:
   os: linux
   arch: amd64
 release:
-  version: 2.22.1
-  url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.1/Heroic-2.22.1-linux-x64.tar.xz
-  verification:
-    algorithm: sha256
-    digest: 8a20af7b8ced2f0d895b1a8d9d013a41225113cbcfd12c8be873f03f0eeb8386
-    source: https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/assets/506700585
-  archive: tar.xz
+  default-channel: stable
+  channels:
+    stable:
+      current: "2.22.1"
+  releases:
+    - channel: stable
+      version: "2.22.1"
+      url: https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.1/Heroic-2.22.1-linux-x64.tar.xz
+      verification:
+        algorithm: sha256
+        digest: 8a20af7b8ced2f0d895b1a8d9d013a41225113cbcfd12c8be873f03f0eeb8386
+        source: https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/assets/506700585
+      archive: tar.xz
 application:
   executables:
     - name: heroic

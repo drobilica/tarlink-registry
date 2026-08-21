@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 id: ludusavi
 name: Ludusavi
 summary: Game save backup tool
@@ -9,13 +9,19 @@ platform:
   os: linux
   arch: amd64
 release:
-  version: 0.31.0
-  url: https://github.com/mtkennerly/ludusavi/releases/download/v0.31.0/ludusavi-v0.31.0-linux.tar.gz
-  verification:
-    algorithm: sha256
-    digest: 7322ff45d41eae7ae064a80d8c9ecccc5b8fb6fc090a603a66369cd4b054068d
-    source: https://api.github.com/repos/mtkennerly/ludusavi/releases/assets/388940760
-  archive: tar.gz
+  default-channel: stable
+  channels:
+    stable:
+      current: "0.31.0"
+  releases:
+    - channel: stable
+      version: "0.31.0"
+      url: https://github.com/mtkennerly/ludusavi/releases/download/v0.31.0/ludusavi-v0.31.0-linux.tar.gz
+      verification:
+        algorithm: sha256
+        digest: 7322ff45d41eae7ae064a80d8c9ecccc5b8fb6fc090a603a66369cd4b054068d
+        source: https://api.github.com/repos/mtkennerly/ludusavi/releases/assets/388940760
+      archive: tar.gz
 application:
   executables:
     - name: ludusavi

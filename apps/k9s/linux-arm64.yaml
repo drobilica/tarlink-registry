@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 id: k9s
 name: k9s
 summary: Terminal UI for Kubernetes clusters
@@ -10,13 +10,19 @@ platform:
   os: linux
   arch: arm64
 release:
-  version: 0.51.0
-  url: https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_arm64.tar.gz
-  verification:
-    algorithm: sha256
-    digest: 3ee05c82e5f9198928a4e86133608ba6a2c10a2244d6a7789e820f78319d640c
-    source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
-  archive: tar.gz
+  default-channel: stable
+  channels:
+    stable:
+      current: "0.51.0"
+  releases:
+    - channel: stable
+      version: "0.51.0"
+      url: https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_arm64.tar.gz
+      verification:
+        algorithm: sha256
+        digest: 3ee05c82e5f9198928a4e86133608ba6a2c10a2244d6a7789e820f78319d640c
+        source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
+      archive: tar.gz
 application:
   executables:
     - name: k9s

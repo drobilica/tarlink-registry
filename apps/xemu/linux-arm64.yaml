@@ -1,0 +1,33 @@
+schema: 2
+id: xemu
+name: xemu
+summary: Original Xbox emulator
+homepage: https://xemu.app/
+categories:
+  - emulation
+  - games
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: arm64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "0.8.136"
+  releases:
+    - channel: stable
+      version: "0.8.136"
+      url: https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136-aarch64.AppImage
+      verification:
+        algorithm: sha256
+        digest: 8d2598bab0680ddd36c2d15ecccb70523e29adb852cd75e35bc5943dc0eb4816
+        source: https://api.github.com/repos/xemu-project/xemu/releases/assets/441463418
+      archive: appimage
+application:
+  executables:
+    - name: xemu
+      path: appimage
+desktop:
+  enabled: false

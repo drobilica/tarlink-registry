@@ -1,4 +1,4 @@
-schema: 1
+schema: 2
 id: godot
 name: Godot
 summary: Open-source 2D and 3D game engine
@@ -10,13 +10,19 @@ platform:
   os: linux
   arch: amd64
 release:
-  version: 4.7.2
-  url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
-  verification:
-    algorithm: sha512
-    digest: 9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65
-    source: https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt
-  archive: zip
+  default-channel: stable
+  channels:
+    stable:
+      current: "4.7.2"
+  releases:
+    - channel: stable
+      version: "4.7.2"
+      url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+      verification:
+        algorithm: sha512
+        digest: 9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65
+        source: https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt
+      archive: zip
 application:
   executables:
     - name: Godot_v4.7.2-stable_linux.x86_64
