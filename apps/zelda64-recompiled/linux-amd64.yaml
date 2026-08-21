@@ -1,7 +1,7 @@
 schema: 3
 id: zelda64-recompiled
 name: Zelda64Recompiled
-summary: "Native recompile of The Legend of Zelda: Ocarina of Time"
+summary: "Native recompile of The Legend of Zelda: Majora's Mask"
 homepage: https://github.com/Zelda64Recomp/Zelda64Recomp
 categories: [games, recompilation]
 requirements: [original-game-data]
