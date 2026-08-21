@@ -31,6 +31,8 @@ Use `tarlink registry sync` only to force a refresh.
 - **k9s 0.51.0 and Helm 4.2.4 (Linux amd64 and arm64)** use their official portable command-line archives and upstream SHA-256 checksum publications.
 - **IntelliJ IDEA, PyCharm, and GoLand 2026.2.1 (Linux amd64 and arm64)** use the official JetBrains portable archives, bundled launchers, icons, and upstream SHA-256 checksum publications.
 - **Banjo: Recompiled 1.0.2 (Linux amd64 and arm64)** and **Space Station Silicon Valley: Recompiled 0.2.0 (Linux amd64)** use official native archives containing runtimes only. Original game data is not distributed and must be supplied by the user where required.
+- **Prism Launcher 11.0.3 (Linux amd64 and arm64)** uses the official self-contained AppImages for managing Minecraft instances, mods, and modpacks.
+- **NocturneRecomp 1.4.3 (Linux amd64 and arm64)** uses official native archives containing the Castlevania: Symphony of the Night runtime; original game data remains user-supplied.
 
 An application remains unavailable on an architecture when its official upstream release has no matching artifact; TarLink does not substitute another architecture or invent a digest.
 

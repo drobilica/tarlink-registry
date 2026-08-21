@@ -1,0 +1,33 @@
+schema: 2
+id: nocturne-recomp
+name: NocturneRecomp
+summary: "Native recompiled Castlevania: Symphony of the Night runtime"
+homepage: https://github.com/birabittoh/NocturneRecomp
+categories:
+  - games
+  - recompilation
+requirements:
+  - original-game-data
+platform:
+  os: linux
+  arch: arm64
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "1.4.3"
+  releases:
+    - channel: stable
+      version: "1.4.3"
+      url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-arm64.tar.gz
+      verification:
+        algorithm: sha256
+        digest: 32a4f6bd8ed0af9720cbf7f1c96937a7698db9190d89e5a855e7dac3b02337ba
+        source: https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434752
+      archive: tar.gz
+application:
+  executables:
+    - name: nocturnerecomp
+      path: nocturnerecomp
+desktop:
+  enabled: false

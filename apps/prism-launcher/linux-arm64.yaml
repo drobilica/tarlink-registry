@@ -1,0 +1,30 @@
+schema: 2
+id: prism-launcher
+name: Prism Launcher
+summary: Minecraft launcher for managing instances, accounts, mods, and modpacks
+homepage: https://prismlauncher.org/
+categories:
+  - games
+release:
+  default-channel: stable
+  channels:
+    stable:
+      current: "11.0.3"
+  releases:
+    - channel: stable
+      version: "11.0.3"
+      url: https://github.com/PrismLauncher/PrismLauncher/releases/download/11.0.3/PrismLauncher-Linux-aarch64.AppImage
+      verification:
+        algorithm: sha256
+        digest: e4aa885be2cc1184bf3266c51462bc776343482202b46f0fd5ce32dcdbb4f002
+        source: https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/assets/473692035
+      archive: appimage
+platform:
+  os: linux
+  arch: arm64
+application:
+  executables:
+    - name: prismlauncher
+      path: appimage
+desktop:
+  enabled: false
