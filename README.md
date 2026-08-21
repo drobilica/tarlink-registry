@@ -33,12 +33,13 @@ Use `tarlink registry sync` only to force a refresh.
 - **Banjo: Recompiled 1.0.2 (Linux amd64 and arm64)** and **Space Station Silicon Valley: Recompiled 0.2.0 (Linux amd64)** use official native archives containing runtimes only. Original game data is not distributed and must be supplied by the user where required.
 - **Prism Launcher 11.0.3 (Linux amd64 and arm64)** uses the official self-contained AppImages for managing Minecraft instances, mods, and modpacks.
 - **NocturneRecomp 1.4.3 (Linux amd64 and arm64)** uses official native archives containing the Castlevania: Symphony of the Night runtime; original game data remains user-supplied.
+- **Zelda64Recompiled 1.2.2, Harvest Moon 64: Recompiled 1.2.1, and Mega Man 64 Recompiled 0.9.1 (Linux amd64)** use official two-layer archives. Their original game data remains user-supplied.
 
 An application remains unavailable on an architecture when its official upstream release has no matching artifact; TarLink does not substitute another architecture or invent a digest.
 
 ## Manifest contract
 
-Manifests are strict schema v2 data. Each file declares exactly one Linux architecture matching its filename and a release history with explicit channel heads. Each approved release has one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
+Manifests are strict schema v3 data. Each file declares exactly one Linux architecture matching its filename and a release history with explicit channel heads. Each approved release has one HTTPS artifact URL, one accepted archive type (`tar.gz`, `tar.xz`, or `zip`), and:
 
 ```yaml
 release:
@@ -49,6 +50,9 @@ release:
   releases:
     - channel: stable
       version: <approved-version>
+      nested-archive: # optional, exact inner archive in the outer output
+        path: <canonical-relative-path>
+        archive: tar.gz | tar.xz | zip
       verification:
         algorithm: sha256 | sha512
         digest: <exact lowercase digest>

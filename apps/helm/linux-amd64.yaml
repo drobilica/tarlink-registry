@@ -1,4 +1,4 @@
-schema: 2
+schema: 3
 id: helm
 name: Helm
 summary: Package manager for Kubernetes

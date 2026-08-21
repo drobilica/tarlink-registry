@@ -1,4 +1,4 @@
-schema: 2
+schema: 3
 id: nocturne-recomp
 name: NocturneRecomp
 summary: "Native recompiled Castlevania: Symphony of the Night runtime"

@@ -1,0 +1,29 @@
+schema: 3
+id: zelda64-recompiled
+name: Zelda64Recompiled
+summary: "Native recompile of The Legend of Zelda: Ocarina of Time"
+homepage: https://github.com/Zelda64Recomp/Zelda64Recomp
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels:
+    stable: {current: "1.2.2"}
+  releases:
+    - channel: stable
+      version: "1.2.2"
+      url: https://github.com/Zelda64Recomp/Zelda64Recomp/releases/download/v1.2.2/Zelda64Recompiled-v1.2.2-Linux-X64.zip
+      verification:
+        algorithm: sha256
+        digest: de8b19cdb4e3ad0c10fd6d8127f7a6cc2a9eba106d89c753439178b718887c42
+        source: https://api.github.com/repos/Zelda64Recomp/Zelda64Recomp/releases/assets/286581896
+      archive: zip
+      nested-archive:
+        path: Zelda64Recompiled.tar.gz
+        archive: tar.gz
+application:
+  executables:
+    - name: Zelda64Recompiled
+      path: Zelda64Recompiled
+desktop: {enabled: false}

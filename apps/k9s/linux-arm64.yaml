@@ -1,4 +1,4 @@
-schema: 2
+schema: 3
 id: k9s
 name: k9s
 summary: Terminal UI for Kubernetes clusters

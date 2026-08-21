@@ -1,0 +1,29 @@
+schema: 3
+id: mega-man-64-recompiled
+name: Mega Man 64 Recompiled
+summary: Native recompile of Mega Man 64
+homepage: https://github.com/MegaMan64Recomp/MegaMan64Recompiled
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels:
+    stable: {current: "0.9.1"}
+  releases:
+    - channel: stable
+      version: "0.9.1"
+      url: https://github.com/MegaMan64Recomp/MegaMan64Recompiled/releases/download/v0.9.1/MegaMan64Recompiled-v0.9.1-Linux-X64.zip
+      verification:
+        algorithm: sha256
+        digest: 231945f3b599acd49e7bb169ad3881c74eabcc02e014f61f3274a9e5f955ba20
+        source: https://api.github.com/repos/MegaMan64Recomp/MegaMan64Recompiled/releases/assets/409342533
+      archive: zip
+      nested-archive:
+        path: MegaMan64Recompiled.tar.gz
+        archive: tar.gz
+application:
+  executables:
+    - name: MegaMan64Recompiled
+      path: MegaMan64Recompiled
+desktop: {enabled: false}

@@ -1,0 +1,29 @@
+schema: 3
+id: harvest-moon-64-recompiled
+name: "Harvest Moon 64: Recompiled"
+summary: Native recompile of Harvest Moon 64
+homepage: https://github.com/HarvestMoon64Recomp/HarvestMoon64Recomp
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels:
+    stable: {current: "1.2.1"}
+  releases:
+    - channel: stable
+      version: "1.2.1"
+      url: https://github.com/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/download/v1.2.1/HarvestMoon64Recompiled-v1.2.1-Linux-X64.zip
+      verification:
+        algorithm: sha256
+        digest: 5eb528c0e6fb9e0a755bdc57cdc1731e692bfeebb33047157e6c3eddae39eda6
+        source: https://api.github.com/repos/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/assets/468629043
+      archive: zip
+      nested-archive:
+        path: HarvestMoon64Recompiled.tar.gz
+        archive: tar.gz
+application:
+  executables:
+    - name: HarvestMoon64Recompiled
+      path: HarvestMoon64Recompiled
+desktop: {enabled: false}

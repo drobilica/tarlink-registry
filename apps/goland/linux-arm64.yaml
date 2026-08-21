@@ -1,4 +1,4 @@
-schema: 2
+schema: 3
 id: goland
 name: GoLand
 summary: Integrated development environment for Go
