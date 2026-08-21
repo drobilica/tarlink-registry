@@ -59,3 +59,8 @@ execute third-party application binaries. `original-game-data` is informational
 metadata and is not a rejection reason. The validator pin must target a
 compatible published TarLink release. Do not add local scripts or tooling for
 these checks.
+
+Candidate research is maintainer workflow, not registry data. Use TarLink's
+canonical registry research commands and the TarLink-side
+`registry-research/candidates.yaml` ledger; do not add candidate records,
+research scripts, API clients, provenance logic, or caches here.
