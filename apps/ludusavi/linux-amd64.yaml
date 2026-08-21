@@ -27,4 +27,5 @@ application:
     - name: ludusavi
       path: ludusavi
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Utility]

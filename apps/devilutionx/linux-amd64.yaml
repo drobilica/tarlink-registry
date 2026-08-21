@@ -29,4 +29,5 @@ application:
     - name: devilutionx
       path: devilutionx
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Game]

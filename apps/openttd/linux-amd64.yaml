@@ -27,4 +27,5 @@ application:
     - name: openttd
       path: openttd
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Game]

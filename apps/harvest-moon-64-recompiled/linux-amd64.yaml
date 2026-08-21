@@ -26,4 +26,4 @@ application:
   executables:
     - name: HarvestMoon64Recompiled
       path: HarvestMoon64Recompiled
-desktop: {enabled: false}
+desktop: {enabled: true, categories: [Game]}

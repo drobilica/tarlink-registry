@@ -30,4 +30,5 @@ application:
     - name: melonDS
       path: melonDS
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Game, Emulator]

@@ -26,4 +26,4 @@ application:
   executables:
     - name: MegaMan64Recompiled
       path: MegaMan64Recompiled
-desktop: {enabled: false}
+desktop: {enabled: true, categories: [Game]}

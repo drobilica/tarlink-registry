@@ -30,4 +30,5 @@ application:
     - name: nocturnerecomp
       path: nocturnerecomp
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Game]

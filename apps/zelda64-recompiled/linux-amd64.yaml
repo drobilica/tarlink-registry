@@ -26,4 +26,4 @@ application:
   executables:
     - name: Zelda64Recompiled
       path: Zelda64Recompiled
-desktop: {enabled: false}
+desktop: {enabled: true, categories: [Game]}

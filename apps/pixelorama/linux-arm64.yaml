@@ -21,4 +21,4 @@ application:
   executables:
     - name: pixelorama
       path: Pixelorama.arm64
-desktop: {enabled: false}
+desktop: {enabled: true, categories: [Graphics, Development]}

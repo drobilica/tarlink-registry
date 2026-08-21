@@ -27,4 +27,5 @@ application:
     - name: r2modman
       path: r2modman
 desktop:
-  enabled: false
+  enabled: true
+  categories: [Game]
