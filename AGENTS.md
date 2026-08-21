@@ -60,7 +60,8 @@ metadata and is not a rejection reason. The validator pin must target a
 compatible published TarLink release. Do not add local scripts or tooling for
 these checks.
 
-Candidate research is maintainer workflow, not registry data. Use TarLink's
-canonical registry research commands and the TarLink-side
-`registry-research/candidates.yaml` ledger; do not add candidate records,
-research scripts, API clients, provenance logic, or caches here.
+Candidate research lives in TarLink, not this registry. Before repeating
+candidate research, consult TarLink's canonical research commands and its
+`registry-research/candidates.yaml` ledger. Do not add candidate records,
+research scripts, API clients, parsers, provenance logic, or caches here.
+Official manifests still require normal TarLink validation and materialization.
