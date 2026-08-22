@@ -32,3 +32,6 @@ desktop:
   categories:
     - Development
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/godotengine/godot/893cf5cbfe789ae67c9389708e1428141bb39b18/misc/logo/icon.png
+    sha256: 4c7157447b020ecb1a0cb755fe0569620247bf5def9f7c4409f063ac479509a9
