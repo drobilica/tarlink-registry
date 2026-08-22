@@ -27,4 +27,6 @@ application:
     - name: prismlauncher
       path: appimage
 desktop:
-  enabled: false
+  enabled: true
+  categories:
+    - Game

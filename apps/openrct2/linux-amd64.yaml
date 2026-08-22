@@ -29,4 +29,6 @@ application:
     - name: openrct2
       path: appimage
 desktop:
-  enabled: false
+  enabled: true
+  categories:
+    - Game

@@ -21,4 +21,8 @@ application:
   executables:
     - name: tiled
       path: appimage
-desktop: {enabled: false}
+desktop:
+  enabled: true
+  categories:
+    - Graphics
+    - Development
