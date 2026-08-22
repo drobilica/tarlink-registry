@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 7c682d7 # TarLink v0.9.3 release target
+          ref: 7c682d7d67e45cfe175a4e49ca6f29c6f375bf61 # TarLink v0.9.3 release target
           path: .tarlink
 
       - name: Set up Go
@@ -62,7 +62,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: 7c682d7 # TarLink v0.9.3 release target
+          ref: 7c682d7d67e45cfe175a4e49ca6f29c6f375bf61 # TarLink v0.9.3 release target
           path: .tarlink
 
       - name: Set up Go
