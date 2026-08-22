@@ -6,8 +6,6 @@ homepage: https://pcsx2.net/
 categories:
   - emulation
   - games
-requirements:
-  - original-game-data
 platform:
   os: linux
   arch: amd64
