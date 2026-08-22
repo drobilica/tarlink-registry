@@ -34,3 +34,6 @@ desktop:
   categories:
     - Game
     - Emulator
+  icon:
+    url: https://raw.githubusercontent.com/hrydgard/ppsspp/fa50bb1976065c4f8b1b47af227d367fe9771555/icons/hicolor/512x512/apps/ppsspp.png
+    sha256: 2154404e94f93eb30b11ce6e94e1214964f26f97e91d1ad56f95bdb84c1611d1

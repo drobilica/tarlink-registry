@@ -34,3 +34,6 @@ desktop:
   categories:
     - Game
     - Emulator
+  icon:
+    url: https://raw.githubusercontent.com/xemu-project/xemu/fc24584ce88f0915ad7f04775bb7712c2e3f49ee/ui/icons/xemu_512x512.png
+    sha256: a6995ffec85bbb9f4a1d5fc922dd6192864e367340438b04d5793134e6b33c9f

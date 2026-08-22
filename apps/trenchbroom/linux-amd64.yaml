@@ -26,3 +26,6 @@ desktop:
   categories:
     - Graphics
     - Development
+  icon:
+    url: https://raw.githubusercontent.com/TrenchBroom/TrenchBroom/b8c14a93c6945a389c56ff7bf77e869c16f24895/app/TrenchBroom/resources/linux/icons/icon_512.png
+    sha256: 1029352dfcc5524600d88caa06c81691b60fc927d60668de08acbedbc1a10436

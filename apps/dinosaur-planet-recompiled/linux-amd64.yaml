@@ -26,3 +26,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/DinosaurPlanetRecomp/dino-recomp/725b2ede9cacc57968e0a028efed8df9235ba483/icons/512.png
+    sha256: 9395ddd6ea41cb35fcecfb82287ec77a7f39b8c3627f3a676a9d82ee650247e8

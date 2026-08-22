@@ -30,4 +30,5 @@ desktop:
   enabled: true
   categories:
     - Development
-  icon: bin/goland.svg
+  icon:
+    path: bin/goland.svg
