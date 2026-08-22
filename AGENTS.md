@@ -26,13 +26,13 @@ This repository is the official TarLink application registry. Keep it declarativ
 ## Pre-1.0 policy
 
 - Before TarLink `v1.0.0`, do not add compatibility layers, legacy manifest forms, fallback behavior, or migration files unless explicitly requested.
+- Registry changes use a branch and pull request even before TarLink `v1.0.0`; the core repository's pre-1.0 direct-to-main policy does not apply here.
 
 ## Agents and Git
 
 - Worker/subagents may research, edit, and validate their assigned manifests, but must not commit, push, tag, publish releases, or change repository settings.
-- Before TarLink `v1.0.0`, the orchestrating agent should commit and push validated task changes directly to `main` unless the user says otherwise.
-- Work preparing or targeting TarLink `v1.0.0` must use a branch and pull request.
-- After TarLink `v1.0.0`, all changes to `main` must go through branches and pull requests.
+- All registry changes must use a branch and pull request. Push the branch and open or update the pull request only after full structural validation and changed-artifact validation against the branch's starting `main` HEAD have passed.
+- Merge only after the required pull-request CI checks are green.
 - Never commit unrelated pre-existing changes.
 - Do not create tags/releases or change release workflow unless explicitly requested.
 
@@ -54,7 +54,16 @@ tarlink registry validate .
 CI must continue using the pinned TarLink validator rather than a second schema implementation. If authoritative provenance or an exact supported artifact cannot be established, do not create the manifest.
 
 Use TarLink-provided tooling: structurally validate the entire registry on
-every change, and materialize only new or materially changed artifacts. Never
+every change, and materialize only new or materially changed artifacts. Before
+opening or pushing a registry change, run the canonical changed-artifact check
+against the branch's starting `main` HEAD:
+
+```sh
+./scripts/check-registry.sh <registry-path> --changed-from <STARTING_REGISTRY_HEAD>
+```
+
+This exercises materially changed artifacts through TarLink's real download,
+checksum, archive, install, integration, state, and uninstall lifecycle. Never
 execute third-party application binaries. `original-game-data` is informational
 metadata and is not a rejection reason. The validator pin must target a
 compatible published TarLink release. Do not add local scripts or tooling for
