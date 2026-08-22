@@ -27,4 +27,6 @@ application:
     - name: steam-rom-manager
       path: appimage
 desktop:
-  enabled: false
+  enabled: true
+  categories:
+    - Game

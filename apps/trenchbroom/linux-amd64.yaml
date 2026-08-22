@@ -21,4 +21,8 @@ application:
   executables:
     - name: trenchbroom
       path: TrenchBroom.AppImage
-desktop: {enabled: false}
+desktop:
+  enabled: true
+  categories:
+    - Graphics
+    - Development

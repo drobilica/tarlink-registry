@@ -22,4 +22,7 @@ application:
   executables:
     - name: 2ship
       path: 2ship.appimage
-desktop: {enabled: false}
+desktop:
+  enabled: true
+  categories:
+    - Game

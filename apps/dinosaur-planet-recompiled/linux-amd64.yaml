@@ -22,4 +22,7 @@ application:
   executables:
     - name: dinosaur-planet-recompiled
       path: appimage
-desktop: {enabled: false}
+desktop:
+  enabled: true
+  categories:
+    - Game
