@@ -50,3 +50,6 @@ desktop:
   categories:
     - Game
     - Emulator
+  icon:
+    url: https://raw.githubusercontent.com/PCSX2/pcsx2/bc8151d2a46d4aba039ea5580afbfc7bfcf6d730/bin/resources/icons/AppIconLarge.png
+    sha256: 956278a74b5ed2e6ea7a17dfa95f984282af3252a61838e7cb4cf2e0ed80ca87

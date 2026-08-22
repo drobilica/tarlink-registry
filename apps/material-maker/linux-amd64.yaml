@@ -24,4 +24,5 @@ application:
 desktop:
   enabled: true
   categories: [Graphics, Development]
-  icon: examples/mm_icon.png
+  icon:
+    path: examples/mm_icon.png

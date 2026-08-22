@@ -26,3 +26,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/HarbourMasters/2ship2harkinian/acfd617302ebb74e63f26f0049b53400a644c8e8/mm/linux/2s2hIcon.png
+    sha256: 7e71a3c899f64ea760c6899e4fc282817d6a989fd976feaec66865958f3819e0

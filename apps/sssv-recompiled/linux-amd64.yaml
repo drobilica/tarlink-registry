@@ -33,4 +33,5 @@ desktop:
   enabled: true
   categories:
     - Game
-  icon: assets/Logo.svg
+  icon:
+    path: assets/Logo.svg

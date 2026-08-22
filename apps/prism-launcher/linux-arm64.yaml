@@ -30,3 +30,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/PrismLauncher/PrismLauncher/8ae894c7b1f74a58405a2dabd5614dae4ef3f08c/program_info/org.prismlauncher.PrismLauncher_256.png
+    sha256: 91f0250a25990bb0c58b07ee61d183ee7d2a8630e4e05d5b7a73cf4096dd6eee

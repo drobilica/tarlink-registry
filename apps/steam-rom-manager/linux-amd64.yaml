@@ -30,3 +30,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/SteamGridDB/steam-rom-manager/7f0f4024bf829a22a2fba56c6e6dce5182b76af4/src/assets/icons/512x512.png
+    sha256: 371dbd9c9dbee38018ad32cff823660c91407f6b23ac7eec7d8860f5f271daaa

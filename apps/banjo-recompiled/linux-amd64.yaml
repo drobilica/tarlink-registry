@@ -33,4 +33,5 @@ desktop:
   enabled: true
   categories:
     - Game
-  icon: assets/Banjo.svg
+  icon:
+    path: assets/Banjo.svg

@@ -34,4 +34,5 @@ desktop:
   categories:
     - Game
     - Emulator
-  icon: icons/hicolor/scalable/apps/org.dosbox-staging.dosbox-staging.svg
+  icon:
+    path: icons/hicolor/scalable/apps/org.dosbox-staging.dosbox-staging.svg

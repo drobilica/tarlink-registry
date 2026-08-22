@@ -26,3 +26,6 @@ desktop:
   categories:
     - Graphics
     - Development
+  icon:
+    url: https://raw.githubusercontent.com/mapeditor/tiled/1fd984638f9898af920103799bcd68b467287295/src/tiledapp/images/tiled.xcassets/tiled-icon-mac.appiconset/icon_512x512.png
+    sha256: 0dcc05e23af27bff7c67081d6c938af3994dd28b349a7d7ef5bbc7b60ecb37a9

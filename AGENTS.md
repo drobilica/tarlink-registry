@@ -16,8 +16,8 @@ This repository is the official TarLink application registry. Keep it declarativ
 - Keep the repository data-only. Do not add a parser, generated index, Go module, scripts, installers, hooks, commands, source-policy mirror, or registry-local validation implementation.
 - Manifests remain strict schema v3 files at `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml`.
 - Platform resolution is exact. Never add compatibility filenames, architecture fallback, or a manifest for an upstream platform that does not exist.
-- Use only authoritative upstream HTTPS release URLs and authoritative upstream checksum provenance.
-- Use the exact secure checksum published by authoritative upstream for the exact artifact: currently lowercase SHA-256 or SHA-512 only. Never invent, locally derive, substitute, convert, or copy a digest from an untrusted mirror or different artifact. If upstream publishes both supported algorithms, use its canonical or recommended source rather than choosing numerically.
+- Application/release artifacts: use only authoritative upstream HTTPS release URLs and authoritative upstream checksum provenance. Use the exact secure checksum published by authoritative upstream for the exact artifact: currently lowercase SHA-256 or SHA-512 only. Never invent, locally derive, substitute, convert, or copy a digest from an untrusted mirror or different artifact. If upstream publishes both supported algorithms, use its canonical or recommended source rather than choosing numerically.
+- External desktop icons: these are separate integration resources, not release artifacts. Their URLs must satisfy TarLink's immutable upstream URL policy, and each requires a lowercase SHA-256 integrity pin over the exact immutable icon bytes. Registry maintainers may compute and record this pin because upstream projects are not required to publish icon checksums; it is not upstream checksum provenance and must never be represented as such.
 - Manifests must not contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations.
 - Keep shared metadata identical across platform manifests for the same application.
 - Unsupported applications or platforms remain unsupported rather than weakening the manifest or trust model.
@@ -66,8 +66,8 @@ This exercises materially changed artifacts through TarLink's real download,
 checksum, archive, install, integration, state, and uninstall lifecycle. Never
 execute third-party application binaries. `original-game-data` is informational
 metadata and is not a rejection reason. The validator pin must target a
-compatible published TarLink release. Do not add local scripts or tooling for
-these checks.
+compatible published TarLink release or the exact immutable commit that is the
+pending release target. Do not add local scripts or tooling for these checks.
 
 Candidate research lives in TarLink, not this registry. Before repeating
 candidate research, consult TarLink's canonical research commands and its

@@ -32,3 +32,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/4a7ee146caab8888eb31e56a33c0559db89b17bd/resources/logo/icon_x512.png
+    sha256: 14547c761454ddaeaed45a798d33d7354105e9d47095ab240bd131385f27ecec

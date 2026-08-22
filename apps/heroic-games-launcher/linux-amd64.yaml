@@ -30,4 +30,5 @@ desktop:
   enabled: true
   categories:
     - Game
-  icon: resources/app.asar.unpacked/build/icon.png
+  icon:
+    path: resources/app.asar.unpacked/build/icon.png
