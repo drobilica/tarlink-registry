@@ -1,0 +1,25 @@
+schema: 3
+id: dinosaur-planet-recompiled
+name: "Dinosaur Planet: Recompiled"
+summary: Native recompile of Dinosaur Planet
+homepage: https://github.com/DinosaurPlanetRecomp/dino-recomp
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "0.3.0"}}
+  releases:
+    - channel: stable
+      version: "0.3.0"
+      url: https://github.com/DinosaurPlanetRecomp/dino-recomp/releases/download/v0.3.0/DinosaurPlanetRecompiled-v0.3.0-Linux-x64.AppImage
+      verification:
+        algorithm: sha256
+        digest: b39d08cf89627ad8172945f1ed8d638d9df724fa2ab5cb87cd0e6cd8e4cba1d9
+        source: https://api.github.com/repos/DinosaurPlanetRecomp/dino-recomp/releases/assets/434119047
+      archive: appimage
+application:
+  executables:
+    - name: dinosaur-planet-recompiled
+      path: appimage
+desktop: {enabled: false}

@@ -1,0 +1,28 @@
+schema: 3
+id: goemon64-recomp
+name: Goemon64Recomp
+summary: Native recompile of Mystical Ninja Starring Goemon
+homepage: https://github.com/klorfmorf/Goemon64Recomp
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "0.2.0-dev"}}
+  releases:
+    - channel: stable
+      version: "0.2.0-dev"
+      url: https://github.com/klorfmorf/Goemon64Recomp/releases/download/v0.2.0-dev/Goemon64Recompiled-Linux-X64-Release.zip
+      verification:
+        algorithm: sha256
+        digest: 73e0deb9fab6deb40365708ca4c8ef5ef2d06e54160a9eb089655b063b361f0d
+        source: https://api.github.com/repos/klorfmorf/Goemon64Recomp/releases/assets/348684379
+      archive: zip
+      nested-archive:
+        path: Goemon64Recompiled.tar.gz
+        archive: tar.gz
+application:
+  executables:
+    - name: Goemon64Recompiled
+      path: Goemon64Recompiled
+desktop: {enabled: true, categories: [Game]}

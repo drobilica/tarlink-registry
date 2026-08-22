@@ -1,0 +1,25 @@
+schema: 3
+id: 2ship2harkinian
+name: "2Ship2Harkinian"
+summary: "Native recompile of The Legend of Zelda: Majora's Mask"
+homepage: https://github.com/HarbourMasters/2ship2harkinian
+categories: [games, recompilation]
+requirements: [original-game-data]
+platform: {os: linux, arch: amd64}
+release:
+  default-channel: stable
+  channels: {stable: {current: "4.0.2"}}
+  releases:
+    - channel: stable
+      version: "4.0.2"
+      url: https://github.com/HarbourMasters/2ship2harkinian/releases/download/4.0.2/2Ship-Keiichi-Charlie-Linux.zip
+      verification:
+        algorithm: sha256
+        digest: c97fc9440f5584f350c911ec7385778394aa62f651c6613cee0b74c0141932cb
+        source: https://api.github.com/repos/HarbourMasters/2ship2harkinian/releases/assets/365002966
+      archive: zip
+application:
+  executables:
+    - name: 2ship
+      path: 2ship.appimage
+desktop: {enabled: false}
