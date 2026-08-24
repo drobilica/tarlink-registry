@@ -7,8 +7,16 @@ categories: [game-development, graphics]
 platform: {os: linux, arch: amd64}
 release:
   default-channel: stable
-  channels: {stable: {current: "2026.1"}}
+  channels: {stable: {current: "2026.2"}}
   releases:
+    - channel: stable
+      version: "2026.2"
+      url: https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.2/TrenchBroom-Linux-x86_64-v2026.2-Release.zip
+      verification:
+        algorithm: sha256
+        digest: 721fe0ad3d7ea5bdfd81c38526105c584fd20abefcbf57d60f843ad751f41ef6
+        source: https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/523376950
+      archive: zip
     - channel: stable
       version: "2026.1"
       url: https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.1/TrenchBroom-Linux-x86_64-v2026.1-Release.zip

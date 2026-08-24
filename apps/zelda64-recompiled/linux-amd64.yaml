@@ -26,8 +26,11 @@ application:
   executables:
     - name: Zelda64Recompiled
       path: Zelda64Recompiled
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: Zelda64Recompiled
+  working-directory: application-root
   categories: [Game]
   icon:
     url: https://raw.githubusercontent.com/Zelda64Recomp/Zelda64Recomp/54950a10408599d1d63802ee21cc2c4b05bfd378/icons/512.png

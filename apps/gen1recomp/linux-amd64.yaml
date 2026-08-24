@@ -10,7 +10,7 @@ requirements:
   - original-game-data
 platform:
   os: linux
-  arch: arm64
+  arch: amd64
 release:
   default-channel: stable
   channels:
@@ -19,24 +19,16 @@ release:
   releases:
     - channel: stable
       version: "0.2.20"
-      url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux-arm64.AppImage
+      url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux.zip
       verification:
         algorithm: sha256
-        digest: 023276a1fabd43f8d074d4615fc3ea013f59c39ce1defd66725224d4619cc748
+        digest: cdd493937d8b5b6f6b377440026c15285b070cc64b05b67a9fcacf8cdc39cca8
         source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/sha256sums.txt
-      archive: appimage
-    - channel: stable
-      version: "0.2.19"
-      url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/gen1recomp-0.2.19-linux-arm64.AppImage
-      verification:
-        algorithm: sha256
-        digest: e0d7dc6cc6cab29d69bfac22aa90a4ea1cf10efd6a47c289406e54ad28803112
-        source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/sha256sums.txt
-      archive: appimage
+      archive: zip
 application:
   executables:
     - name: gen1recomp
-      path: appimage
+      path: gen1recomp-x86_64.AppImage
 desktop:
   enabled: true
   categories:
