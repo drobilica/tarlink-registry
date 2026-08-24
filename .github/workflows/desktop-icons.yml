@@ -1,0 +1,78 @@
+name: Maintain desktop icons
+
+on:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: registry-desktop-icons
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out registry main
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Check out published TarLink fixer
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: drobilica/tarlink
+          ref: 177b9e042365c380e2a73b297bc74057bcd4809d # TarLink v0.9.6 release
+          path: .tarlink
+
+      - name: Set up Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: .tarlink/go.mod
+          cache-dependency-path: .tarlink/go.sum
+
+      - name: Find existing maintenance PR
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count=$(gh pr list --state open --search 'in:title "verified desktop icons"' --json number --jq 'length')
+          echo "exists=$([[ "$count" != 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Repair missing icons
+        if: steps.existing.outputs.exists != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: (cd .tarlink && go run ./cmd/tarlink registry icons "$GITHUB_WORKSPACE" --fix --json) > "$RUNNER_TEMP/icon-report.json"
+
+      - name: Detect manifest changes
+        if: steps.existing.outputs.exists != 'true'
+        id: diff
+        run: |
+          if git diff --quiet -- apps; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Validate repaired registry
+        if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
+        run: |
+          (cd .tarlink && go run ./cmd/tarlink registry validate "$GITHUB_WORKSPACE")
+          .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --changed-from "$GITHUB_SHA"
+
+      - name: Create maintenance branch and PR
+        if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="automation/desktop-icons-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git add apps
+          git diff --cached --quiet && exit 0
+          git config user.name tarlink-bot
+          git config user.email tarlink-bot@users.noreply.github.com
+          git commit -m "maint: repair verified desktop icons"
+          git push --set-upstream origin "$branch"
+          gh pr create --title "maint: repair verified desktop icons" --body-file "$RUNNER_TEMP/icon-report.json" --base main --head "$branch"

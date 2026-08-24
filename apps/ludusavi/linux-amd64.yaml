@@ -29,3 +29,6 @@ application:
 desktop:
   enabled: true
   categories: [Utility]
+  icon:
+    url: https://raw.githubusercontent.com/mtkennerly/ludusavi/8844d7b67e784909f4ef42f7bfb047b700fe7b15/assets/icon.png
+    sha256: a8eb8375fae6120f3233e7f03a9e120c9b0484890191c6758ffe63ff7affcf84
