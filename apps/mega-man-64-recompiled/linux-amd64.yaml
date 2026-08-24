@@ -26,4 +26,9 @@ application:
   executables:
     - name: MegaMan64Recompiled
       path: MegaMan64Recompiled
-desktop: {enabled: true, categories: [Game]}
+desktop:
+  enabled: true
+  categories: [Game]
+  icon:
+    url: https://raw.githubusercontent.com/MegaMan64Recomp/MegaMan64Recompiled/62d2e3e4061490a85e0332af63d9a858f10cd0d2/icons/512.png
+    sha256: b21e87ebbd108f334bff24d19e9ce1295ee10b48a19175e5a06645cc88788a16

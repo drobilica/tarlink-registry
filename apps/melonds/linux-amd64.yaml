@@ -32,3 +32,6 @@ application:
 desktop:
   enabled: true
   categories: [Game, Emulator]
+  icon:
+    url: https://raw.githubusercontent.com/melonDS-emu/melonDS/b86390e4428bf38ce4c1ce0e9ca446d6d25955e8/res/melon512.png
+    sha256: 0ce799fcd26e49e94303a25d758c3028039bd78c436b034b0575f76d0e950a87
