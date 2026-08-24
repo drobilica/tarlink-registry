@@ -29,8 +29,11 @@ application:
   executables:
     - name: SSSVRecompiled
       path: SSSVRecompiled
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: SSSVRecompiled
+  working-directory: application-root
   categories:
     - Game
   icon:

@@ -29,8 +29,11 @@ application:
   executables:
     - name: BanjoRecompiled
       path: BanjoRecompiled
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: BanjoRecompiled
+  working-directory: application-root
   categories:
     - Game
   icon:
