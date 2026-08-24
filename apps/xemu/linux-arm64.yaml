@@ -29,6 +29,7 @@ application:
   executables:
     - name: xemu
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

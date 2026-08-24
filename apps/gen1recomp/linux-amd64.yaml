@@ -29,8 +29,10 @@ application:
   executables:
     - name: gen1recomp
       path: gen1recomp-x86_64.AppImage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: gen1recomp
   categories:
     - Game
   icon:

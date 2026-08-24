@@ -26,6 +26,7 @@ application:
   executables:
     - name: prismlauncher
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

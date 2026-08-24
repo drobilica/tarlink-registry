@@ -26,6 +26,7 @@ application:
   executables:
     - name: heroic
       path: heroic
+      create-bin-link: true
 desktop:
   enabled: true
   categories:
