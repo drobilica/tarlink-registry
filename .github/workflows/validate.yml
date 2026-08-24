@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: af8ae15 # TarLink v0.10.0 compatible validator commit
+          ref: af8ae15d71320c5dadc5ce435927d7c59a672803 # TarLink v0.10.0 compatible validator commit
           path: .tarlink
 
       - name: Set up Go
@@ -62,7 +62,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: drobilica/tarlink
-          ref: af8ae15 # TarLink v0.10.0 compatible validator commit
+          ref: af8ae15d71320c5dadc5ce435927d7c59a672803 # TarLink v0.10.0 compatible validator commit
           path: .tarlink
 
       - name: Set up Go
