@@ -34,6 +34,7 @@ application:
   executables:
     - name: r2modman
       path: r2modman
+      create-bin-link: true
 desktop:
   enabled: true
   categories: [Game]

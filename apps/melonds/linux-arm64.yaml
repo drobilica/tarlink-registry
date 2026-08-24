@@ -29,6 +29,7 @@ application:
   executables:
     - name: melonDS
       path: melonDS
+      create-bin-link: true
 desktop:
   enabled: true
   categories: [Game, Emulator]

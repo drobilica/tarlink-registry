@@ -28,6 +28,7 @@ application:
   executables:
     - name: openrct2
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

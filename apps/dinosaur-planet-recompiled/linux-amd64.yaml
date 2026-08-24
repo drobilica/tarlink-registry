@@ -22,8 +22,10 @@ application:
   executables:
     - name: dinosaur-planet-recompiled
       path: appimage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: dinosaur-planet-recompiled
   categories:
     - Game
   icon:

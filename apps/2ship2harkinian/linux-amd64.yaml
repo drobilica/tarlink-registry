@@ -30,8 +30,10 @@ application:
   executables:
     - name: 2ship
       path: 2ship.appimage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: 2ship
   categories:
     - Game
   icon:

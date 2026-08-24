@@ -29,6 +29,7 @@ application:
   executables:
     - name: dosbox
       path: dosbox
+      create-bin-link: true
 desktop:
   enabled: true
   categories:
