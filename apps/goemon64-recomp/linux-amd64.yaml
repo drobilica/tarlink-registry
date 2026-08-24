@@ -25,4 +25,9 @@ application:
   executables:
     - name: Goemon64Recompiled
       path: Goemon64Recompiled
-desktop: {enabled: true, categories: [Game]}
+desktop:
+  enabled: true
+  categories: [Game]
+  icon:
+    url: https://raw.githubusercontent.com/klorfmorf/Goemon64Recomp/11d13f809074bc25bacd2f13c28cdc17129d778c/icons/512.png
+    sha256: 101788aa50b860a4ba71a864aad6e933bd263d3006b238256b038cfa2a684369

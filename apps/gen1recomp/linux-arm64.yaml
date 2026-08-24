@@ -33,3 +33,6 @@ desktop:
   enabled: true
   categories:
     - Game
+  icon:
+    url: https://raw.githubusercontent.com/bryanthaboi/gen1recomp/116a6ba450dd65f25c9be150952fc3c27be904c0/mobile/android/love/src/jni/SDL2/Xcode-iOS/Demos/Icon.png
+    sha256: 518d4922881cb735d0d81391cb778898a567052f7e7dcb724fd633fea36626dc

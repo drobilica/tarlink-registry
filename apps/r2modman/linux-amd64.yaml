@@ -29,3 +29,6 @@ application:
 desktop:
   enabled: true
   categories: [Game]
+  icon:
+    url: https://raw.githubusercontent.com/ebkr/r2modmanPlus/4a36a32257ac07a0bb324386c9b171634a520af5/src-electron/icons/linux-512x512.png
+    sha256: e10669586873faeb4465ceb02609d3e907dd777b0cf5ca665170740b04de46e3

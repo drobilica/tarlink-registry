@@ -31,3 +31,6 @@ application:
 desktop:
   enabled: true
   categories: [Game]
+  icon:
+    url: https://raw.githubusercontent.com/diasurgical/devilutionx/7223eeac9e8274fbf665b4de86fda26d3b22c52f/Packaging/resources/icon.png
+    sha256: d0cd417af6bfa753d0f90f57c4270f05e90c0ae8136b414143489957ee79b62b
