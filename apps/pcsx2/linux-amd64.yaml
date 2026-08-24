@@ -15,7 +15,7 @@ release:
     stable:
       current: "2.6.3"
     nightly:
-      current: "2.7.523"
+      current: "2.7.524"
   releases:
     - channel: stable
       version: "2.6.3"
@@ -24,6 +24,14 @@ release:
         algorithm: sha256
         digest: 8ce7de8613c17b00b01028a512dd1b81998b6626ebbe93a067e0eb20aeedd5bf
         source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/347252753
+      archive: appimage
+    - channel: nightly
+      version: "2.7.524"
+      url: https://github.com/PCSX2/pcsx2/releases/download/v2.7.524/pcsx2-v2.7.524-linux-appimage-x64-Qt.AppImage
+      verification:
+        algorithm: sha256
+        digest: 21e54d0d42e9bf93a6e00bd97fd84562bc7ddd9f2b0713857448cf76250ca749
+        source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/524079812
       archive: appimage
     - channel: nightly
       version: "2.7.519"

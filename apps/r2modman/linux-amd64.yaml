@@ -12,8 +12,16 @@ release:
   default-channel: stable
   channels:
     stable:
-      current: "3.2.18"
+      current: "3.2.19"
   releases:
+    - channel: stable
+      version: "3.2.19"
+      url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.tar.gz
+      verification:
+        algorithm: sha256
+        digest: 92d255935e2d23edb72122254c379b0500c3d2f8ab51265e0d89d4b7943b5a5c
+        source: https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523454411
+      archive: tar.gz
     - channel: stable
       version: "3.2.18"
       url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.tar.gz
