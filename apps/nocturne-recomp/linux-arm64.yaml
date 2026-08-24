@@ -32,3 +32,4 @@ application:
 desktop:
   enabled: true
   categories: [Game]
+  icon: null
