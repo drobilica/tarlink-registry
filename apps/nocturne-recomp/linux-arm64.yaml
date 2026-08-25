@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: nocturne-recomp
 name: NocturneRecomp
 summary: "Native recompiled Castlevania: Symphony of the Night runtime"
@@ -29,7 +30,10 @@ application:
   executables:
     - name: nocturnerecomp
       path: nocturnerecomp
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: nocturnerecomp
+  working-directory: application-root
   categories: [Game]
   icon: null

@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: openttd
 name: OpenTTD
 summary: Open source simulation game based upon Transport Tycoon Deluxe
@@ -26,6 +27,7 @@ application:
   executables:
     - name: openttd
       path: openttd
+      create-bin-link: true
 desktop:
   enabled: true
   categories: [Game]

@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: prism-launcher
 name: Prism Launcher
 summary: Minecraft launcher for managing instances, accounts, mods, and modpacks
@@ -26,6 +27,7 @@ application:
   executables:
     - name: prismlauncher
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

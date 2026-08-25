@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: devilutionx
 name: DevilutionX
 summary: Modern Diablo and Hellfire source port
@@ -28,6 +29,7 @@ application:
   executables:
     - name: devilutionx
       path: devilutionx
+      create-bin-link: true
 desktop:
   enabled: true
   categories: [Game]

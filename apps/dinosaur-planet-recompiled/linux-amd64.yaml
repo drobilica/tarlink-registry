@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: dinosaur-planet-recompiled
 name: "Dinosaur Planet: Recompiled"
 summary: Native recompile of Dinosaur Planet
@@ -22,8 +23,10 @@ application:
   executables:
     - name: dinosaur-planet-recompiled
       path: appimage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: dinosaur-planet-recompiled
   categories:
     - Game
   icon:

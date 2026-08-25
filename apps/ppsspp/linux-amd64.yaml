@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: ppsspp
 name: PPSSPP
 summary: PlayStation Portable emulator
@@ -29,6 +30,7 @@ application:
   executables:
     - name: ppsspp
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

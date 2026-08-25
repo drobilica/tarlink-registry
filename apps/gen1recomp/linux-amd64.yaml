@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: gen1recomp
 name: Gen1Recomp
 summary: Native LÖVE2D recreation of Pokémon Red, Blue, and Yellow
@@ -29,8 +30,10 @@ application:
   executables:
     - name: gen1recomp
       path: gen1recomp-x86_64.AppImage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: gen1recomp
   categories:
     - Game
   icon:

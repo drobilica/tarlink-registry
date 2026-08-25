@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: 2ship2harkinian
 name: "2Ship2Harkinian"
 summary: "Native recompile of The Legend of Zelda: Majora's Mask"
@@ -30,8 +31,10 @@ application:
   executables:
     - name: 2ship
       path: 2ship.appimage
+      create-bin-link: false
 desktop:
   enabled: true
+  executable: 2ship
   categories:
     - Game
   icon:

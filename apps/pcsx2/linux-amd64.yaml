@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: pcsx2
 name: PCSX2
 summary: PlayStation 2 emulator
@@ -53,6 +54,7 @@ application:
   executables:
     - name: pcsx2
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

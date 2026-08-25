@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: steam-rom-manager
 name: Steam ROM Manager
 summary: Bulk game importer and artwork manager for Steam
@@ -26,6 +27,7 @@ application:
   executables:
     - name: steam-rom-manager
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

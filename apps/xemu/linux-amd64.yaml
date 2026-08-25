@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: xemu
 name: xemu
 summary: Original Xbox emulator
@@ -29,6 +30,7 @@ application:
   executables:
     - name: xemu
       path: appimage
+      create-bin-link: true
 desktop:
   enabled: true
   categories:

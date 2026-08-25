@@ -1,4 +1,5 @@
 schema: 3
+revision: 2
 id: heroic-games-launcher
 name: Heroic Games Launcher
 summary: Open source launcher for Epic, GOG, and Amazon games
@@ -26,6 +27,7 @@ application:
   executables:
     - name: heroic
       path: heroic
+      create-bin-link: true
 desktop:
   enabled: true
   categories:
