@@ -4,7 +4,7 @@ The [official TarLink registry](https://github.com/drobilica/tarlink-registry) i
 
 ## How it works
 
-Each application lives under `apps/<id>/` with one strict schema-v4 manifest. Shared application metadata appears once, while each supported architecture has an explicit platform definition:
+Each application lives under `apps/<id>/` with one strict schema-v5 manifest. Shared application, release, and desktop metadata appears once; platform availability is derived from exact artifact keys in retained releases:
 
 ```text
 apps/
@@ -14,9 +14,9 @@ apps/
     └── manifest.yaml
 ```
 
-Platform resolution is exact: Linux amd64 selects `platforms.linux-amd64`, and Linux arm64 selects `platforms.linux-arm64`. Unsupported platforms are omitted; there is no architecture fallback. The `apps/` directory and TarLink are the authoritative catalog; this README intentionally does not duplicate application names or versions.
+Platform resolution is exact: Linux amd64 selects `artifacts.linux-amd64`, and Linux arm64 selects `artifacts.linux-arm64` for the selected release. Unsupported platforms are omitted; there is no architecture fallback. The `apps/` directory and TarLink are the authoritative catalog; this README intentionally does not duplicate application names or versions.
 
-Manifests are strict schema v4 and must declare an official upstream HTTPS
+Manifests are strict schema v5 and must declare an official upstream HTTPS
 release artifact, an accepted archive type (`tar.gz`, `tar.xz`, `zip`, or
 `appimage`), and the exact lowercase SHA-256 or SHA-512 digest approved in this
 registry for those bytes. Maintainers may calculate that digest locally;

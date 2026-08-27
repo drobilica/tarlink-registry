@@ -1,43 +1,38 @@
-schema: 4
-id: goemon64-recomp
-name: Goemon64Recomp
-summary: Native recompile of Mystical Ninja Starring Goemon
-homepage: https://github.com/klorfmorf/Goemon64Recomp
+schema: 5
+id: "goemon64-recomp"
+name: "Goemon64Recomp"
+summary: "Native recompile of Mystical Ninja Starring Goemon"
+homepage: "https://github.com/klorfmorf/Goemon64Recomp"
 categories:
-- games
-- recompilation
+  - "games"
+  - "recompilation"
 requirements:
-- original-game-data
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 0.2.0-dev
-      releases:
-      - channel: stable
-        version: 0.2.0-dev
-        url: https://github.com/klorfmorf/Goemon64Recomp/releases/download/v0.2.0-dev/Goemon64Recompiled-Linux-X64-Release.zip
-        verification:
-          algorithm: sha256
-          digest: 73e0deb9fab6deb40365708ca4c8ef5ef2d06e54160a9eb089655b063b361f0d
-          source: https://api.github.com/repos/klorfmorf/Goemon64Recomp/releases/assets/348684379
-        archive: zip
-        nested-archive:
-          path: Goemon64Recompiled.tar.gz
-          archive: tar.gz
-    application:
-      executables:
-      - name: Goemon64Recompiled
-        path: Goemon64Recompiled
-        create-bin-link: false
-    desktop:
-      enabled: true
-      executable: Goemon64Recompiled
-      working-directory: application-root
-      categories:
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/klorfmorf/Goemon64Recomp/11d13f809074bc25bacd2f13c28cdc17129d778c/icons/512.png
-        sha256: 101788aa50b860a4ba71a864aad6e933bd263d3006b238256b038cfa2a684369
+  - "original-game-data"
+release:
+  current: "0.2.0-dev"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.2.0-dev"
+      nested-archive:
+        path: "Goemon64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/klorfmorf/Goemon64Recomp/releases/download/v0.2.0-dev/Goemon64Recompiled-Linux-X64-Release.zip"
+          verification:
+            digest: "73e0deb9fab6deb40365708ca4c8ef5ef2d06e54160a9eb089655b063b361f0d"
+            source: "https://api.github.com/repos/klorfmorf/Goemon64Recomp/releases/assets/348684379"
+application:
+  executable:
+    path: "Goemon64Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "Goemon64Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/klorfmorf/Goemon64Recomp/11d13f809074bc25bacd2f13c28cdc17129d778c/icons/512.png"
+    sha256: "101788aa50b860a4ba71a864aad6e933bd263d3006b238256b038cfa2a684369"

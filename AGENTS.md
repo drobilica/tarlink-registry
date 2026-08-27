@@ -14,12 +14,12 @@ This repository is the official TarLink application registry. Keep it declarativ
 ## Registry contract
 
 - Keep the repository data-only. Do not add a parser, generated index, Go module, scripts, installers, hooks, commands, source-policy mirror, or registry-local validation implementation.
-- Manifests are strict schema v4 files at `apps/<id>/manifest.yaml`, with shared metadata once and explicit `platforms.linux-amd64` and/or `platforms.linux-arm64` definitions.
+- Manifests are strict schema v5 files at `apps/<id>/manifest.yaml`, with shared metadata once and exact artifact keys under retained releases.
 - Platform resolution is exact. Unsupported platforms are omitted. Never add compatibility filenames, architecture fallback, placeholder architectures, or a manifest for an upstream platform that does not exist.
-- Application/release artifacts: use only official upstream portable Linux artifacts over HTTPS and record the exact lowercase SHA-256 or SHA-512 digest approved for those bytes. Maintainers may calculate the digest locally through TarLink's bounded tooling; upstream checksum publication is optional. For new local calculations prefer SHA-256 without rehashing existing valid manifests. Schema-v4 `verification.source` is honest informational official release or artifact-origin metadata, not independent checksum provenance; never fabricate a checksum URL.
+- Application/release artifacts: use only official upstream portable Linux artifacts over HTTPS and record the exact lowercase SHA-256 or SHA-512 digest approved for those bytes. Maintainers may calculate the digest locally through TarLink's bounded tooling; upstream checksum publication is optional. For new local calculations prefer SHA-256 without rehashing existing valid manifests. Schema-v5 `verification.source` is honest informational official release or artifact-origin metadata, not independent checksum provenance; never fabricate a checksum URL.
 - External desktop icons: these are separate integration resources, not release artifacts. Their URLs must satisfy TarLink's immutable upstream URL policy, and each requires a lowercase SHA-256 integrity pin over the exact immutable icon bytes. Registry maintainers may compute and record this pin because upstream projects are not required to publish icon checksums; it is not upstream checksum provenance and must never be represented as such.
 - Manifests must not contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations.
-- Keep shared application metadata in the single application manifest; release, revision, application, and desktop details belong under their exact platform keys.
+- Keep shared application, release, executable, and desktop metadata in the single application manifest; platform-specific facts belong in exact release artifact and executable-path maps.
 - Unsupported applications or platforms remain unsupported rather than weakening the manifest or trust model.
 - TarLink owns the schema and validator; do not duplicate them here.
 

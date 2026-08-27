@@ -1,44 +1,39 @@
-schema: 4
-id: trenchbroom
-name: TrenchBroom
-summary: Level editor for Quake-engine games
-homepage: https://trenchbroom.github.io
+schema: 5
+id: "trenchbroom"
+name: "TrenchBroom"
+summary: "Level editor for Quake-engine games"
+homepage: "https://trenchbroom.github.io"
 categories:
-- game-development
-- graphics
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: '2026.2'
-      releases:
-      - channel: stable
-        version: '2026.2'
-        url: https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.2/TrenchBroom-Linux-x86_64-v2026.2-Release.zip
-        verification:
-          algorithm: sha256
-          digest: 721fe0ad3d7ea5bdfd81c38526105c584fd20abefcbf57d60f843ad751f41ef6
-          source: https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/523376950
-        archive: zip
-      - channel: stable
-        version: '2026.1'
-        url: https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.1/TrenchBroom-Linux-x86_64-v2026.1-Release.zip
-        verification:
-          algorithm: sha256
-          digest: c92f325668ee5d4e8df375580926ef371013b5624255da3e47c22d134bdfcd2c
-          source: https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/451595061
-        archive: zip
-    application:
-      executables:
-      - name: trenchbroom
-        path: TrenchBroom.AppImage
-    desktop:
-      enabled: true
-      categories:
-      - Graphics
-      - Development
-      icon:
-        url: https://raw.githubusercontent.com/TrenchBroom/TrenchBroom/b8c14a93c6945a389c56ff7bf77e869c16f24895/app/TrenchBroom/resources/linux/icons/icon_512.png
-        sha256: 1029352dfcc5524600d88caa06c81691b60fc927d60668de08acbedbc1a10436
+  - "game-development"
+  - "graphics"
+release:
+  current: "2026.2"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "2026.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.2/TrenchBroom-Linux-x86_64-v2026.2-Release.zip"
+          verification:
+            digest: "721fe0ad3d7ea5bdfd81c38526105c584fd20abefcbf57d60f843ad751f41ef6"
+            source: "https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/523376950"
+    - version: "2026.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TrenchBroom/TrenchBroom/releases/download/v2026.1/TrenchBroom-Linux-x86_64-v2026.1-Release.zip"
+          verification:
+            digest: "c92f325668ee5d4e8df375580926ef371013b5624255da3e47c22d134bdfcd2c"
+            source: "https://api.github.com/repos/TrenchBroom/TrenchBroom/releases/assets/451595061"
+application:
+  executable:
+    path: "TrenchBroom.AppImage"
+    name: "trenchbroom"
+desktop:
+  categories:
+    - "Graphics"
+    - "Development"
+  icon:
+    url: "https://raw.githubusercontent.com/TrenchBroom/TrenchBroom/b8c14a93c6945a389c56ff7bf77e869c16f24895/app/TrenchBroom/resources/linux/icons/icon_512.png"
+    sha256: "1029352dfcc5524600d88caa06c81691b60fc927d60668de08acbedbc1a10436"

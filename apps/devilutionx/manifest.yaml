@@ -1,64 +1,41 @@
-schema: 4
-id: devilutionx
-name: DevilutionX
-summary: Modern Diablo and Hellfire source port
-homepage: https://github.com/diasurgical/DevilutionX
+schema: 5
+id: "devilutionx"
+name: "DevilutionX"
+summary: "Modern Diablo and Hellfire source port"
+homepage: "https://github.com/diasurgical/DevilutionX"
 categories:
-- games
+  - "games"
 requirements:
-- original-game-data
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 1.5.5-appimage
-      releases:
-      - channel: stable
-        version: 1.5.5-appimage
-        url: https://github.com/diasurgical/DevilutionX/releases/download/1.5.5/devilutionx-linux-x86_64.appimage
-        verification:
-          algorithm: sha256
-          digest: 38a88b3e1f127ec8436949a1766937838ba6596a15686773c69c7e0482816c61
-          source: https://api.github.com/repos/diasurgical/DevilutionX/releases/assets/310600314
-        archive: appimage
-    application:
-      executables:
-      - name: devilutionx
-        path: appimage
-        create-bin-link: true
-    desktop:
-      enabled: true
-      categories:
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/diasurgical/devilutionx/7223eeac9e8274fbf665b4de86fda26d3b22c52f/Packaging/resources/icon.png
-        sha256: d0cd417af6bfa753d0f90f57c4270f05e90c0ae8136b414143489957ee79b62b
-  linux-arm64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 1.5.5
-      releases:
-      - channel: stable
-        version: 1.5.5
-        url: https://github.com/diasurgical/DevilutionX/releases/download/1.5.5/devilutionx-linux-aarch64.tar.xz
-        verification:
-          algorithm: sha256
-          digest: 71f34342cd750dc6dec1effefa250e90a5fe0f127e79d4c9c66f4d07706c3442
-          source: https://api.github.com/repos/diasurgical/DevilutionX/releases/assets/316238322
-        archive: tar.xz
-    application:
-      executables:
-      - name: devilutionx
-        path: devilutionx
-        create-bin-link: true
-    desktop:
-      enabled: true
-      categories:
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/diasurgical/devilutionx/7223eeac9e8274fbf665b4de86fda26d3b22c52f/Packaging/resources/icon.png
-        sha256: d0cd417af6bfa753d0f90f57c4270f05e90c0ae8136b414143489957ee79b62b
+  - "original-game-data"
+release:
+  current: "1.5.5"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.5.5"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/diasurgical/DevilutionX/releases/download/1.5.5/devilutionx-linux-x86_64.appimage"
+          verification:
+            digest: "38a88b3e1f127ec8436949a1766937838ba6596a15686773c69c7e0482816c61"
+            source: "https://api.github.com/repos/diasurgical/DevilutionX/releases/assets/310600314"
+          archive: "appimage"
+        linux-arm64:
+          url: "https://github.com/diasurgical/DevilutionX/releases/download/1.5.5/devilutionx-linux-aarch64.tar.xz"
+          verification:
+            digest: "71f34342cd750dc6dec1effefa250e90a5fe0f127e79d4c9c66f4d07706c3442"
+            source: "https://api.github.com/repos/diasurgical/DevilutionX/releases/assets/316238322"
+          archive: "tar.xz"
+application:
+  executable:
+    paths:
+      linux-amd64: "appimage"
+      linux-arm64: "devilutionx"
+    name: "devilutionx"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/diasurgical/devilutionx/7223eeac9e8274fbf665b4de86fda26d3b22c52f/Packaging/resources/icon.png"
+    sha256: "d0cd417af6bfa753d0f90f57c4270f05e90c0ae8136b414143489957ee79b62b"

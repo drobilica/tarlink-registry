@@ -1,65 +1,37 @@
-schema: 4
-id: nocturne-recomp
-name: NocturneRecomp
-summary: 'Native recompiled Castlevania: Symphony of the Night runtime'
-homepage: https://github.com/birabittoh/NocturneRecomp
+schema: 5
+id: "nocturne-recomp"
+name: "NocturneRecomp"
+summary: "Native recompiled Castlevania: Symphony of the Night runtime"
+homepage: "https://github.com/birabittoh/NocturneRecomp"
 categories:
-- games
-- recompilation
+  - "games"
+  - "recompilation"
 requirements:
-- original-game-data
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 1.4.3
-      releases:
-      - channel: stable
-        version: 1.4.3
-        url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-x64.tar.gz
-        verification:
-          algorithm: sha256
-          digest: 77d1ae43e29a8ac8b9a433ec077f3795290c14aff85c6b7f2b2de11d8c7ceff8
-          source: https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434748
-        archive: tar.gz
-    application:
-      executables:
-      - name: nocturnerecomp
-        path: nocturnerecomp
-        create-bin-link: false
-    desktop:
-      enabled: true
-      executable: nocturnerecomp
-      working-directory: application-root
-      categories:
-      - Game
-      icon: null
-  linux-arm64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 1.4.3
-      releases:
-      - channel: stable
-        version: 1.4.3
-        url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-arm64.tar.gz
-        verification:
-          algorithm: sha256
-          digest: 32a4f6bd8ed0af9720cbf7f1c96937a7698db9190d89e5a855e7dac3b02337ba
-          source: https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434752
-        archive: tar.gz
-    application:
-      executables:
-      - name: nocturnerecomp
-        path: nocturnerecomp
-        create-bin-link: false
-    desktop:
-      enabled: true
-      executable: nocturnerecomp
-      working-directory: application-root
-      categories:
-      - Game
-      icon: null
+  - "original-game-data"
+release:
+  current: "1.4.3"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.4.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-x64.tar.gz"
+          verification:
+            digest: "77d1ae43e29a8ac8b9a433ec077f3795290c14aff85c6b7f2b2de11d8c7ceff8"
+            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434748"
+        linux-arm64:
+          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-arm64.tar.gz"
+          verification:
+            digest: "32a4f6bd8ed0af9720cbf7f1c96937a7698db9190d89e5a855e7dac3b02337ba"
+            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434752"
+application:
+  executable:
+    path: "nocturnerecomp"
+    create-bin-link: false
+desktop:
+  executable: "nocturnerecomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"

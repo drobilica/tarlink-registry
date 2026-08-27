@@ -1,34 +1,29 @@
-schema: 4
-id: blender
-name: Blender
-summary: Open-source 3D creation suite
-homepage: https://www.blender.org/
+schema: 5
+id: "blender"
+name: "Blender"
+summary: "Open-source 3D creation suite"
+homepage: "https://www.blender.org/"
 categories:
-- game-development
-- graphics
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 5.2.0
-      releases:
-      - channel: stable
-        version: 5.2.0
-        url: https://download.blender.org/release/Blender5.2/blender-5.2.0-linux-x64.tar.xz
-        verification:
-          algorithm: sha256
-          digest: 96f6c181a30f4950607839dc84d42a354b250d8a0231b098b59b7bc69c351c48
-          source: https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256
-        archive: tar.xz
-    application:
-      executables:
-      - name: blender
-        path: blender
-    desktop:
-      enabled: true
-      icon:
-        path: blender.svg
-      categories:
-      - Graphics
+  - "game-development"
+  - "graphics"
+release:
+  current: "5.2.0"
+  archive: "tar.xz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "5.2.0"
+      artifacts:
+        linux-amd64:
+          url: "https://download.blender.org/release/Blender5.2/blender-5.2.0-linux-x64.tar.xz"
+          verification:
+            digest: "96f6c181a30f4950607839dc84d42a354b250d8a0231b098b59b7bc69c351c48"
+            source: "https://download.blender.org/release/Blender5.2/blender-5.2.0.sha256"
+application:
+  executable:
+    path: "blender"
+desktop:
+  categories:
+    - "Graphics"
+  icon:
+    path: "blender.svg"

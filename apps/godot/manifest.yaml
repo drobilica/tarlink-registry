@@ -1,63 +1,39 @@
-schema: 4
-id: godot
-name: Godot
-summary: Open-source 2D and 3D game engine
-homepage: https://godotengine.org/
+schema: 5
+id: "godot"
+name: "Godot"
+summary: "Open-source 2D and 3D game engine"
+homepage: "https://godotengine.org/"
 categories:
-- game-development
-- development
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 4.7.2
-      releases:
-      - channel: stable
-        version: 4.7.2
-        url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
-        verification:
-          algorithm: sha512
-          digest: 9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65
-          source: https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt
-        archive: zip
-    application:
-      executables:
-      - name: Godot_v4.7.2-stable_linux.x86_64
-        path: Godot_v4.7.2-stable_linux.x86_64
-    desktop:
-      enabled: true
-      categories:
-      - Development
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/godotengine/godot/893cf5cbfe789ae67c9389708e1428141bb39b18/misc/logo/icon.png
-        sha256: 4c7157447b020ecb1a0cb755fe0569620247bf5def9f7c4409f063ac479509a9
-  linux-arm64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 4.7.2
-      releases:
-      - channel: stable
-        version: 4.7.2
-        url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.arm64.zip
-        verification:
-          algorithm: sha512
-          digest: dd59918da086bd49bde2f5450b5e567ff8650cbde9abbd7b8f4ca1197ff8c609baa38834666d032deafb47099078d7822279e2a0e06e5665745468f26533e7e2
-          source: https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt
-        archive: zip
-    application:
-      executables:
-      - name: Godot_v4.7.2-stable_linux.arm64
-        path: Godot_v4.7.2-stable_linux.arm64
-    desktop:
-      enabled: true
-      categories:
-      - Development
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/godotengine/godot/893cf5cbfe789ae67c9389708e1428141bb39b18/misc/logo/icon.png
-        sha256: 4c7157447b020ecb1a0cb755fe0569620247bf5def9f7c4409f063ac479509a9
+  - "game-development"
+  - "development"
+release:
+  current: "4.7.2"
+  archive: "zip"
+  verification:
+    algorithm: "sha512"
+  releases:
+    - version: "4.7.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip"
+          verification:
+            digest: "9aa00f7a605200940bce3027a567b782f49bd8e940dd06ae9e987bd65aee1b1467edd56ed84fcdcbdd44354bf613bdbb4e5d2913e925850368e150c59ed54c65"
+            source: "https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt"
+        linux-arm64:
+          url: "https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.arm64.zip"
+          verification:
+            digest: "dd59918da086bd49bde2f5450b5e567ff8650cbde9abbd7b8f4ca1197ff8c609baa38834666d032deafb47099078d7822279e2a0e06e5665745468f26533e7e2"
+            source: "https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt"
+application:
+  executable:
+    paths:
+      linux-amd64: "Godot_v4.7.2-stable_linux.x86_64"
+      linux-arm64: "Godot_v4.7.2-stable_linux.arm64"
+    name: "godot"
+desktop:
+  categories:
+    - "Development"
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/godotengine/godot/893cf5cbfe789ae67c9389708e1428141bb39b18/misc/logo/icon.png"
+    sha256: "4c7157447b020ecb1a0cb755fe0569620247bf5def9f7c4409f063ac479509a9"

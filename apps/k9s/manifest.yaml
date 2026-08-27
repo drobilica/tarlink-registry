@@ -1,53 +1,29 @@
-schema: 4
-id: k9s
-name: k9s
-summary: Terminal UI for Kubernetes clusters
-homepage: https://k9scli.io/
+schema: 5
+id: "k9s"
+name: "k9s"
+summary: "Terminal UI for Kubernetes clusters"
+homepage: "https://k9scli.io/"
 categories:
-- development
-- utilities
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 0.51.0
-      releases:
-      - channel: stable
-        version: 0.51.0
-        url: https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_amd64.tar.gz
-        verification:
-          algorithm: sha256
-          digest: c3752ad51a5a4015a113819c4eeb6e55a4d0e4b8e652494797532f6fc8161dd7
-          source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
-        archive: tar.gz
-    application:
-      executables:
-      - name: k9s
-        path: k9s
-    desktop:
-      enabled: false
-      categories: []
-  linux-arm64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 0.51.0
-      releases:
-      - channel: stable
-        version: 0.51.0
-        url: https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_arm64.tar.gz
-        verification:
-          algorithm: sha256
-          digest: 3ee05c82e5f9198928a4e86133608ba6a2c10a2244d6a7789e820f78319d640c
-          source: https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256
-        archive: tar.gz
-    application:
-      executables:
-      - name: k9s
-        path: k9s
-    desktop:
-      enabled: false
-      categories: []
+  - "development"
+  - "utilities"
+release:
+  current: "0.51.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.51.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_amd64.tar.gz"
+          verification:
+            digest: "c3752ad51a5a4015a113819c4eeb6e55a4d0e4b8e652494797532f6fc8161dd7"
+            source: "https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256"
+        linux-arm64:
+          url: "https://github.com/derailed/k9s/releases/download/v0.51.0/k9s_Linux_arm64.tar.gz"
+          verification:
+            digest: "3ee05c82e5f9198928a4e86133608ba6a2c10a2244d6a7789e820f78319d640c"
+            source: "https://github.com/derailed/k9s/releases/download/v0.51.0/checksums.sha256"
+application:
+  executable:
+    path: "k9s"

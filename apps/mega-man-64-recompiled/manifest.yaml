@@ -1,43 +1,38 @@
-schema: 4
-id: mega-man-64-recompiled
-name: Mega Man 64 Recompiled
-summary: Native recompile of Mega Man 64
-homepage: https://github.com/MegaMan64Recomp/MegaMan64Recompiled
+schema: 5
+id: "mega-man-64-recompiled"
+name: "Mega Man 64 Recompiled"
+summary: "Native recompile of Mega Man 64"
+homepage: "https://github.com/MegaMan64Recomp/MegaMan64Recompiled"
 categories:
-- games
-- recompilation
+  - "games"
+  - "recompilation"
 requirements:
-- original-game-data
-platforms:
-  linux-amd64:
-    release:
-      default-channel: stable
-      channels:
-        stable:
-          current: 0.9.1
-      releases:
-      - channel: stable
-        version: 0.9.1
-        url: https://github.com/MegaMan64Recomp/MegaMan64Recompiled/releases/download/v0.9.1/MegaMan64Recompiled-v0.9.1-Linux-X64.zip
-        verification:
-          algorithm: sha256
-          digest: 231945f3b599acd49e7bb169ad3881c74eabcc02e014f61f3274a9e5f955ba20
-          source: https://api.github.com/repos/MegaMan64Recomp/MegaMan64Recompiled/releases/assets/409342533
-        archive: zip
-        nested-archive:
-          path: MegaMan64Recompiled.tar.gz
-          archive: tar.gz
-    application:
-      executables:
-      - name: MegaMan64Recompiled
-        path: MegaMan64Recompiled
-        create-bin-link: false
-    desktop:
-      enabled: true
-      executable: MegaMan64Recompiled
-      working-directory: application-root
-      categories:
-      - Game
-      icon:
-        url: https://raw.githubusercontent.com/MegaMan64Recomp/MegaMan64Recompiled/62d2e3e4061490a85e0332af63d9a858f10cd0d2/icons/512.png
-        sha256: b21e87ebbd108f334bff24d19e9ce1295ee10b48a19175e5a06645cc88788a16
+  - "original-game-data"
+release:
+  current: "0.9.1"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.9.1"
+      nested-archive:
+        path: "MegaMan64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/MegaMan64Recomp/MegaMan64Recompiled/releases/download/v0.9.1/MegaMan64Recompiled-v0.9.1-Linux-X64.zip"
+          verification:
+            digest: "231945f3b599acd49e7bb169ad3881c74eabcc02e014f61f3274a9e5f955ba20"
+            source: "https://api.github.com/repos/MegaMan64Recomp/MegaMan64Recompiled/releases/assets/409342533"
+application:
+  executable:
+    path: "MegaMan64Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "MegaMan64Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/MegaMan64Recomp/MegaMan64Recompiled/62d2e3e4061490a85e0332af63d9a858f10cd0d2/icons/512.png"
+    sha256: "b21e87ebbd108f334bff24d19e9ce1295ee10b48a19175e5a06645cc88788a16"
