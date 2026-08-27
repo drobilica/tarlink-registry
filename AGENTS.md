@@ -16,7 +16,7 @@ This repository is the official TarLink application registry. Keep it declarativ
 - Keep the repository data-only. Do not add a parser, generated index, Go module, scripts, installers, hooks, commands, source-policy mirror, or registry-local validation implementation.
 - Manifests remain strict schema v3 files at `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml`.
 - Platform resolution is exact. Never add compatibility filenames, architecture fallback, or a manifest for an upstream platform that does not exist.
-- Application/release artifacts: use only authoritative upstream HTTPS release URLs and authoritative upstream checksum provenance. Use the exact secure checksum published by authoritative upstream for the exact artifact: currently lowercase SHA-256 or SHA-512 only. Never invent, locally derive, substitute, convert, or copy a digest from an untrusted mirror or different artifact. If upstream publishes both supported algorithms, use its canonical or recommended source rather than choosing numerically.
+- Application/release artifacts: use only official upstream portable Linux artifacts over HTTPS and record the exact lowercase SHA-256 or SHA-512 digest approved for those bytes. Maintainers may calculate the digest locally through TarLink's bounded tooling; upstream checksum publication is optional. For new local calculations prefer SHA-256 without rehashing existing valid manifests. Schema-v3 `verification.source` is honest informational official release or artifact-origin metadata, not independent checksum provenance; never fabricate a checksum URL.
 - External desktop icons: these are separate integration resources, not release artifacts. Their URLs must satisfy TarLink's immutable upstream URL policy, and each requires a lowercase SHA-256 integrity pin over the exact immutable icon bytes. Registry maintainers may compute and record this pin because upstream projects are not required to publish icon checksums; it is not upstream checksum provenance and must never be represented as such.
 - Manifests must not contain commands, arguments, scripts, hooks, installers, environment variables, custom destinations, hardlinks, or arbitrary integrations.
 - Keep shared metadata identical across platform manifests for the same application.
@@ -51,7 +51,10 @@ tarlink registry validate .
 - If Podman is unavailable, run host-compatible validation and rely on Ubuntu GitHub Actions for the remaining Linux checks.
 - Ubuntu GitHub Actions is the authoritative final integration validation environment. After pushing, inspect the run for the exact pushed commit and require it to pass; if it fails, fix, push again, and repeat.
 
-CI must continue using the pinned TarLink validator rather than a second schema implementation. If authoritative provenance or an exact supported artifact cannot be established, do not create the manifest.
+CI resolves the latest published stable TarLink release once per workflow run,
+verifies the downloaded released binary, and uses that exact run-local version
+rather than a source checkout or second schema implementation. Never commit a
+TarLink commit or tag pin solely for validator selection.
 
 Use TarLink-provided tooling: structurally validate the entire registry on
 every change, and materialize only new or materially changed artifacts. Before
@@ -59,18 +62,18 @@ opening or pushing a registry change, run the canonical changed-artifact check
 against the branch's starting `main` HEAD:
 
 ```sh
-./scripts/check-registry.sh <registry-path> --changed-from <STARTING_REGISTRY_HEAD>
+tarlink registry check <registry-path> --old-root <STARTING_REGISTRY_TREE>
 ```
 
-This exercises materially changed artifacts through TarLink's real download,
+The previous tree may be prepared with a thin `git archive`/`tar` step. This
+exercises materially changed artifacts through TarLink's real download,
 checksum, archive, install, integration, state, and uninstall lifecycle. Never
 execute third-party application binaries. `original-game-data` is informational
-metadata and is not a rejection reason. The validator pin must target a
-compatible published TarLink release or the exact immutable commit that is the
-pending release target. Do not add local scripts or tooling for these checks.
+metadata and is not a rejection reason. Do not add local scripts or tooling for
+these checks.
 
-Candidate research lives in TarLink, not this registry. Before repeating
-candidate research, consult TarLink's canonical research commands and its
-`registry-research/candidates.yaml` ledger. Do not add candidate records,
-research scripts, API clients, parsers, provenance logic, or caches here.
-Official manifests still require normal TarLink validation and materialization.
+Candidate research lives in TarLink, not this registry. Its advisory candidate
+ledger and provenance commands are optional discovery aids, not prerequisites
+for an ordinary manifest. Do not add candidate records, research scripts, API
+clients, parsers, provenance logic, or caches here. Official manifests still
+require normal TarLink validation and materialization.

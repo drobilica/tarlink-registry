@@ -23,32 +23,58 @@ on:
         type: boolean
 
 jobs:
+  resolve-tarlink:
+    name: Resolve latest stable TarLink
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+    steps:
+      - name: Resolve release once
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          tag=$(gh api repos/drobilica/tarlink/releases/latest --jq .tag_name)
+          if [[ ! "$tag" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "latest TarLink release is not stable: $tag" >&2
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
   structural:
+    needs: resolve-tarlink
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Check out registry
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - name: Check out TarLink validator
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          repository: drobilica/tarlink
-          ref: 3863b252f028e95c2951b49ced8ba20fa1b9b791 # TarLink release-target validator commit
-          path: .tarlink
-
-      - name: Set up Go
-        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
-        with:
-          go-version-file: .tarlink/go.mod
-          cache-dependency-path: .tarlink/go.sum
+      - name: Download verified released TarLink
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARLINK_TAG: ${{ needs.resolve-tarlink.outputs.tag }}
+        shell: bash
+        run: |
+          release_dir="$RUNNER_TEMP/tarlink-release"
+          mkdir -p "$release_dir"
+          gh release download "$TARLINK_TAG" --repo drobilica/tarlink \
+            --pattern checksums.txt --pattern tarlink-linux-amd64 --dir "$release_dir"
+          matches=$(awk '$2 == "tarlink-linux-amd64" { count++ } END { print count + 0 }' "$release_dir/checksums.txt")
+          test "$matches" -eq 1
+          expected=$(awk '$2 == "tarlink-linux-amd64" { print $1 }' "$release_dir/checksums.txt")
+          actual=$(sha256sum "$release_dir/tarlink-linux-amd64" | awk '{ print $1 }')
+          test "$actual" = "$expected"
+          chmod 0755 "$release_dir/tarlink-linux-amd64"
+          echo "TARLINK_BINARY=$release_dir/tarlink-linux-amd64" >> "$GITHUB_ENV"
 
       - name: Validate manifests with TarLink
-        working-directory: .tarlink
-        run: go run ./cmd/tarlink registry validate "$GITHUB_WORKSPACE"
+        run: |
+          "$TARLINK_BINARY" registry validate "$GITHUB_WORKSPACE"
 
   artifacts:
-    needs: structural
+    needs: [resolve-tarlink, structural]
     if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event_name == 'pull_request' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
@@ -58,18 +84,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check out TarLink validator
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          repository: drobilica/tarlink
-          ref: 3863b252f028e95c2951b49ced8ba20fa1b9b791 # TarLink release-target validator commit
-          path: .tarlink
-
-      - name: Set up Go
-        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
-        with:
-          go-version-file: .tarlink/go.mod
-          cache-dependency-path: .tarlink/go.sum
+      - name: Download verified released TarLink
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARLINK_TAG: ${{ needs.resolve-tarlink.outputs.tag }}
+        shell: bash
+        run: |
+          release_dir="$RUNNER_TEMP/tarlink-release"
+          mkdir -p "$release_dir"
+          gh release download "$TARLINK_TAG" --repo drobilica/tarlink \
+            --pattern checksums.txt --pattern tarlink-linux-amd64 --dir "$release_dir"
+          matches=$(awk '$2 == "tarlink-linux-amd64" { count++ } END { print count + 0 }' "$release_dir/checksums.txt")
+          test "$matches" -eq 1
+          expected=$(awk '$2 == "tarlink-linux-amd64" { print $1 }' "$release_dir/checksums.txt")
+          actual=$(sha256sum "$release_dir/tarlink-linux-amd64" | awk '{ print $1 }')
+          test "$actual" = "$expected"
+          chmod 0755 "$release_dir/tarlink-linux-amd64"
+          echo "TARLINK_BINARY=$release_dir/tarlink-linux-amd64" >> "$GITHUB_ENV"
 
       - name: Materialize selected artifacts
         env:
@@ -78,11 +109,14 @@ jobs:
           FULL_AUDIT: ${{ inputs.full }}
         run: |
           if [ "$FULL_AUDIT" = true ]; then
-            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --all-artifacts
+            "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --all-artifacts
           elif [ -n "$REQUESTED_APP" ]; then
-            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --app "$REQUESTED_APP"
+            "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --app "$REQUESTED_APP"
           elif [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]; then
-            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --changed-from "$BASE_SHA"
+            old_root="$RUNNER_TEMP/previous-registry"
+            mkdir -p "$old_root"
+            git archive "$BASE_SHA" apps | tar -x -C "$old_root"
+            "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --old-root "$old_root"
           else
-            .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE"
+            "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE"
           fi
