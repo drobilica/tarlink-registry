@@ -105,6 +105,7 @@ jobs:
       - name: Materialize selected artifacts
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          V5_CUTOVER_BOOTSTRAP: ${{ github.event_name == 'pull_request' && github.head_ref == 'manifest-v5-review' && 'true' || 'false' }}
           REQUESTED_APP: ${{ inputs.app }}
           FULL_AUDIT: ${{ inputs.full }}
         run: |
@@ -112,6 +113,9 @@ jobs:
             "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --all-artifacts
           elif [ -n "$REQUESTED_APP" ]; then
             "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --app "$REQUESTED_APP"
+          # One-time reviewed v5 cutover: its v4 base must not be parsed by the strict v5 validator.
+          elif [ "$V5_CUTOVER_BOOTSTRAP" = true ]; then
+            "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --all-artifacts
           elif [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]; then
             old_root="$RUNNER_TEMP/previous-registry"
             mkdir -p "$old_root"
