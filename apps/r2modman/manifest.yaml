@@ -1,0 +1,43 @@
+schema: 4
+id: r2modman
+name: r2modman
+summary: Mod manager for games using Thunderstore
+homepage: https://github.com/ebkr/r2modmanPlus
+categories:
+- games
+platforms:
+  linux-amd64:
+    release:
+      default-channel: stable
+      channels:
+        stable:
+          current: 3.2.19
+      releases:
+      - channel: stable
+        version: 3.2.19
+        url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.tar.gz
+        verification:
+          algorithm: sha256
+          digest: 92d255935e2d23edb72122254c379b0500c3d2f8ab51265e0d89d4b7943b5a5c
+          source: https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523454411
+        archive: tar.gz
+      - channel: stable
+        version: 3.2.18
+        url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.tar.gz
+        verification:
+          algorithm: sha256
+          digest: 38950023f9cabb82b68c1f83a06641d13e1dff77c0b0bdb19c3454537fe45cd0
+          source: https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185221
+        archive: tar.gz
+    application:
+      executables:
+      - name: r2modman
+        path: r2modman
+        create-bin-link: true
+    desktop:
+      enabled: true
+      categories:
+      - Game
+      icon:
+        url: https://raw.githubusercontent.com/ebkr/r2modmanPlus/4a36a32257ac07a0bb324386c9b171634a520af5/src-electron/icons/linux-512x512.png
+        sha256: e10669586873faeb4465ceb02609d3e907dd777b0cf5ca665170740b04de46e3

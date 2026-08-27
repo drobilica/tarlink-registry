@@ -1,0 +1,58 @@
+schema: 4
+id: goland
+name: GoLand
+summary: Integrated development environment for Go
+homepage: https://www.jetbrains.com/go
+categories:
+- development
+platforms:
+  linux-amd64:
+    release:
+      default-channel: stable
+      channels:
+        stable:
+          current: 2026.2.1
+      releases:
+      - channel: stable
+        version: 2026.2.1
+        url: https://download.jetbrains.com/go/goland-2026.2.1.tar.gz
+        verification:
+          algorithm: sha256
+          digest: 44a2cb6dda302340ade6e52adfff291c9fd62074c53d312b7f4268ddaa0a2159
+          source: https://download.jetbrains.com/go/goland-2026.2.1.tar.gz.sha256
+        archive: tar.gz
+    application:
+      executables:
+      - name: goland
+        path: bin/goland
+    desktop:
+      enabled: true
+      categories:
+      - Development
+      icon:
+        path: bin/goland.svg
+  linux-arm64:
+    release:
+      default-channel: stable
+      channels:
+        stable:
+          current: 2026.2.1
+      releases:
+      - channel: stable
+        version: 2026.2.1
+        url: https://download.jetbrains.com/go/goland-2026.2.1-aarch64.tar.gz
+        verification:
+          algorithm: sha256
+          digest: 0ff8085bb9c896ac3a478fa0d63b21f991c7f37e900598abaa5a855f8c127712
+          source: https://download.jetbrains.com/go/goland-2026.2.1-aarch64.tar.gz.sha256
+        archive: tar.gz
+    application:
+      executables:
+      - name: goland
+        path: bin/goland
+    desktop:
+      enabled: true
+      categories:
+      - Development
+      icon:
+        path: bin/goland.svg
