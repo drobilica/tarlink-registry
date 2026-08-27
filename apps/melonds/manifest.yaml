@@ -1,0 +1,67 @@
+schema: 4
+id: melonds
+name: melonDS
+summary: Nintendo DS emulator
+homepage: https://melonds.kuribo64.net/
+categories:
+- emulation
+- games
+requirements:
+- original-game-data
+platforms:
+  linux-amd64:
+    release:
+      default-channel: stable
+      channels:
+        stable:
+          current: '1.1'
+      releases:
+      - channel: stable
+        version: '1.1'
+        url: https://github.com/melonDS-emu/melonDS/releases/download/1.1/melonDS-1.1-ubuntu-x86_64.zip
+        verification:
+          algorithm: sha256
+          digest: 99465129f5413b2aad332e4377e523cf3cda905dc329d47dcb1ad01ce2cb3f66
+          source: https://api.github.com/repos/melonDS-emu/melonDS/releases/assets/317872324
+        archive: zip
+    application:
+      executables:
+      - name: melonDS
+        path: melonDS
+        create-bin-link: true
+    desktop:
+      enabled: true
+      categories:
+      - Game
+      - Emulator
+      icon:
+        url: https://raw.githubusercontent.com/melonDS-emu/melonDS/b86390e4428bf38ce4c1ce0e9ca446d6d25955e8/res/melon512.png
+        sha256: 0ce799fcd26e49e94303a25d758c3028039bd78c436b034b0575f76d0e950a87
+  linux-arm64:
+    release:
+      default-channel: stable
+      channels:
+        stable:
+          current: '1.1'
+      releases:
+      - channel: stable
+        version: '1.1'
+        url: https://github.com/melonDS-emu/melonDS/releases/download/1.1/melonDS-1.1-ubuntu-aarch64.zip
+        verification:
+          algorithm: sha256
+          digest: 43bd28d9e6e864f08747905c9cbdeac701880d75f2dedad737279c7a005790f4
+          source: https://api.github.com/repos/melonDS-emu/melonDS/releases/assets/317872142
+        archive: zip
+    application:
+      executables:
+      - name: melonDS
+        path: melonDS
+        create-bin-link: true
+    desktop:
+      enabled: true
+      categories:
+      - Game
+      - Emulator
+      icon:
+        url: https://raw.githubusercontent.com/melonDS-emu/melonDS/b86390e4428bf38ce4c1ce0e9ca446d6d25955e8/res/melon512.png
+        sha256: 0ce799fcd26e49e94303a25d758c3028039bd78c436b034b0575f76d0e950a87

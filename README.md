@@ -4,20 +4,19 @@ The [official TarLink registry](https://github.com/drobilica/tarlink-registry) i
 
 ## How it works
 
-Each application lives under `apps/<id>/` with one strict schema-v3 manifest per supported architecture:
+Each application lives under `apps/<id>/` with one strict schema-v4 manifest. Shared application metadata appears once, while each supported architecture has an explicit platform definition:
 
 ```text
 apps/
 ├── blender/
-│   └── linux-amd64.yaml
+│   └── manifest.yaml
 └── godot/
-    ├── linux-amd64.yaml
-    └── linux-arm64.yaml
+    └── manifest.yaml
 ```
 
-Platform resolution is exact: Linux amd64 selects `linux-amd64.yaml`, and Linux arm64 selects `linux-arm64.yaml`. There is no architecture fallback. The `apps/` directory and TarLink are the authoritative catalog; this README intentionally does not duplicate application names or versions.
+Platform resolution is exact: Linux amd64 selects `platforms.linux-amd64`, and Linux arm64 selects `platforms.linux-arm64`. Unsupported platforms are omitted; there is no architecture fallback. The `apps/` directory and TarLink are the authoritative catalog; this README intentionally does not duplicate application names or versions.
 
-Manifests are strict schema v3 and must declare an official upstream HTTPS
+Manifests are strict schema v4 and must declare an official upstream HTTPS
 release artifact, an accepted archive type (`tar.gz`, `tar.xz`, `zip`, or
 `appimage`), and the exact lowercase SHA-256 or SHA-512 digest approved in this
 registry for those bytes. Maintainers may calculate that digest locally;
