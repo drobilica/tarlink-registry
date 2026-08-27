@@ -105,7 +105,7 @@ jobs:
       - name: Materialize selected artifacts
         env:
           BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
-          V5_CUTOVER_BOOTSTRAP: ${{ github.event_name == 'pull_request' && github.head_ref == 'manifest-v5-review' && 'true' || 'false' }}
+          V5_CUTOVER_BOOTSTRAP: ${{ (github.event_name == 'pull_request' && github.event.pull_request.head.ref == 'manifest-v5-review' || github.event_name == 'push' && github.ref_name == 'manifest-v5-review') && 'true' || 'false' }}
           REQUESTED_APP: ${{ inputs.app }}
           FULL_AUDIT: ${{ inputs.full }}
         run: |
