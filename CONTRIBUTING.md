@@ -3,11 +3,11 @@
 Registry changes should remain small, reviewable data changes.
 
 1. Add or update exactly one `apps/<id>/linux-amd64.yaml` or `apps/<id>/linux-arm64.yaml` for each supported architecture.
-2. Use an official portable Linux binary archive supported by TarLink.
-3. Use the exact SHA-256 or SHA-512 digest that authoritative upstream publishes for that artifact.
-4. Record the exact lowercase digest and authoritative upstream HTTPS checksum source. Do not recalculate a different algorithm or substitute a GitHub-generated digest for an authoritative upstream SHA-512.
-5. Run `tarlink registry validate .`.
-6. In the pull request, link the upstream release page, artifact, and checksum publication.
+2. Use an official upstream portable Linux artifact over HTTPS.
+3. Record the exact lowercase SHA-256 or SHA-512 digest approved for those bytes. You may calculate it locally with TarLink's bounded inspection tooling; upstream checksum publication is optional. Prefer SHA-256 for a new local calculation without rehashing existing valid entries.
+4. Keep schema-v3 `verification.source` as an honest official upstream release page or artifact-origin HTTPS URL. It is informational metadata, not an assertion that upstream published a checksum; never fabricate a checksum URL.
+5. Run `tarlink registry validate .` and materialize changed artifacts with `tarlink registry check . --old-root <STARTING_REGISTRY_TREE>`.
+6. In the pull request, link the official upstream release page and exact artifact.
 
 TarLink targets Linux, but registry development from macOS is supported. Run the TarLink validator locally; use Podman for Linux-specific validation when available. Ubuntu GitHub Actions is the final integration validation environment, and must not be skipped because the host is macOS.
 

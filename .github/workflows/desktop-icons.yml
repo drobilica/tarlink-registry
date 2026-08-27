@@ -23,18 +23,36 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check out published TarLink fixer
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          repository: drobilica/tarlink
-          ref: 5dac3a124956c2d308d94d78bc4903a95da1f8a1 # TarLink v0.9.10 release
-          path: .tarlink
+      - name: Resolve latest stable TarLink once
+        id: tarlink_release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          tag=$(gh api repos/drobilica/tarlink/releases/latest --jq .tag_name)
+          if [[ ! "$tag" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "latest TarLink release is not stable: $tag" >&2
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
 
-      - name: Set up Go
-        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
-        with:
-          go-version-file: .tarlink/go.mod
-          cache-dependency-path: .tarlink/go.sum
+      - name: Download verified released TarLink
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARLINK_TAG: ${{ steps.tarlink_release.outputs.tag }}
+        shell: bash
+        run: |
+          release_dir="$RUNNER_TEMP/tarlink-release"
+          mkdir -p "$release_dir"
+          gh release download "$TARLINK_TAG" --repo drobilica/tarlink \
+            --pattern checksums.txt --pattern tarlink-linux-amd64 --dir "$release_dir"
+          matches=$(awk '$2 == "tarlink-linux-amd64" { count++ } END { print count + 0 }' "$release_dir/checksums.txt")
+          test "$matches" -eq 1
+          expected=$(awk '$2 == "tarlink-linux-amd64" { print $1 }' "$release_dir/checksums.txt")
+          actual=$(sha256sum "$release_dir/tarlink-linux-amd64" | awk '{ print $1 }')
+          test "$actual" = "$expected"
+          chmod 0755 "$release_dir/tarlink-linux-amd64"
+          echo "TARLINK_BINARY=$release_dir/tarlink-linux-amd64" >> "$GITHUB_ENV"
 
       - name: Find existing maintenance PR
         id: existing
@@ -48,7 +66,8 @@ jobs:
         if: steps.existing.outputs.exists != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: (cd .tarlink && go run ./cmd/tarlink registry icons "$GITHUB_WORKSPACE" --fix --json) > "$RUNNER_TEMP/icon-report.json"
+        run: |
+          "$TARLINK_BINARY" registry icons "$GITHUB_WORKSPACE" --fix --json > "$RUNNER_TEMP/icon-report.json"
 
       - name: Detect manifest changes
         if: steps.existing.outputs.exists != 'true'
@@ -59,8 +78,11 @@ jobs:
       - name: Validate repaired registry
         if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
         run: |
-          (cd .tarlink && go run ./cmd/tarlink registry validate "$GITHUB_WORKSPACE")
-          .tarlink/scripts/check-registry.sh "$GITHUB_WORKSPACE" --changed-from "$GITHUB_SHA"
+          "$TARLINK_BINARY" registry validate "$GITHUB_WORKSPACE"
+          old_root="$RUNNER_TEMP/previous-registry"
+          mkdir -p "$old_root"
+          git archive "$GITHUB_SHA" apps | tar -x -C "$old_root"
+          "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --old-root "$old_root"
 
       - name: Create maintenance branch and PR
         if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
