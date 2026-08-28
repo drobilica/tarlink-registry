@@ -36,6 +36,17 @@ This repository is the official TarLink application registry. Keep it declarativ
 - Never commit unrelated pre-existing changes.
 - Do not create tags/releases or change release workflow unless explicitly requested.
 
+### Remote write verification
+
+- After any authorized remote Git/GitHub write, command success alone is not completion: read back the authoritative remote state before reporting pushed, merged, PR created/updated, CI complete, or task complete.
+- Branch pushes: fetch and verify `origin/<branch>` equals the intended commit (e.g. `git rev-parse origin/<branch>` plus `git ls-remote origin refs/heads/<branch>`); the push exit status is not evidence.
+- PR creation/update: read the PR back with `gh` and verify it exists with the intended base branch, head branch, head SHA, and open state.
+- PR merges (mandatory): after an attempted merge, query the PR again and require GitHub state `MERGED`, then fetch `origin/main` and verify it contains the intended changes (squash/rebase merges leave the branch's commits unreachable, so verify content rather than commit reachability). A pushed PR branch or a zero-exit `gh pr merge` is not proof of a merge; if the PR remains open, queued, blocked, or failed, report that state instead of success.
+- CI: inspect required checks for the exact authoritative remote commit — pushed branch head, PR head, or post-merge `origin/main` commit — and require them complete and successful; never count a run for a different SHA.
+- Tags/releases stay out of scope unless explicitly requested; if one is ever authorized, verify remote state (tag exists and peels to the intended commit via its `^{}` ref; release exists with expected tag, status, and assets) before reporting it published.
+- If authoritative remote state does not match the intended result, the remote operation is not complete: reconcile within scope or report the exact blocker, and never convert an attempted remote write into a success claim.
+- Completion reports must state the real milestone — local commit created, branch pushed, PR open, PR merged, main updated, CI green — rather than a generic `done`.
+
 ## Validation
 
 Validate with TarLink itself:
