@@ -1,0 +1,33 @@
+schema: 5
+id: "super-mario-world-recomp"
+name: "Super Mario World Recomp"
+summary: "Native recompile of Super Mario World"
+homepage: "https://github.com/mstan/SuperMarioWorldRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.11.1"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.11.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.11.1/SuperMarioWorldRecomp-linux-0.11.1-x86_64.AppImage"
+          verification:
+            digest: "f24eb5594eac811697206a7464ec2b2b448651e8f3eaef2408d029061a17217c"
+            source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/528700365"
+application:
+  executable:
+    path: "appimage"
+    name: "super-mario-world-recomp"
+    create-bin-link: false
+desktop:
+  executable: "super-mario-world-recomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"
