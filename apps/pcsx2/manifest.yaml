@@ -10,13 +10,29 @@ release:
   default-channel: "stable"
   channels:
     nightly:
-      current: "2.7.524"
+      current: "2.7.525"
     stable:
-      current: "2.6.3"
+      current: "2.8.0"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - channel: "stable"
+      version: "2.8.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.8.0/pcsx2-v2.8.0-linux-appimage-x64-Qt.AppImage"
+          verification:
+            digest: "f0e36b31fc885c9ccdb5339274f1d998a9e69bf736b92dd8674134091f992a3f"
+            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534396714"
+    - channel: "nightly"
+      version: "2.7.525"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.525/pcsx2-v2.7.525-linux-appimage-x64-Qt.AppImage"
+          verification:
+            digest: "abe1010e62f90a959fb46702ba4a55309e2a87f83902a40daa50adb738c35d6d"
+            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534312034"
     - channel: "stable"
       version: "2.6.3"
       artifacts:
