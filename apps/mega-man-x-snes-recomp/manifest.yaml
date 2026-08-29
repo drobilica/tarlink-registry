@@ -1,0 +1,33 @@
+schema: 5
+id: "mega-man-x-snes-recomp"
+name: "Mega Man X SNES Recomp"
+summary: "Native recompile of Mega Man X (SNES)"
+homepage: "https://github.com/mstan/MegaManXSNESRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.4.3"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.4.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/MegaManXSNESRecomp/releases/download/v1.4.3/MegaManXSNESRecomp-linux-1.4.3-x86_64.AppImage"
+          verification:
+            digest: "4c615851411983b92d832a0bb59bd9d459e6deb68714dc4cc270a7c8400d8cf8"
+            source: "https://api.github.com/repos/mstan/MegaManXSNESRecomp/releases/assets/516573084"
+application:
+  executable:
+    path: "appimage"
+    name: "mega-man-x-snes-recomp"
+    create-bin-link: false
+desktop:
+  executable: "mega-man-x-snes-recomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"

@@ -1,0 +1,32 @@
+schema: 5
+id: "tomba-recompiled"
+name: "Tomba! Recompiled"
+summary: "Native recompile of Tomba!"
+homepage: "https://github.com/mstan/TombaRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.12.3-alpha"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.12.3-alpha"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/TombaRecomp/releases/download/v0.12.3-alpha/tomba-0.12.3-alpha-linux-x64.zip"
+          verification:
+            digest: "bfeea3de357ae203a7864ec9b3502b3e77c3ab44ec96ebb4a4190d1a09cd2aa5"
+            source: "https://api.github.com/repos/mstan/TombaRecomp/releases/assets/531508428"
+application:
+  executable:
+    path: "Tomba__Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "Tomba__Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
