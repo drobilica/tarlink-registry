@@ -1,0 +1,32 @@
+schema: 5
+id: "street-fighter-alpha-3-recomp"
+name: "Street Fighter Alpha 3 Recompiled"
+summary: "Native recompile of Street Fighter Alpha 3"
+homepage: "https://github.com/TechnicallyComputers/Street-Fighter-Alpha-3-Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.2.15"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.2.15"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TechnicallyComputers/Street-Fighter-Alpha-3-Recomp/releases/download/v0.2.15/sfa-0.2.15-linux-x64.zip"
+          verification:
+            digest: "b4d58fe8cfa00f9433242dc0be09917ef3acb752337ae2b1cd0f3cf32d5b6714"
+            source: "https://api.github.com/repos/TechnicallyComputers/Street-Fighter-Alpha-3-Recomp/releases/assets/530311858"
+application:
+  executable:
+    path: "Street_Fighter_Alpha_3__Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "Street_Fighter_Alpha_3__Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
