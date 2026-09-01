@@ -1,0 +1,40 @@
+schema: 5
+id: "snowboard-kids-2-recompiled"
+name: "Snowboard Kids 2: Recompiled"
+summary: "Native recompiled Snowboard Kids 2 runtime"
+homepage: "https://github.com/cdlewis/snowboardkids2-recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.5"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.5"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/cdlewis/snowboardkids2-recomp/releases/download/v1.0.5/SnowboardKids2Recompiled-Linux-X64-Release.tar.gz"
+          verification:
+            digest: "90a97d4eed83bfc3a962212c09e4d4943c131200cd10090b8e7a5d80bd4e7732"
+            source: "https://api.github.com/repos/cdlewis/snowboardkids2-recomp/releases/assets/453888009"
+        linux-arm64:
+          url: "https://github.com/cdlewis/snowboardkids2-recomp/releases/download/v1.0.5/SnowboardKids2Recompiled-Linux-ARM64-Release.tar.gz"
+          verification:
+            digest: "3855a8369cfbf478644b57beb7791380d0a97d1d2d91869d8d4bca32ed71a735"
+            source: "https://api.github.com/repos/cdlewis/snowboardkids2-recomp/releases/assets/453888013"
+application:
+  executable:
+    path: "SnowboardKids2Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "SnowboardKids2Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/cdlewis/snowboardkids2-recomp/e4703fb66466d364796475b4a3f5fa0c99a814bc/icons/512.png"
+    sha256: "54f44852055a9bb78b7be065ceb6e7c227b654c2351c3045d8e3bcdeab397083"

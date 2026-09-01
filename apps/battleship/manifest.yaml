@@ -1,0 +1,32 @@
+schema: 5
+id: "battleship"
+name: "BattleShip: Super Smash Bros. 64"
+summary: "Native recompile of Super Smash Bros. 64"
+homepage: "https://github.com/JRickey/BattleShip"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.5.1"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.5.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/JRickey/BattleShip/releases/download/v1.5.1/BattleShip-x86_64.AppImage"
+          verification:
+            digest: "c9e8e733de3cf47181a5cec9c71e34f7ee0bfcc8a56af3b10b665fbbb9288f94"
+            source: "https://api.github.com/repos/JRickey/BattleShip/releases/assets/475621254"
+application:
+  executable:
+    path: "appimage"
+    name: "BattleShip"
+    create-bin-link: false
+desktop:
+  executable: "BattleShip"
+  categories:
+    - "Game"
