@@ -1,0 +1,36 @@
+schema: 5
+id: "starship"
+name: "Starship"
+summary: "Native recompile of Star Fox 64"
+homepage: "https://github.com/HarbourMasters/Starship"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "2.0.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "2.0.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/HarbourMasters/Starship/releases/download/v2.0.0/Starship-Barnard-Alfa-Linux.zip"
+          verification:
+            digest: "85dd03d3ad8abd881aa3aa2b49ded336627b44b8ac8333e3c41b5bf7c4336289"
+            source: "https://api.github.com/repos/HarbourMasters/Starship/releases/assets/258112321"
+application:
+  executable:
+    path: "starship.appimage"
+    name: "starship"
+    create-bin-link: false
+desktop:
+  executable: "starship"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/HarbourMasters/Starship/cb19785/logo.png"
+    sha256: "587a34213bbaf54cf39ecb70011119c274893e4bbfeb9c28939bfc15b6fceea8"

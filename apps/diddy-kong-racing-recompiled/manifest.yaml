@@ -1,0 +1,36 @@
+schema: 5
+id: "diddy-kong-racing-recompiled"
+name: "Diddy Kong Racing Recompiled"
+summary: "Native recompile of Diddy Kong Racing"
+homepage: "https://github.com/ThatGuyMcd/DKR-R"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.0"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.0/DKR-R-1.0.0-Linux-x86_64.AppImage"
+          verification:
+            digest: "a228cc7ff5d3a84074e01cfbde54bae1a1ee0a93c3b94d278f59e917506e3d2f"
+            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/508438526"
+application:
+  executable:
+    path: "appimage"
+    name: "DKR-R"
+    create-bin-link: false
+desktop:
+  executable: "DKR-R"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/ThatGuyMcd/DKR-R/8085dbb/assets/ui/Icons/256x256.png"
+    sha256: "387d609472ae381bbcab640c1edcb03c0c83f2bbbb787860ddb32e7442696e2f"
