@@ -1,0 +1,35 @@
+schema: 5
+id: "bloody-roar-2-recompiled"
+name: "Bloody Roar II Recompiled"
+summary: "Native recompiled Bloody Roar II runtime"
+homepage: "https://github.com/novapowers0/BloodyRoar2Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.5.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.5.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/novapowers0/BloodyRoar2Recomp/releases/download/v0.5.0/BloodyRoar2-US-Linux-v0.5.0.zip"
+          verification:
+            digest: "76dd16681beaa0734dea1321b9be3a25ff49c6cce7a62bba958da1412f326675"
+            source: "https://api.github.com/repos/novapowers0/BloodyRoar2Recomp/releases/assets/520781621"
+application:
+  executable:
+    path: "BloodyRoar2_Recompiled_USA"
+    create-bin-link: false
+desktop:
+  executable: "BloodyRoar2_Recompiled_USA"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/novapowers0/BloodyRoar2Recomp/2495f722374354a9dc09405d7048997e54c36ec8/assets/psxrecomp.png"
+    sha256: "c2f3886727558480cc2c397119f6b411ac70c0e4969627561551f11c3c144485"
