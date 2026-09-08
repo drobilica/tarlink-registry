@@ -6,11 +6,23 @@ homepage: "https://prismlauncher.org/"
 categories:
   - "games"
 release:
-  current: "11.0.3"
+  current: "11.1.0"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "11.1.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.0/PrismLauncher-Linux-x86_64.AppImage"
+          verification:
+            digest: "07d0987fd46b3ec442c15b25b6ab78b29737d33a8095039f488f301103bca463"
+            source: "https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/assets/542309842"
+        linux-arm64:
+          url: "https://github.com/PrismLauncher/PrismLauncher/releases/download/11.1.0/PrismLauncher-Linux-aarch64.AppImage"
+          verification:
+            digest: "9655afa384a4900dee80c1fe34be407146bc852cdf2aac09a66788d7f6f44842"
+            source: "https://api.github.com/repos/PrismLauncher/PrismLauncher/releases/assets/542309845"
     - version: "11.0.3"
       artifacts:
         linux-amd64:

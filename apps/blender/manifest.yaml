@@ -7,11 +7,18 @@ categories:
   - "game-development"
   - "graphics"
 release:
-  current: "5.2.0"
+  current: "5.2.1"
   archive: "tar.xz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "5.2.1"
+      artifacts:
+        linux-amd64:
+          url: "https://download.blender.org/release/Blender5.2/blender-5.2.1-linux-x64.tar.xz"
+          verification:
+            digest: "a31f524fa99a527d3d52b7f5aaa68c34e1a19d5a1c9473f79c5cc610fd5b10e9"
+            source: "https://download.blender.org/release/Blender5.2/blender-5.2.1.sha256"
     - version: "5.2.0"
       artifacts:
         linux-amd64:

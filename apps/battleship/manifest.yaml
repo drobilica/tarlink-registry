@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.5.1"
+  current: "1.6"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.6"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/JRickey/BattleShip/releases/download/v1.6/BattleShip-x86_64.AppImage"
+          verification:
+            digest: "c7b909e82c991cc8947acce0f3b4702959b4cdbd9781fc199b0dcf8015b87f35"
+            source: "https://github.com/JRickey/BattleShip/releases/download/v1.6/SHA256SUMS.txt"
     - version: "1.5.1"
       artifacts:
         linux-amd64:

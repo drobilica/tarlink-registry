@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.0.0"
+  current: "1.0.4"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.0.4"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/DKR-R-1.0.4-Linux-x86_64.AppImage"
+          verification:
+            digest: "9da1e72dd23eaf7b6e096f19bc2bb215065e2ef7c5fd35a2601c9d430fe25ee0"
+            source: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/SHA256SUMS"
     - version: "1.0.0"
       artifacts:
         linux-amd64:
