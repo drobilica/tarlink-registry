@@ -1,0 +1,35 @@
+schema: 5
+id: "street-fighter-ex2-plus-recomp"
+name: "Street Fighter EX2 Plus Recompiled"
+summary: "Native recompile of Street Fighter EX2 Plus"
+homepage: "https://github.com/strider973/Street-Fighter-EX2-Plus-Recompiled"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.1.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.1.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/strider973/Street-Fighter-EX2-Plus-Recompiled/releases/download/v0.1.0/sfex2p-0.1.0-linux-x64.zip"
+          verification:
+            digest: "2fb74fa486cf663dd2ce595bffaf73aeca769a0e0dbc46bed703933b8ca715c0"
+            source: "https://api.github.com/repos/strider973/Street-Fighter-EX2-Plus-Recompiled/releases/assets/535371777"
+application:
+  executable:
+    path: "Street_Fighter_EX2_Plus"
+    create-bin-link: false
+desktop:
+  executable: "Street_Fighter_EX2_Plus"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/strider973/Street-Fighter-EX2-Plus-Recompiled/f4151f535b258f59db62932931f940c87758c345/assets/psxrecomp.png"
+    sha256: "c2f3886727558480cc2c397119f6b411ac70c0e4969627561551f11c3c144485"

@@ -1,0 +1,40 @@
+schema: 5
+id: "bomberman-64-recompiled"
+name: "Bomberman 64 Recompiled"
+summary: "Native recompile of Bomberman 64"
+homepage: "https://github.com/RevoSucks/BM64Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.0"
+      nested-archive:
+        path: "BM64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/RevoSucks/BM64Recomp/releases/download/v1.0.0/BM64Recompiled-Linux-X64-Release.zip"
+          verification:
+            digest: "0a8f1889295ca0e06802e37317862e1552e98f09022c111b145396f36ae20bba"
+            source: "https://api.github.com/repos/RevoSucks/BM64Recomp/releases/assets/379318962"
+        linux-arm64:
+          url: "https://github.com/RevoSucks/BM64Recomp/releases/download/v1.0.0/BM64Recompiled-Linux-ARM64-Release.zip"
+          verification:
+            digest: "63864cd71f9371eb5cf6a1cae4f49b821f046a59f29b82c6a8f8e57fbf1030ed"
+            source: "https://api.github.com/repos/RevoSucks/BM64Recomp/releases/assets/379319330"
+application:
+  executable:
+    path: "BM64Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "BM64Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"

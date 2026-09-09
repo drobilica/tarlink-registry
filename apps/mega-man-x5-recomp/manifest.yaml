@@ -1,0 +1,33 @@
+schema: 5
+id: "mega-man-x5-recomp"
+name: "Mega Man X5 Recomp"
+summary: "Native recompile of Mega Man X5"
+homepage: "https://github.com/mstan/MegaManX5Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.0.2-alpha"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.0.2-alpha"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/MegaManX5Recomp/releases/download/v0.0.2-alpha/MegaManX5Recomp-v0.0.2-alpha-linux-x86_64.AppImage"
+          verification:
+            digest: "5c0928d3a7224101b65b6dc5b3e0d2dc5b8ec0789f5958e1df600aafb2ee84b0"
+            source: "https://api.github.com/repos/mstan/MegaManX5Recomp/releases/assets/504214247"
+application:
+  executable:
+    path: "appimage"
+    name: "mega-man-x5-recomp"
+    create-bin-link: false
+desktop:
+  executable: "mega-man-x5-recomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"
