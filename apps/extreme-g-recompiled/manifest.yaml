@@ -1,0 +1,43 @@
+schema: 5
+id: "extreme-g-recompiled"
+name: "Extreme-G: Recompiled"
+summary: "Native recompiled Extreme-G runtime"
+homepage: "https://gitlab.com/sonicdcer/ExtremeGRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.0"
+      nested-archive:
+        path: "ExtremeGRecompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/package_files/338153275/download"
+          verification:
+            digest: "0289e5cd4d39f043981ab13578a34dcedf383e169a9a57cf403afa1c61af154d"
+            source: "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/package_files/338153275/download"
+        linux-arm64:
+          url: "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/package_files/338153292/download"
+          verification:
+            digest: "8ed3a683df63cefedfdc948de8308a98a381805b55ba41c60315305ebb074d56"
+            source: "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/package_files/338153292/download"
+application:
+  executable:
+    path: "ExtremeGRecompiled"
+    create-bin-link: false
+desktop:
+  executable: "ExtremeGRecompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://gitlab.com/sonicdcer/ExtremeGRecomp/-/raw/0ef199a0c5936ceb8f93fcce01a99c7e0f5d5ec2/icons/512.png"
+    sha256: "0aa93ec35dd27793b91e24b878c9f5a6404f7a0c62faeafaffc2caf883ddd3c5"

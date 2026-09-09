@@ -1,0 +1,40 @@
+schema: 5
+id: "bomberman-hero-recompiled"
+name: "Bomberman Hero Recompiled"
+summary: "Native recompile of Bomberman Hero"
+homepage: "https://github.com/RevoSucks/BMHeroRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.7.1"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.7.1"
+      nested-archive:
+        path: "BMHeroRecompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/RevoSucks/BMHeroRecomp/releases/download/v0.7.1/BMHeroRecompiled-Linux-X64-Release.zip"
+          verification:
+            digest: "8ccf995307af9c35efdc99d2404029c8588da5c314f5ae771fed88d2dc0a568c"
+            source: "https://api.github.com/repos/RevoSucks/BMHeroRecomp/releases/assets/411325152"
+        linux-arm64:
+          url: "https://github.com/RevoSucks/BMHeroRecomp/releases/download/v0.7.1/BMHeroRecompiled-Linux-ARM64-Release.zip"
+          verification:
+            digest: "7eb76ae6b9d3fcc1024418f5f225833868b6b106e075e76e8dd847c7feefe24c"
+            source: "https://api.github.com/repos/RevoSucks/BMHeroRecomp/releases/assets/411325171"
+application:
+  executable:
+    path: "BMHeroRecompiled"
+    create-bin-link: false
+desktop:
+  executable: "BMHeroRecompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"

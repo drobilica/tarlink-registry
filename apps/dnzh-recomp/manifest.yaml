@@ -1,0 +1,43 @@
+schema: 5
+id: "dnzh-recomp"
+name: "Duke Nukem Zero Hour: Recompiled"
+summary: "Native recompiled Duke Nukem Zero Hour runtime"
+homepage: "https://gitlab.com/sonicdcer/DNZHRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.0.3"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.0.3"
+      nested-archive:
+        path: "DNZHRecompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://gitlab.com/sonicdcer/DNZHRecomp/-/package_files/333737109/download"
+          verification:
+            digest: "7c7e07257d79aa00f3043407730001e8076d4138566464e7c1c11f8ac197429b"
+            source: "https://gitlab.com/sonicdcer/DNZHRecomp/-/package_files/333737109/download"
+        linux-arm64:
+          url: "https://gitlab.com/sonicdcer/DNZHRecomp/-/package_files/333737191/download"
+          verification:
+            digest: "add1ba91db84ac93d6dbfb34723cb33cc5de4bde3d42f838695447af2024ea5f"
+            source: "https://gitlab.com/sonicdcer/DNZHRecomp/-/package_files/333737191/download"
+application:
+  executable:
+    path: "DNZHRecompiled"
+    create-bin-link: false
+desktop:
+  executable: "DNZHRecompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://gitlab.com/sonicdcer/DNZHRecomp/-/raw/b0df6f314772a5b725d60915e088e7afe5db6a11/icons/512.png"
+    sha256: "77fa9064eb1a03bb82300bccf73ee689eb651cd27479ab8a0c811ab87084392f"

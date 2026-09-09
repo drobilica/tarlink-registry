@@ -1,0 +1,40 @@
+schema: 5
+id: "donkey-kong-64-recompiled"
+name: "Donkey Kong 64 Recompiled"
+summary: "Native recompile of Donkey Kong 64"
+homepage: "https://github.com/Rainchus/Donkey-Kong-64-Recompiled"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.2"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.2"
+      nested-archive:
+        path: "DK64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Rainchus/Donkey-Kong-64-Recompiled/releases/download/1.0.2/DK64Recompiled-Linux-X64-Release-1-0-2.zip"
+          verification:
+            digest: "7a723280d92768bbeb1c384f5fbe9f27cd08fdad8b90df85a9402a151d31e4df"
+            source: "https://api.github.com/repos/Rainchus/Donkey-Kong-64-Recompiled/releases/assets/540537802"
+        linux-arm64:
+          url: "https://github.com/Rainchus/Donkey-Kong-64-Recompiled/releases/download/1.0.2/DK64Recompiled-Linux-ARM64-Release-1-0-2.zip"
+          verification:
+            digest: "ac121f933ed881aaaf9d70be36cbb538df93ed9abf20c5d23484fb4dd5ae7c20"
+            source: "https://api.github.com/repos/Rainchus/Donkey-Kong-64-Recompiled/releases/assets/540537691"
+application:
+  executable:
+    path: "DK64Recompiled"
+    create-bin-link: false
+desktop:
+  executable: "DK64Recompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"

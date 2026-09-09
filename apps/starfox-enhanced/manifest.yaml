@@ -1,0 +1,32 @@
+schema: 5
+id: "starfox-enhanced"
+name: "Star Fox Enhanced"
+summary: "Native enhanced port of Star Fox"
+homepage: "https://github.com/kandowontu/starfox-enhanced"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.0.6.5"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.0.6.5"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/kandowontu/starfox-enhanced/releases/download/v0.0.6.5/StarFoxEnhanced-0.0.6.5-linux-x64.zip"
+          verification:
+            digest: "93e65ac362ae7995ea2b2e6519245a2cc64bbf8b8f2c2594242e59ce2db7ebed"
+            source: "https://api.github.com/repos/kandowontu/starfox-enhanced/releases/assets/552035400"
+application:
+  executable:
+    path: "StarFoxEnhanced-linux-x64/starfox_pc"
+    create-bin-link: false
+desktop:
+  executable: "starfox_pc"
+  working-directory: "application-root"
+  categories:
+    - "Game"
