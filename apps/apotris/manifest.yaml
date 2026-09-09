@@ -1,0 +1,34 @@
+schema: 5
+id: "apotris"
+name: "Apotris"
+summary: "Free block stacking game"
+homepage: "https://apotris.com/"
+categories:
+  - "games"
+release:
+  current: "4.1.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "4.1.0"
+      artifacts:
+        linux-amd64:
+          url: "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0Linux-x64.zip"
+          verification:
+            digest: "20b2e2aa793cb9d7ce904940277f4dae1860b46be322af0bf7ec7df7b693654a"
+            source: "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0Linux-x64.zip"
+        linux-arm64:
+          url: "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0Linux-arm64.zip"
+          verification:
+            digest: "3891f3a35b652c34f2754e8092c1c0296eb7298b0f9f9f28462ea6092ded2129"
+            source: "https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.1.0Linux-arm64.zip"
+application:
+  executable:
+    path: "Apotris"
+    create-bin-link: false
+desktop:
+  executable: "Apotris"
+  working-directory: "application-root"
+  categories:
+    - "Game"
