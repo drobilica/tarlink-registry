@@ -1,0 +1,34 @@
+schema: 5
+id: "fallout-community-edition"
+name: "Fallout Community Edition"
+summary: "Modern community engine for Fallout"
+homepage: "https://github.com/alexbatalov/fallout1-ce"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.1.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.1.0"
+      runtime:
+        id: "steam-linux-runtime-4"
+        version: "4.0.20260805.254769"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/alexbatalov/fallout1-ce/releases/download/v1.1.0/fallout-ce-linux-x64.tar.gz"
+          verification:
+            digest: "54f89e43dc664df3357959eee3ee04f0e6ceeb9879be59a9b7beb918badf50ae"
+            source: "https://api.github.com/repos/alexbatalov/fallout1-ce/releases/assets/154698403"
+application:
+  executable:
+    path: "fallout-ce"
+    create-bin-link: false
+desktop:
+  executable: "fallout-ce"
+  working-directory: "application-root"
+  categories:
+    - "Game"
