@@ -1,6 +1,6 @@
 # Repository instructions
 
-This repository is the official TarLink application registry. Keep it declarative, data-only, minimal, and compatible with the TarLink validator.
+This repository is the official TarLink application and execution-runtime registry. Keep it declarative, data-only, minimal, and compatible with the TarLink validator.
 
 ## Scope and authority
 
@@ -13,8 +13,8 @@ This repository is the official TarLink application registry. Keep it declarativ
 
 ## Registry contract
 
-- Keep the repository data-only. Do not add a parser, generated index, Go module, scripts, installers, hooks, commands, source-policy mirror, or registry-local validation implementation.
-- Manifests are strict schema v5 files at `apps/<id>/manifest.yaml`, with shared metadata once and exact artifact keys under retained releases.
+- Keep the repository data-only. Do not add a parser, generated index, Go module, scripts, installers, hooks, commands, source-policy mirror, build recipes, arbitrary environment configuration, arbitrary mounts, executor templates, package-manager logic, user source configuration, proprietary-data mappings, or registry-local validation implementation.
+- Application manifests are strict schema v5 files at `apps/<id>/manifest.yaml`, with shared metadata once and exact artifact keys under retained releases. Execution-runtime manifests use TarLink's strict runtime schema at `runtimes/<id>/manifest.yaml`; applications may reference an exact compatible runtime only from the applicable retained release.
 - Platform resolution is exact. Unsupported platforms are omitted. Never add compatibility filenames, architecture fallback, placeholder architectures, or a manifest for an upstream platform that does not exist.
 - Application/release artifacts: use only official upstream portable Linux artifacts over HTTPS and record the exact lowercase SHA-256 or SHA-512 digest approved for those bytes. Maintainers may calculate the digest locally through TarLink's bounded tooling; upstream checksum publication is optional. For new local calculations prefer SHA-256 without rehashing existing valid manifests. Schema-v5 `verification.source` is honest informational official release or artifact-origin metadata, not independent checksum provenance; never fabricate a checksum URL.
 - External desktop icons: these are separate integration resources, not release artifacts. Their URLs must satisfy TarLink's immutable upstream URL policy, and each requires a lowercase SHA-256 integrity pin over the exact immutable icon bytes. Registry maintainers may compute and record this pin because upstream projects are not required to publish icon checksums; it is not upstream checksum provenance and must never be represented as such.

@@ -1,10 +1,10 @@
 # TarLink Registry
 
-The [official TarLink registry](https://github.com/drobilica/tarlink-registry) is a data-only catalog of portable Linux applications for [TarLink](https://github.com/drobilica/tarlink). TarLink owns the schema, parser, resolver, and installation policy; this repository contains only reviewable application manifests.
+The [official TarLink registry](https://github.com/drobilica/tarlink-registry) is a data-only catalog of portable Linux applications and execution runtimes for [TarLink](https://github.com/drobilica/tarlink). TarLink owns the schema, parser, resolver, and installation policy; this repository contains only reviewable declarative manifests.
 
 ## How it works
 
-Each application lives under `apps/<id>/` with one strict schema-v5 manifest. Shared application, release, and desktop metadata appears once; platform availability is derived from exact artifact keys in retained releases:
+Each application lives under `apps/<id>/` with one strict schema-v5 manifest. Shared application, release, and desktop metadata appears once; platform availability is derived from exact artifact keys in retained releases. Declarative execution runtimes, when needed, live at `runtimes/<id>/manifest.yaml`; an application release pins the exact compatible runtime ID and version. TarLink owns the runtime implementation and launch behavior.
 
 ```text
 apps/
