@@ -1,0 +1,13 @@
+schema: 1
+id: steam-linux-runtime-4
+kind: steam-linux-runtime
+version: 4.0.20260805.254769
+platform: linux-amd64
+artifact:
+  url: https://repo.steampowered.com/steamrt4/images/4.0.20260805.254769/SteamLinuxRuntime_4.tar.xz
+  archive: tar.xz
+  verification:
+    algorithm: sha256
+    digest: 3226d8234e7c0542ee767837832bfb1dad5e5e2dc944ec97eb221b437f6b9349
+    source: https://repo.steampowered.com/steamrt4/images/4.0.20260805.254769/SHA256SUMS
+interface: valve-v2-entry-point-v1
