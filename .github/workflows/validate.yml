@@ -118,7 +118,7 @@ jobs:
           elif [ -n "$BASE_SHA" ] && [ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]; then
             old_root="$RUNNER_TEMP/previous-registry"
             mkdir -p "$old_root"
-            git archive "$BASE_SHA" apps | tar -x -C "$old_root"
+            git archive "$BASE_SHA" apps runtimes | tar -x -C "$old_root"
             "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --old-root "$old_root"
           else
             "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE"

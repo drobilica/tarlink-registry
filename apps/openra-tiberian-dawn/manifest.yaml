@@ -1,0 +1,30 @@
+schema: 5
+id: "openra-tiberian-dawn"
+name: "OpenRA Tiberian Dawn"
+summary: "Open source real-time strategy engine for Tiberian Dawn"
+homepage: "https://www.openra.net/"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "release-20250330"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "release-20250330"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/OpenRA/OpenRA/releases/download/release-20250330/OpenRA-Tiberian-Dawn-x86_64.AppImage"
+          verification:
+            digest: "b3d202d1bf701be5989c41c256d19bd2b1788694df01e343ade865cf1190706b"
+            source: "https://github.com/OpenRA/OpenRA/releases/tag/release-20250330"
+application:
+  executable:
+    path: "appimage"
+    name: "openra-tiberian-dawn"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Game"

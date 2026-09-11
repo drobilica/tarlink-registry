@@ -1,0 +1,30 @@
+schema: 5
+id: "magic-sushi"
+name: "Magic Sushi"
+summary: "Open source sushi puzzle game"
+homepage: "https://github.com/EXL/Magic-Sushi"
+categories:
+  - "games"
+release:
+  current: "1.0.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.0"
+      runtime:
+        id: "steam-linux-runtime-3"
+        version: "3.0.20260805.254768"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/EXL/Magic-Sushi/releases/download/v1.0.0/Magic-Sushi-240x320-LIN_v1.0.0_19-Sep-2022.zip"
+          verification:
+            digest: "3b9daff65aa7ee455ef46074cc5baf260177f4cba8ef8c717cb5fea8b0c8872c"
+            source: "https://api.github.com/repos/EXL/Magic-Sushi/releases/assets/78337017"
+application:
+  executable:
+    path: "Magic-Sushi-SDL2"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"
