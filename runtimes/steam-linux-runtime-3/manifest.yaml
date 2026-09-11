@@ -1,0 +1,13 @@
+schema: 1
+id: steam-linux-runtime-3
+kind: steam-linux-runtime
+version: 3.0.20260805.254768
+platform: linux-amd64
+artifact:
+  url: https://repo.steampowered.com/steamrt3/images/3.0.20260805.254768/SteamLinuxRuntime_sniper.tar.xz
+  archive: tar.xz
+  verification:
+    algorithm: sha256
+    digest: e264f0639ab775338311036f207b35cebe99bc417b016b53931ebca8b30b3d94
+    source: https://repo.steampowered.com/steamrt3/images/3.0.20260805.254768/SHA256SUMS
+interface: valve-v2-entry-point-v1

@@ -1,0 +1,32 @@
+schema: 5
+id: "kens-labyrinth"
+name: "Ken's Labyrinth"
+summary: "Open source first-person action game"
+homepage: "https://github.com/sacredbanana/lab3d-sdl"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "4.2.1"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "4.2.1"
+      runtime:
+        id: "steam-linux-runtime-3"
+        version: "3.0.20260805.254768"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/sacredbanana/lab3d-sdl/releases/download/4.2.1/kens-labyrinth-linux-amd64.tar.gz"
+          verification:
+            digest: "6f4e3550c5dc864bf0996d3817f48b583c8c645a40b375246739212156e6dda5"
+            source: "https://api.github.com/repos/sacredbanana/lab3d-sdl/releases/assets/295473891"
+application:
+  executable:
+    path: "ken"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"
