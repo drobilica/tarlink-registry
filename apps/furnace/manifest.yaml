@@ -30,3 +30,6 @@ application:
 desktop:
   categories:
     - "Utility"
+  icon:
+    url: "https://raw.githubusercontent.com/tildearrow/furnace/f2619dbd988c92bf9c7173648d191648f60aecbf/res/icon.iconset/icon_512x512.png"
+    sha256: "5081ae29d96c1d405f95360e65d10fdcad1df17554222a87cbd8ab21daa42b9b"
