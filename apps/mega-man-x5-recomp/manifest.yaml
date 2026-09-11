@@ -26,8 +26,3 @@ application:
     path: "appimage"
     name: "mega-man-x5-recomp"
     create-bin-link: false
-desktop:
-  executable: "mega-man-x5-recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"

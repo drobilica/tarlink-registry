@@ -33,7 +33,3 @@ application:
     path: "appimage"
     name: "BattleShip"
     create-bin-link: false
-desktop:
-  executable: "BattleShip"
-  categories:
-    - "Game"

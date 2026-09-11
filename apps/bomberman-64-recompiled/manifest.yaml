@@ -33,8 +33,3 @@ application:
   executable:
     path: "BM64Recompiled"
     create-bin-link: false
-desktop:
-  executable: "BM64Recompiled"
-  working-directory: "application-root"
-  categories:
-    - "Game"

@@ -33,8 +33,3 @@ application:
   executable:
     path: "DK64Recompiled"
     create-bin-link: false
-desktop:
-  executable: "DK64Recompiled"
-  working-directory: "application-root"
-  categories:
-    - "Game"

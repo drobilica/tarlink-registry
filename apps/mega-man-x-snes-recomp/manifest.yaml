@@ -26,8 +26,3 @@ application:
     path: "appimage"
     name: "mega-man-x-snes-recomp"
     create-bin-link: false
-desktop:
-  executable: "mega-man-x-snes-recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"

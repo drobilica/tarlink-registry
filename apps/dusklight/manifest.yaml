@@ -31,8 +31,3 @@ application:
     path: "appimage"
     name: "dusklight"
     create-bin-link: false
-desktop:
-  executable: "dusklight"
-  working-directory: "application-root"
-  categories:
-    - "Game"
