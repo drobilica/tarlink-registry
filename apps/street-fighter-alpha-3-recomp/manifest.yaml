@@ -25,8 +25,3 @@ application:
   executable:
     path: "Street_Fighter_Alpha_3__Recompiled"
     create-bin-link: false
-desktop:
-  executable: "Street_Fighter_Alpha_3__Recompiled"
-  working-directory: "application-root"
-  categories:
-    - "Game"

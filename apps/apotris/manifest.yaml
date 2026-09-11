@@ -27,8 +27,3 @@ application:
   executable:
     path: "Apotris"
     create-bin-link: false
-desktop:
-  executable: "Apotris"
-  working-directory: "application-root"
-  categories:
-    - "Game"

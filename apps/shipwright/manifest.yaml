@@ -25,8 +25,3 @@ application:
     path: "soh.appimage"
     name: "shipwright"
     create-bin-link: false
-desktop:
-  executable: "shipwright"
-  working-directory: "application-root"
-  categories:
-    - "Game"

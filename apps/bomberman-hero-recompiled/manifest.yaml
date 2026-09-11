@@ -33,8 +33,3 @@ application:
   executable:
     path: "BMHeroRecompiled"
     create-bin-link: false
-desktop:
-  executable: "BMHeroRecompiled"
-  working-directory: "application-root"
-  categories:
-    - "Game"

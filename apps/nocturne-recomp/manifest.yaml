@@ -42,8 +42,3 @@ application:
   executable:
     path: "nocturnerecomp"
     create-bin-link: false
-desktop:
-  executable: "nocturnerecomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"

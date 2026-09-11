@@ -26,8 +26,3 @@ application:
     path: "appimage"
     name: "super-mario-world-recomp"
     create-bin-link: false
-desktop:
-  executable: "super-mario-world-recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"

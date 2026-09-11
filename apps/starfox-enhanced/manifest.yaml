@@ -25,8 +25,3 @@ application:
   executable:
     path: "StarFoxEnhanced-linux-x64/starfox_pc"
     create-bin-link: false
-desktop:
-  executable: "starfox_pc"
-  working-directory: "application-root"
-  categories:
-    - "Game"
