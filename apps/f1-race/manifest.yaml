@@ -23,7 +23,7 @@ release:
             source: "https://api.github.com/repos/EXL/F1-Race/releases/assets/78336390"
 application:
   executable:
-    path: "F1-Race-LIN_v1.0.1_19-Sep-2022/F1-Race"
+    path: "F1-Race"
     create-bin-link: false
 desktop:
   categories:

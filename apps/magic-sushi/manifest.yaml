@@ -23,7 +23,7 @@ release:
             source: "https://api.github.com/repos/EXL/Magic-Sushi/releases/assets/78337017"
 application:
   executable:
-    path: "Magic-Sushi-240x320-LIN_v1.0.0_19-Sep-2022/Magic-Sushi-SDL2"
+    path: "Magic-Sushi-SDL2"
     create-bin-link: false
 desktop:
   categories:

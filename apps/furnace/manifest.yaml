@@ -25,7 +25,7 @@ release:
             source: "https://api.github.com/repos/tildearrow/furnace/releases/assets/263218759"
 application:
   executable:
-    path: "furnace/furnace"
+    path: "furnace"
     create-bin-link: true
 desktop:
   categories:
