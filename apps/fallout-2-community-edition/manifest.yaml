@@ -1,0 +1,34 @@
+schema: 5
+id: "fallout-2-community-edition"
+name: "Fallout 2 Community Edition"
+summary: "Modern community engine for Fallout 2"
+homepage: "https://github.com/alexbatalov/fallout2-ce"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.3.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.3.0"
+      runtime:
+        id: "steam-linux-runtime-4"
+        version: "4.0.20260805.254769"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/alexbatalov/fallout2-ce/releases/download/v1.3.0/fallout2-ce-linux-x64.tar.gz"
+          verification:
+            digest: "6d7fcd57e07bdb135538179b89c28bf386d24408b2f03e67048bd6ed527a0899"
+            source: "https://api.github.com/repos/alexbatalov/fallout2-ce/releases/assets/163372459"
+application:
+  executable:
+    path: "fallout2-ce"
+    create-bin-link: false
+desktop:
+  executable: "fallout2-ce"
+  working-directory: "application-root"
+  categories:
+    - "Game"
