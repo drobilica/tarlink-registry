@@ -38,3 +38,6 @@ desktop:
   working-directory: "application-root"
   categories:
     - "Game"
+  icon:
+    url: https://raw.githubusercontent.com/revosucks/bm64recomp/79fda1f089f4c3def1e617f5368af3a3143069ca/icons/512.png
+    sha256: 7f71d795091575e8fdedb77c56f775eda76a34e465e3912bb5aaac8504854e3e
