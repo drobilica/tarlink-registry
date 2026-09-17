@@ -38,3 +38,6 @@ desktop:
   working-directory: "application-root"
   categories:
     - "Game"
+  icon:
+    url: https://raw.githubusercontent.com/rainchus/donkey-kong-64-recompiled/9177e21a3f633e834779573783b399750f20e7fe/icons/app.png
+    sha256: b743cafe4f3e19dba6aad4c17af833b62ff758af0390d13eec3303f166893f6b
