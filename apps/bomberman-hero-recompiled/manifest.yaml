@@ -38,3 +38,6 @@ desktop:
   working-directory: "application-root"
   categories:
     - "Game"
+  icon:
+    url: https://raw.githubusercontent.com/revosucks/bmherorecomp/71b0af3fd6630ae1db4700af3abafa3f55ab5275/icons/app.png
+    sha256: 403e7666d4f65c8d069b1a4dec1f24dbc4a90552c4d6941db53fe8e7ea2d3f86
