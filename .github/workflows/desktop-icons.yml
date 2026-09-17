@@ -7,7 +7,7 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+  pull-requests: read
 
 concurrency:
   group: registry-desktop-icons
@@ -84,8 +84,9 @@ jobs:
           git archive "$GITHUB_SHA" apps runtimes | tar -x -C "$old_root"
           "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --old-root "$old_root"
 
-      - name: Create maintenance branch and PR
+      - name: Publish validated maintenance branch
         if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
+        id: branch
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -97,4 +98,24 @@ jobs:
           git config user.email tarlink-bot@users.noreply.github.com
           git commit -m "maint: repair verified desktop icons"
           git push --set-upstream origin "$branch"
-          gh pr create --title "maint: repair verified desktop icons" --body-file "$RUNNER_TEMP/icon-report.json" --base main --head "$branch"
+          echo "name=$branch" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Report maintenance handoff
+        if: steps.existing.outputs.exists != 'true' && steps.diff.outputs.changed == 'true'
+        env:
+          BRANCH: ${{ steps.branch.outputs.name }}
+          SHA: ${{ steps.branch.outputs.sha }}
+        run: |
+          {
+            echo '## Desktop-icon maintenance requires review'
+            echo
+            echo "TarLink repaired and validated the registry. A maintainer must open a pull request from \`$BRANCH\` at \`$SHA\`."
+            echo
+            echo "[Open pull request](https://github.com/$GITHUB_REPOSITORY/compare/main...$BRANCH?expand=1)"
+            echo
+            echo '### Repair report'
+            echo '```json'
+            cat "$RUNNER_TEMP/icon-report.json"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
