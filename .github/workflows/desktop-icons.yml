@@ -81,7 +81,7 @@ jobs:
           "$TARLINK_BINARY" registry validate "$GITHUB_WORKSPACE"
           old_root="$RUNNER_TEMP/previous-registry"
           mkdir -p "$old_root"
-          git archive "$GITHUB_SHA" apps | tar -x -C "$old_root"
+          git archive "$GITHUB_SHA" apps runtimes | tar -x -C "$old_root"
           "$TARLINK_BINARY" registry check "$GITHUB_WORKSPACE" --old-root "$old_root"
 
       - name: Create maintenance branch and PR
