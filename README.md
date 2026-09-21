@@ -30,17 +30,16 @@ is not a publisher signature or independent authentication of the mutable
 registry. `verification.source` is informational release or artifact-origin
 metadata.
 
-TarLink's latest stable `v0.18.0` predates its static artifact repository
-feature. That feature is implemented on TarLink `main`, while this repository
-remains data-only on both lines; repository publication and external HTTPS
-hosting are outside this registry.
+TarLink's latest stable `v0.18.1` includes its static artifact repository
+feature, while this repository remains data-only on both lines; repository
+publication and external HTTPS hosting are outside this registry.
 
 ## Use and contribute
 
 Install TarLink, then choose an application from this repository:
 
 ```sh
-RELEASE=v0.18.0
+RELEASE=v0.18.1
 curl -fL --proto '=https' --tlsv1.2 -o tarlink-install.sh \
   "https://raw.githubusercontent.com/drobilica/tarlink/$RELEASE/install.sh"
 sed -n '1,$p' tarlink-install.sh
