@@ -29,23 +29,54 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          tag=$(gh api repos/drobilica/tarlink/releases/latest --jq .tag_name)
+          release_json="$RUNNER_TEMP/tarlink-release.json"
+          gh api repos/drobilica/tarlink/releases/latest >"$release_json"
+          tag=$(jq -r .tag_name "$release_json")
           if [[ ! "$tag" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
             echo "latest TarLink release is not stable: $tag" >&2
             exit 1
           fi
+          release_id=$(jq -er '.id | numbers' "$release_json")
+          checksums=$(jq -er '([.assets[] | select(.name == "checksums.txt")] | if length == 1 then .[0] | [.id, .digest] | @tsv else error("expected one checksums asset") end)' "$release_json")
+          binary=$(jq -er '([.assets[] | select(.name == "tarlink-linux-amd64")] | if length == 1 then .[0] | [.id, .digest] | @tsv else error("expected one amd64 asset") end)' "$release_json")
+          checksums_id=${checksums%%$'\t'*}
+          checksums_digest=${checksums#*$'\t'}
+          binary_id=${binary%%$'\t'*}
+          binary_digest=${binary#*$'\t'}
+          [[ "$checksums_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          [[ "$binary_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "release_id=$release_id" >> "$GITHUB_OUTPUT"
+          echo "checksums_id=$checksums_id" >> "$GITHUB_OUTPUT"
+          echo "checksums_digest=$checksums_digest" >> "$GITHUB_OUTPUT"
+          echo "binary_id=$binary_id" >> "$GITHUB_OUTPUT"
+          echo "binary_digest=$binary_digest" >> "$GITHUB_OUTPUT"
 
-      - name: Download verified released TarLink
+      - name: Download verified stable TarLink release
         env:
           GH_TOKEN: ${{ github.token }}
           TARLINK_TAG: ${{ steps.tarlink_release.outputs.tag }}
+          TARLINK_RELEASE_ID: ${{ steps.tarlink_release.outputs.release_id }}
+          TARLINK_CHECKSUMS_ID: ${{ steps.tarlink_release.outputs.checksums_id }}
+          TARLINK_CHECKSUMS_DIGEST: ${{ steps.tarlink_release.outputs.checksums_digest }}
+          TARLINK_BINARY_ID: ${{ steps.tarlink_release.outputs.binary_id }}
+          TARLINK_BINARY_DIGEST: ${{ steps.tarlink_release.outputs.binary_digest }}
         shell: bash
         run: |
           release_dir="$RUNNER_TEMP/tarlink-release"
           mkdir -p "$release_dir"
-          gh release download "$TARLINK_TAG" --repo drobilica/tarlink \
-            --pattern checksums.txt --pattern tarlink-linux-amd64 --dir "$release_dir"
+          release_json="$RUNNER_TEMP/tarlink-release-consumer.json"
+          gh api "repos/drobilica/tarlink/releases/$TARLINK_RELEASE_ID" >"$release_json"
+          test "$(jq -r .tag_name "$release_json")" = "$TARLINK_TAG"
+          test "$(jq -r .id "$release_json")" = "$TARLINK_RELEASE_ID"
+          jq -e --arg checksums_id "$TARLINK_CHECKSUMS_ID" --arg checksums_digest "$TARLINK_CHECKSUMS_DIGEST" --arg binary_id "$TARLINK_BINARY_ID" --arg binary_digest "$TARLINK_BINARY_DIGEST" '
+            ([.assets[] | select((.id | tostring) == $checksums_id and .name == "checksums.txt" and .digest == $checksums_digest)] | length == 1) and
+            ([.assets[] | select((.id | tostring) == $binary_id and .name == "tarlink-linux-amd64" and .digest == $binary_digest)] | length == 1)
+          ' "$release_json"
+          gh api --header 'Accept: application/octet-stream' "repos/drobilica/tarlink/releases/assets/$TARLINK_CHECKSUMS_ID" >"$release_dir/checksums.txt"
+          gh api --header 'Accept: application/octet-stream' "repos/drobilica/tarlink/releases/assets/$TARLINK_BINARY_ID" >"$release_dir/tarlink-linux-amd64"
+          test "sha256:$(sha256sum "$release_dir/checksums.txt" | awk '{print $1}')" = "$TARLINK_CHECKSUMS_DIGEST"
+          test "sha256:$(sha256sum "$release_dir/tarlink-linux-amd64" | awk '{print $1}')" = "$TARLINK_BINARY_DIGEST"
           matches=$(awk '$2 == "tarlink-linux-amd64" { count++ } END { print count + 0 }' "$release_dir/checksums.txt")
           test "$matches" -eq 1
           expected=$(awk '$2 == "tarlink-linux-amd64" { print $1 }' "$release_dir/checksums.txt")
