@@ -26,9 +26,16 @@ This repository is the official TarLink application and execution-runtime regist
 ## Pre-1.0 policy
 
 - Before TarLink `v1.0.0`, do not add compatibility layers, legacy manifest forms, fallback behavior, or migration files unless explicitly requested.
-- Registry changes use a branch and pull request even before TarLink `v1.0.0`; the core repository's pre-1.0 direct-to-main policy does not apply here.
+- Registry changes use a branch and pull request, matching TarLink's PR-only repository policy.
 
 ## Agents and Git
+
+All registry changes use pull-request branches and require the exact existing
+check-run names `structural` and `artifacts`. The safe settings application
+order is: first confirm both checks run reliably on pull requests, then require
+pull requests and those two checks in the repository ruleset/branch protection,
+then restrict bypasses and verify the effective ruleset. This proposal is
+pending and does not claim live settings were changed.
 
 - Worker/subagents may research, edit, and validate their assigned manifests, but must not commit, push, tag, publish releases, or change repository settings.
 - All registry changes must use a branch and pull request. Push the branch and open or update the pull request only after full structural validation and changed-artifact validation against the branch's starting `main` HEAD have passed.

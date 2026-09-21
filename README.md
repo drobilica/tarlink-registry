@@ -40,7 +40,11 @@ hosting are outside this registry.
 Install TarLink, then choose an application from this repository:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/drobilica/tarlink/main/install.sh | sh
+RELEASE=v0.18.0
+curl -fL --proto '=https' --tlsv1.2 -o tarlink-install.sh \
+  "https://raw.githubusercontent.com/drobilica/tarlink/$RELEASE/install.sh"
+sed -n '1,$p' tarlink-install.sh
+sh tarlink-install.sh "$RELEASE"
 tarlink install blender
 ```
 
