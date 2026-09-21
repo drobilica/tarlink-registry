@@ -1,6 +1,6 @@
 # TarLink Registry
 
-The [official TarLink registry](https://github.com/drobilica/tarlink-registry) is a data-only catalog of portable Linux applications and execution runtimes for [TarLink](https://github.com/drobilica/tarlink). TarLink owns the schema, parser, resolver, and installation policy; this repository contains only reviewable declarative manifests.
+The [official TarLink registry](https://github.com/drobilica/tarlink-registry) is a data-only catalog of portable Linux applications and execution runtimes for [TarLink](https://github.com/drobilica/tarlink). TarLink owns the schema, parser, resolver, and installation policy; this repository contains only reviewable declarative manifests. It does not create, publish, or serve TarLink static artifact repositories.
 
 ## How it works
 
@@ -24,6 +24,16 @@ upstream does not need to publish a separate checksum. Unsupported applications
 remain unsupported rather than widening the declarative model. Manifests cannot
 contain commands, scripts, hooks, installers, environment variables, custom
 destinations, or arbitrary integrations.
+
+The stored digest is an integrity pin for the exact bytes TarLink downloads; it
+is not a publisher signature or independent authentication of the mutable
+registry. `verification.source` is informational release or artifact-origin
+metadata.
+
+TarLink's latest stable `v0.18.0` predates its static artifact repository
+feature. That feature is implemented on TarLink `main`, while this repository
+remains data-only on both lines; repository publication and external HTTPS
+hosting are outside this registry.
 
 ## Use and contribute
 
