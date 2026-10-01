@@ -1,0 +1,33 @@
+schema: 5
+id: "reblue"
+name: "re:Blue"
+summary: "Native recompile of Blue Dragon"
+homepage: "https://github.com/zolaware/reblue"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.2.1"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.2.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/zolaware/reblue/releases/download/v1.2.1/reblue-1.2.1-x86_64.AppImage"
+          verification:
+            digest: "98b14fe32c5f3c2148a77e5d5df7f8bf7a91fe768c3a68be1e1d075269115ff5"
+            source: "https://api.github.com/repos/zolaware/reblue/releases/assets/575668891"
+        linux-arm64:
+          url: "https://github.com/zolaware/reblue/releases/download/v1.2.1/reblue-1.2.1-aarch64.AppImage"
+          verification:
+            digest: "db6091000afa3e16e28a644df6d92b9fdeebc6a59cf9ce0e5e3f346940aa2d55"
+            source: "https://api.github.com/repos/zolaware/reblue/releases/assets/575668894"
+application:
+  executable:
+    path: "appimage"
+    name: "reblue"
+    create-bin-link: false

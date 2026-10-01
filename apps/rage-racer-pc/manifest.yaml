@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.6-alpha"
+  current: "0.6.5-alpha"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.6.5-alpha"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6.5-alpha/Rage-Racer-0.6.5-alpha-linux-x86_64.zip"
+          verification:
+            digest: "8a509a273c8fcb379d154eeedf0f1177fd16d5ded8a2a860441e760a2575818e"
+            source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/553761864"
     - version: "0.6-alpha"
       artifacts:
         linux-amd64:

@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.0.2-alpha"
+  current: "0.1.0-alpha"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.1.0-alpha"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/MegaManX5Recomp/releases/download/v0.1.0-alpha/MegaManX5Recomp-v0.1.0-alpha-linux-x86_64.AppImage"
+          verification:
+            digest: "00040f8701738c9c11d215c1f3cf4cf539709ec02c4e1d77019c37ea9ca26843"
+            source: "https://api.github.com/repos/mstan/MegaManX5Recomp/releases/assets/558605869"
     - version: "0.0.2-alpha"
       artifacts:
         linux-amd64:

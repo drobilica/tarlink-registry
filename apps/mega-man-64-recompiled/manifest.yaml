@@ -24,6 +24,11 @@ release:
           verification:
             digest: "231945f3b599acd49e7bb169ad3881c74eabcc02e014f61f3274a9e5f955ba20"
             source: "https://api.github.com/repos/MegaMan64Recomp/MegaMan64Recompiled/releases/assets/409342533"
+        linux-arm64:
+          url: "https://github.com/MegaMan64Recomp/MegaMan64Recompiled/releases/download/v0.9.1/MegaMan64Recompiled-v0.9.1-Linux-ARM64.zip"
+          verification:
+            digest: "c871d924fd257c6836283689b7e886b3c278c45f4cad87c0221b457ae21c4c19"
+            source: "https://api.github.com/repos/MegaMan64Recomp/MegaMan64Recompiled/releases/assets/409342487"
 application:
   executable:
     path: "MegaMan64Recompiled"

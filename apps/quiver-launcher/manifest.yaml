@@ -1,0 +1,30 @@
+schema: 5
+id: "quiver-launcher"
+name: "Quiver Launcher"
+summary: "Launcher for apps distributed through GitHub and GitLab releases"
+homepage: "https://github.com/tgeorgiadis/quiver-launcher"
+categories:
+  - "utilities"
+release:
+  current: "3.4.5"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "3.4.5"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/tgeorgiadis/quiver-launcher/releases/download/v3.4.5/QuiverLauncher-linux-x64.AppImage"
+          verification:
+            digest: "877ddfa3628104689f575848ff03512a2cf312a441dede8f80185bbb33626107"
+            source: "https://api.github.com/repos/tgeorgiadis/quiver-launcher/releases/assets/579099271"
+        linux-arm64:
+          url: "https://github.com/tgeorgiadis/quiver-launcher/releases/download/v3.4.5/QuiverLauncher-linux-arm64.AppImage"
+          verification:
+            digest: "1e78e6504360d192980727f316a7388be04551aa6bfed41c8dd0c38373b0bd8f"
+            source: "https://api.github.com/repos/tgeorgiadis/quiver-launcher/releases/assets/579099251"
+application:
+  executable:
+    path: "appimage"
+    name: "quiver-launcher"
+    create-bin-link: false

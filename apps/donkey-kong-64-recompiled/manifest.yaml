@@ -9,11 +9,26 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.0.2"
+  current: "1.0.3"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.0.3"
+      nested-archive:
+        path: "DK64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Rainchus/Donkey-Kong-64-Recompiled/releases/download/v1.0.3/DK64Recompiled-Linux-X64-Release-1-0-3.zip"
+          verification:
+            digest: "352380418f2376640825fe65b0ba085e12e7b792205cfa435a6caa0202e54b5c"
+            source: "https://api.github.com/repos/Rainchus/Donkey-Kong-64-Recompiled/releases/assets/599567756"
+        linux-arm64:
+          url: "https://github.com/Rainchus/Donkey-Kong-64-Recompiled/releases/download/v1.0.3/DK64Recompiled-Linux-ARM64-Release-1-0-3.zip"
+          verification:
+            digest: "bb887245c61ee08f98c2e724ec2b3877000a02554bd501a122bd91409c888ba4"
+            source: "https://api.github.com/repos/Rainchus/Donkey-Kong-64-Recompiled/releases/assets/599567785"
     - version: "1.0.2"
       nested-archive:
         path: "DK64Recompiled.tar.gz"

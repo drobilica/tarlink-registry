@@ -7,11 +7,23 @@ categories:
   - "game-development"
   - "graphics"
 release:
-  current: "1.2.1"
+  current: "1.2.3"
   archive: "tar.gz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.2.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.3/Pixelorama-Linux-64bit.tar.gz"
+          verification:
+            digest: "e7bb3b5f485e3a67f06b15a2c8414a8a7c18b7c6d2cf73f6b3b5904d86821e4b"
+            source: "https://api.github.com/repos/Orama-Interactive/Pixelorama/releases/assets/565753829"
+        linux-arm64:
+          url: "https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.3/Pixelorama-Linux-ARM64.tar.gz"
+          verification:
+            digest: "0c58b317bd1decadc8cc282e12b5a8695031d15a28c1beb7cf27535d4ed3c43a"
+            source: "https://api.github.com/repos/Orama-Interactive/Pixelorama/releases/assets/565753731"
     - version: "1.2.1"
       artifacts:
         linux-amd64:
