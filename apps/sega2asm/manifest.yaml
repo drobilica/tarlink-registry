@@ -1,0 +1,32 @@
+schema: 5
+id: "sega2asm"
+name: "sega2asm"
+summary: "Genesis and Mega Drive disassembler and ROM splitter"
+homepage: "https://github.com/hansbonini/sega2asm"
+categories:
+  - "development"
+release:
+  current: "1.0.2"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/hansbonini/sega2asm/releases/download/v1.0.2/sega2asm_linux_amd64.tar.gz"
+          verification:
+            digest: "1f1b510bb10e10f3aee7ce29a674ac870e8f80ac99c3b62332bbecf2be18dada"
+            source: "https://api.github.com/repos/hansbonini/sega2asm/releases/assets/383351574"
+        linux-arm64:
+          url: "https://github.com/hansbonini/sega2asm/releases/download/v1.0.2/sega2asm_linux_arm64.tar.gz"
+          verification:
+            digest: "7e5d4de578b50ed6d6733a437cf950910c075f50e67fb2cec0c8aabf6d3dd941"
+            source: "https://api.github.com/repos/hansbonini/sega2asm/releases/assets/383351581"
+application:
+  executable:
+    paths:
+      linux-amd64: "sega2asm_linux_amd64"
+      linux-arm64: "sega2asm_linux_arm64"
+    name: "sega2asm"
+    create-bin-link: true

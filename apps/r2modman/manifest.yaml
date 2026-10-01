@@ -6,28 +6,36 @@ homepage: "https://github.com/ebkr/r2modmanPlus"
 categories:
   - "games"
 release:
-  current: "3.2.19"
-  archive: "tar.gz"
+  current: "3.2.20"
+  archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "3.2.20"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.20/r2modman-3.2.20.AppImage"
+          verification:
+            digest: "a349eaf091b37243204d0e05ee59b4bf3cd42857eb2ca452d03b09c86b516a92"
+            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/581314996"
     - version: "3.2.19"
       artifacts:
         linux-amd64:
-          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.tar.gz"
+          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.AppImage"
           verification:
-            digest: "92d255935e2d23edb72122254c379b0500c3d2f8ab51265e0d89d4b7943b5a5c"
-            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523454411"
+            digest: "138712790e61a26ac8323d43c7d3344c6b693ad19be51fb3dda91460cc573bd3"
+            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523453224"
     - version: "3.2.18"
       artifacts:
         linux-amd64:
-          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.tar.gz"
+          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.AppImage"
           verification:
-            digest: "38950023f9cabb82b68c1f83a06641d13e1dff77c0b0bdb19c3454537fe45cd0"
-            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185221"
+            digest: "6d0be05ba24af0849c3368943a1ff5db8a4ff4b26217a5541f2436aab20fbf43"
+            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185045"
 application:
   executable:
-    path: "r2modman"
+    path: "appimage"
+    name: "r2modman"
     create-bin-link: true
 desktop:
   categories:

@@ -1,0 +1,28 @@
+schema: 5
+id: "lost-odyssey-recomp"
+name: "Lost Odyssey Recomp"
+summary: "Native Xbox 360 recompilation of Lost Odyssey"
+homepage: "https://github.com/freefrank/LostOdysseyRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.7.25"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.7.25"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/freefrank/LostOdysseyRecomp/releases/download/v0.7.25/LostOdysseyRecomp-linux-x64-v0.7.25.AppImage"
+          verification:
+            digest: "bfc15c32fea4e6c678bc4a62cdc80ed9411cadeec400c9422ba985fc40ab6be7"
+            source: "https://api.github.com/repos/freefrank/LostOdysseyRecomp/releases/assets/602750225"
+application:
+  executable:
+    path: "appimage"
+    name: "lost-odyssey-recomp"
+    create-bin-link: false

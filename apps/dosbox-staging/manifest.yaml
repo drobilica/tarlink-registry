@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.82.2"
+  current: "0.83.0"
   archive: "tar.xz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.83.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/dosbox-staging/dosbox-staging/releases/download/v0.83.0/dosbox-staging-linux-x86_64-v0.83.0.tar.xz"
+          verification:
+            digest: "d3a94f7f1c3e68a47ec88d61145506c7904452adb0c9c5928cb8cfe2331d6c5c"
+            source: "https://api.github.com/repos/dosbox-staging/dosbox-staging/releases/assets/530796067"
     - version: "0.82.2"
       artifacts:
         linux-amd64:
@@ -29,5 +36,3 @@ desktop:
   categories:
     - "Game"
     - "Emulator"
-  icon:
-    path: "icons/hicolor/scalable/apps/org.dosbox-staging.dosbox-staging.svg"

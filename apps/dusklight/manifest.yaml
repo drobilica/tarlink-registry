@@ -9,11 +9,23 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.4.1"
+  current: "2.0.3"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "2.0.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TwilitRealm/dusklight/releases/download/v2.0.3/Dusklight-v2.0.3-linux-x86_64.AppImage"
+          verification:
+            digest: "87ec251963c984ad2b3ac075281431d2221db2297dc19f2ab5daad92e969fc06"
+            source: "https://api.github.com/repos/TwilitRealm/dusklight/releases/assets/600262574"
+        linux-arm64:
+          url: "https://github.com/TwilitRealm/dusklight/releases/download/v2.0.3/Dusklight-v2.0.3-linux-arm64.AppImage"
+          verification:
+            digest: "7f7d72054847277afccdddb93f7cca4e3b730768da64e30a4cdd6774c23bdbf9"
+            source: "https://api.github.com/repos/TwilitRealm/dusklight/releases/assets/600262576"
     - version: "1.4.1"
       artifacts:
         linux-amd64:

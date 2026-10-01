@@ -1,0 +1,27 @@
+schema: 5
+id: "project8-recomp"
+name: "Project8Recomp"
+summary: "Native recompile of Tony Hawk's Project 8 for Xbox 360"
+homepage: "https://github.com/theokyr/Project8Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.3.0"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.3.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/theokyr/Project8Recomp/releases/download/v0.3.0/Project8Recomp-v0.3.0-linux-x86_64.zip"
+          verification:
+            digest: "dd091bc239f4d734a80b4f317e69bd2bf626404bfb2a3ab6c87c8fe2e6cb4886"
+            source: "https://api.github.com/repos/theokyr/Project8Recomp/releases/assets/527678830"
+application:
+  executable:
+    path: "Project8Recomp"
+    create-bin-link: false

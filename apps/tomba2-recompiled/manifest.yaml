@@ -1,0 +1,28 @@
+schema: 5
+id: "tomba2-recompiled"
+name: "Tomba! 2 Recompiled"
+summary: "Native recompile of Tomba! 2: The Evil Swine Return"
+homepage: "https://github.com/mstan/Tomba2Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.0.10"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.0.10"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/Tomba2Recomp/releases/download/v0.0.10/Tomba2Recomp-v0.0.10-linux-x86_64.AppImage"
+          verification:
+            digest: "3d9d0150cc77cc1fa54937ec9eb3c31ff9ce013ba6894fbf2567d4918c6cb48a"
+            source: "https://github.com/mstan/Tomba2Recomp/releases/download/v0.0.10/Tomba2Recomp-v0.0.10-linux-x86_64.AppImage.sha256"
+application:
+  executable:
+    path: "appimage"
+    name: "tomba2-recompiled"
+    create-bin-link: false

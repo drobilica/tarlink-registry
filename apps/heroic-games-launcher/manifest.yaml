@@ -6,11 +6,18 @@ homepage: "https://heroicgameslauncher.com/"
 categories:
   - "games"
 release:
-  current: "2.22.1"
+  current: "2.22.3"
   archive: "tar.xz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "2.22.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.22.3/Heroic-2.22.3-linux-x64.tar.xz"
+          verification:
+            digest: "7382d719a5114c5f0761eea05cdb22f73f58fe98ec840d16b3d85a054d0d3efd"
+            source: "https://api.github.com/repos/Heroic-Games-Launcher/HeroicGamesLauncher/releases/assets/568214418"
     - version: "2.22.1"
       artifacts:
         linux-amd64:

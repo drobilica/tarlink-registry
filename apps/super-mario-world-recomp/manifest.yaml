@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.11.1"
+  current: "0.14.2"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.14.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.14.2/SuperMarioWorldRecomp-linux-0.14.2-x86_64.AppImage"
+          verification:
+            digest: "7fa57304b85e38b4b0c06c27611d77fe1c8c49422bb196e642f18ff03a9a3ac3"
+            source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/581510421"
     - version: "0.11.1"
       artifacts:
         linux-amd64:

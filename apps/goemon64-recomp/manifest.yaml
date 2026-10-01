@@ -24,6 +24,11 @@ release:
           verification:
             digest: "73e0deb9fab6deb40365708ca4c8ef5ef2d06e54160a9eb089655b063b361f0d"
             source: "https://api.github.com/repos/klorfmorf/Goemon64Recomp/releases/assets/348684379"
+        linux-arm64:
+          url: "https://github.com/klorfmorf/Goemon64Recomp/releases/download/v0.2.0-dev/Goemon64Recompiled-Linux-ARM64-Release.zip"
+          verification:
+            digest: "134fc51de50d8aba05fe9b13c069598030e9588d2b83304e1ace925c135f321b"
+            source: "https://api.github.com/repos/klorfmorf/Goemon64Recomp/releases/assets/348684370"
 application:
   executable:
     path: "Goemon64Recompiled"

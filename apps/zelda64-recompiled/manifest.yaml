@@ -24,6 +24,11 @@ release:
           verification:
             digest: "de8b19cdb4e3ad0c10fd6d8127f7a6cc2a9eba106d89c753439178b718887c42"
             source: "https://api.github.com/repos/Zelda64Recomp/Zelda64Recomp/releases/assets/286581896"
+        linux-arm64:
+          url: "https://github.com/Zelda64Recomp/Zelda64Recomp/releases/download/v1.2.2/Zelda64Recompiled-v1.2.2-Linux-ARM64.zip"
+          verification:
+            digest: "2e49b96aced578363065e1764ca96eaa5590cb6f7e80efd10e8ce1a08462b933"
+            source: "https://api.github.com/repos/Zelda64Recomp/Zelda64Recomp/releases/assets/286581814"
 application:
   executable:
     path: "Zelda64Recompiled"

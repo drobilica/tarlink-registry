@@ -9,11 +9,26 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.2.1"
+  current: "1.2.2"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.2.2"
+      nested-archive:
+        path: "HarvestMoon64Recompiled.tar.gz"
+        archive: "tar.gz"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/download/v1.2.2/HarvestMoon64Recompiled-v1.2.2-Linux-X64.zip"
+          verification:
+            digest: "ae0865eaa1092a88a9321e776ca71dcab86c69c4f74d1004dc4f2d6f2224685c"
+            source: "https://api.github.com/repos/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/assets/589262897"
+        linux-arm64:
+          url: "https://github.com/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/download/v1.2.2/HarvestMoon64Recompiled-v1.2.2-Linux-ARM64.zip"
+          verification:
+            digest: "cd9c19f86bbb3df153de3f49d377d7120cc44f999499731843f281d455882f26"
+            source: "https://api.github.com/repos/HarvestMoon64Recomp/HarvestMoon64Recomp/releases/assets/589262660"
     - version: "1.2.1"
       nested-archive:
         path: "HarvestMoon64Recompiled.tar.gz"

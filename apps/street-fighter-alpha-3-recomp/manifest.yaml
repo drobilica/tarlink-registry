@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.2.15"
+  current: "0.2.16"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.2.16"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TechnicallyComputers/Street-Fighter-Alpha-3-Recomp/releases/download/v0.2.16/sfa-0.2.16-linux-x64.zip"
+          verification:
+            digest: "f32d790d41b3279faa8674b647300c76a7a21b6b817275fd269e5dc69cdfe3ce"
+            source: "https://api.github.com/repos/TechnicallyComputers/Street-Fighter-Alpha-3-Recomp/releases/assets/602612163"
     - version: "0.2.15"
       artifacts:
         linux-amd64:
