@@ -1,0 +1,37 @@
+schema: 5
+id: "nexen"
+name: "Nexen"
+summary: "Multi-system emulator, debugger, and TAS tool (NES, SNES, GB, GBA, PCE, SMS/GG, WS)"
+homepage: "https://github.com/TheAnsarya/Nexen"
+categories:
+  - "emulation"
+  - "games"
+release:
+  current: "1.4.43"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.4.43"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/TheAnsarya/Nexen/releases/download/v1.4.43/Nexen-Linux-x64-v1.4.43.AppImage"
+          verification:
+            digest: "93f448d45c0230587c38bf7ef685f87c76bfdc2c536b451206d59872c387c03c"
+            source: "https://api.github.com/repos/TheAnsarya/Nexen/releases/assets/422070007"
+        linux-arm64:
+          url: "https://github.com/TheAnsarya/Nexen/releases/download/v1.4.43/Nexen-Linux-ARM64-v1.4.43.AppImage"
+          verification:
+            digest: "0f247becbf1a9162647f7f423414d614f5518a4652cd02d249fbe2ba7d576408"
+            source: "https://api.github.com/repos/TheAnsarya/Nexen/releases/assets/422069952"
+application:
+  executable:
+    path: "appimage"
+    name: "nexen"
+    create-bin-link: false
+desktop:
+  executable: "nexen"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+    - "Emulator"

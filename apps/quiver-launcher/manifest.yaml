@@ -28,3 +28,11 @@ application:
     path: "appimage"
     name: "quiver-launcher"
     create-bin-link: false
+desktop:
+  executable: "quiver-launcher"
+  working-directory: "application-root"
+  categories:
+    - "Utility"
+  icon:
+    url: "https://raw.githubusercontent.com/tgeorgiadis/quiver-launcher/425506283e453fcea2e1c8176d6aa965e4b16177/Assets/quiver-icon.png"
+    sha256: "a49ca0d095649b7fb4b1a2b50505007af645c1bb6a9cbbefa92f28a2a538e844"
