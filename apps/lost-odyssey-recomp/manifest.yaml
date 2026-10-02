@@ -26,3 +26,12 @@ application:
     path: "appimage"
     name: "lost-odyssey-recomp"
     create-bin-link: false
+desktop:
+  executable: "lost-odyssey-recomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+    - "Emulator"
+  icon:
+    url: "https://raw.githubusercontent.com/freefrank/LostOdysseyRecomp/fe89910300b92a59006924987e8586ba157cc20c/packaging/linux/io.github.freefrank.LostOdysseyRecomp.png"
+    sha256: "e153c928b34c6f4c6d7d31092e00b4616a8e7a2526fc5d049065a379e3041e4b"

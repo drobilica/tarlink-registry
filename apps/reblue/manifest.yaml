@@ -31,3 +31,11 @@ application:
     path: "appimage"
     name: "reblue"
     create-bin-link: false
+desktop:
+  executable: "reblue"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/zolaware/reblue/ce0edadbb79007526842dadebf80941bf8ea46ca/res/reblue.png"
+    sha256: "4901279e6de5fe9bdd7490352469a033148a1db754d72cbae02c2123d97a657e"
