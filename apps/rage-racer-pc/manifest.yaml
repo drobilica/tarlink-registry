@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.6.5-alpha"
+  current: "0.6.8-alpha-raytracer"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.6.8-alpha-raytracer"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6.8-alpha-raytracer/Rage-Racer-0.6.8-alpha-raytracer-linux-x86_64.zip"
+          verification:
+            digest: "2c9887846eea4163620cafbeec875074a33bbdfd1026c27640fa87622d9b2b9d"
+            source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/577278413"
     - version: "0.6.5-alpha"
       artifacts:
         linux-amd64:
