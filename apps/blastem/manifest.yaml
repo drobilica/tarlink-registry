@@ -1,0 +1,32 @@
+schema: 5
+id: "blastem"
+name: "BlastEm"
+summary: "Emulator for Sega Genesis/Mega Drive and related systems"
+homepage: "https://www.retrodev.com/blastem"
+categories:
+  - "emulation"
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.0"
+      artifacts:
+        linux-amd64:
+          url: "https://www.retrodev.com/blastem/blastem64-1.0.0.tar.gz"
+          verification:
+            digest: "9e47b68a555e24db5ef5bd77e67967124ac3e28ae04ae32e9f3af3eaecf31860"
+            source: "https://www.retrodev.com/blastem/blastem64-1.0.0.tar.gz"
+application:
+  executable:
+    name: "blastem"
+    path: "blastem"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Game"
+    - "Emulator"
