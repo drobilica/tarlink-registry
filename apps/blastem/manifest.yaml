@@ -30,3 +30,6 @@ desktop:
   categories:
     - "Game"
     - "Emulator"
+  icon:
+    url: "https://www.retrodev.com/repos/blastem/raw-file/2b2a182f4522/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    sha256: "cd7eeb5ee40be3ce626d6685449ac955ad6dfbfd5b9cd1c719118f31ce9928a3"
