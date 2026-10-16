@@ -6,6 +6,7 @@ homepage: "https://www.blender.org/"
 categories:
   - "game-development"
   - "graphics"
+enabled: false
 release:
   current: "5.2.2"
   archive: "tar.xz"
