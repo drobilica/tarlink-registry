@@ -1,0 +1,30 @@
+schema: 5
+id: "xrevive"
+name: "xrevive"
+summary: "Desktop launcher for original Xbox games recompiled with XRecomp"
+homepage: "https://github.com/Teraflopping/xrevive"
+categories:
+  - "emulation"
+  - "games"
+release:
+  current: "0.1.13"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.1.13"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.13/xrevive_0.1.13_amd64.AppImage"
+          verification:
+            digest: "f783f58b9df4e7fd774f520fbacf0dfa90bbbe9fca12f58c9036fa2e4ffad786"
+            source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/645804352"
+application:
+  executable:
+    path: "appimage"
+    name: "xrevive"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Game"
+    - "Emulator"
