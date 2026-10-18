@@ -1,0 +1,36 @@
+schema: 5
+id: "qualetize-gui"
+name: "Qualetize GUI"
+summary: "Palette quantization, tile reduction and image conversion for Genesis graphics"
+homepage: "https://github.com/ulalume/qualetize_gui"
+categories:
+  - "game-development"
+  - "graphics"
+release:
+  current: "0.6.3"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.6.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ulalume/qualetize_gui/releases/download/v0.6.3/qualetize-gui-v0.6.3-x86_64-unknown-linux-gnu.tar.gz"
+          verification:
+            digest: "40987b6744fe01b674c7ff17025e4f7b3929f4f4789f2af7f5f38246d8add2fa"
+            source: "https://api.github.com/repos/ulalume/qualetize_gui/releases/assets/542818653"
+        linux-arm64:
+          url: "https://github.com/ulalume/qualetize_gui/releases/download/v0.6.3/qualetize-gui-v0.6.3-aarch64-unknown-linux-gnu.tar.gz"
+          verification:
+            digest: "7c6cd343b31b41cf3fb0f0f1617813a0e3dcacc7b96598d1204a9183078d0af7"
+            source: "https://api.github.com/repos/ulalume/qualetize_gui/releases/assets/542819757"
+application:
+  executable:
+    path: "QualetizeGUI"
+    name: "qualetize-gui"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Graphics"
+  icon:
+    path: "icon.png"

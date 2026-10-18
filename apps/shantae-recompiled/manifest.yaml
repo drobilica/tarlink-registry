@@ -1,0 +1,36 @@
+schema: 5
+id: "shantae-recompiled"
+name: "Shantae Recompiled"
+summary: "Native recompile of Shantae"
+homepage: "https://github.com/vibecodekun/shantaerecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.1.19"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.1.19"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/vibecodekun/shantaerecomp/releases/download/v0.1.19/Shantae_Recomp-0.1.19-x86_64.AppImage"
+          verification:
+            digest: "7d217d5c996e149d0ee737a56a2036a64b9c7edd9f14c3f5093dd25d8cac37dd"
+            source: "https://api.github.com/repos/vibecodekun/shantaerecomp/releases/assets/647067851"
+        linux-arm64:
+          url: "https://github.com/vibecodekun/shantaerecomp/releases/download/v0.1.19/Shantae_Recomp-0.1.19-aarch64.AppImage"
+          verification:
+            digest: "595082c4556da3e850d25152461e3c995389135490a0ffc3a54583f61475e1b9"
+            source: "https://api.github.com/repos/vibecodekun/shantaerecomp/releases/assets/647067924"
+application:
+  executable:
+    path: "appimage"
+    name: "shantae-recompiled"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

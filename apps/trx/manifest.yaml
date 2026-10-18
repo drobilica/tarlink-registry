@@ -1,0 +1,31 @@
+schema: 5
+id: "trx"
+name: "TRX"
+summary: "Native engine for Tomb Raider I-III"
+homepage: "https://github.com/LostArtefacts/TRX"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.11.1"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.11.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/LostArtefacts/TRX/releases/download/trx-1.11.1/TRX-1.11.1-Linux.zip"
+          verification:
+            digest: "46c097c41de5de3ba6cf34055c8eef75959aa292105ccdb07b4bb78e5b5bae18"
+            source: "https://api.github.com/repos/LostArtefacts/TRX/releases/assets/581672137"
+application:
+  executable:
+    path: "TRX"
+    create-bin-link: false
+desktop:
+  executable: "TRX"
+  working-directory: "application-root"
+  categories:
+    - "Game"

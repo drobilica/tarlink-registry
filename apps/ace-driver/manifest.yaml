@@ -1,0 +1,30 @@
+schema: 5
+id: "ace-driver"
+name: "Ace Driver"
+summary: "Native source port of Ace Driver (Namco System 22)"
+homepage: "https://github.com/spacestate1/namco22-decompile"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.9.0"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.9.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/AceDriver-x86_64.AppImage"
+          verification:
+            digest: "f8c313b3d61812fea185198b5d37c6bc33743c362f8d9180eed3d43caceebfd1"
+            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017375"
+application:
+  executable:
+    path: "appimage"
+    name: "ace-driver"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

@@ -1,0 +1,35 @@
+schema: 5
+id: "chaotix-recompiled"
+name: "Knuckles' Chaotix Recompiled"
+summary: "Native recompiled Knuckles' Chaotix runtime"
+homepage: "https://github.com/YuutaTsubasa/ChaotixRecompiled"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.4.3"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.4.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/YuutaTsubasa/ChaotixRecompiled/releases/download/v0.4.3/ChaotixRecompiled-0.4.3-linux-x64.tar.gz"
+          verification:
+            digest: "1338cf638cf7b51af2e55b04d4d802b5f60f5e07a997e5853fbb04698b3030ea"
+            source: "https://api.github.com/repos/YuutaTsubasa/ChaotixRecompiled/releases/assets/649268629"
+application:
+  executable:
+    path: "ChaotixRecompiled"
+    create-bin-link: false
+desktop:
+  executable: "ChaotixRecompiled"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    url: "https://raw.githubusercontent.com/YuutaTsubasa/ChaotixRecompiled/4a0844b6a50ce3321f51fcde304b262d8ca0f6f5/assets/icon/icon.png"
+    sha256: "9f19714eab63e45044058f7cdf09c10746917e71eb49922700790417a1feb792"

@@ -2,18 +2,25 @@ schema: 5
 id: "starfox-enhanced"
 name: "Star Fox Enhanced"
 summary: "Native enhanced port of Star Fox"
-homepage: "https://github.com/kandowontu/starfox-enhanced"
+homepage: "https://github.com/kandowontu2/starfox-enhanced"
 categories:
   - "games"
   - "recompilation"
 requirements:
   - "original-game-data"
 release:
-  current: "0.0.6.5"
+  current: "0.0.8.7"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.0.8.7"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/kandowontu2/starfox-enhanced/releases/download/v0.0.8.7/StarFoxEnhanced-0.0.8.7-linux-x64.zip"
+          verification:
+            digest: "90e8663ee30865d275a0b05063cde0c92f3f7cbccc91b5f0f88905feddfa8ae0"
+            source: "https://api.github.com/repos/kandowontu2/starfox-enhanced/releases/assets/648310886"
     - version: "0.0.6.5"
       artifacts:
         linux-amd64:

@@ -1,0 +1,31 @@
+schema: 5
+id: "pt-pc"
+name: "P.T. PC Port"
+summary: "Native PC port of P.T."
+homepage: "https://github.com/LoreanXavier/pt-pc"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.5"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.5"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/LoreanXavier/pt-pc/releases/download/v1.0.5/P.T.PC.Port-portable-linux.zip"
+          verification:
+            digest: "45a762170299bb535f62c6c53b9549a5fac1620fbae6e16b439b4d22d9814fe5"
+            source: "https://api.github.com/repos/LoreanXavier/pt-pc/releases/assets/645679742"
+application:
+  executable:
+    path: "pt"
+    create-bin-link: false
+desktop:
+  executable: "pt"
+  working-directory: "application-root"
+  categories:
+    - "Game"

@@ -1,0 +1,29 @@
+schema: 5
+id: "celpix"
+name: "celPix"
+summary: "ROM graphics, palette, tilemap and compression editor"
+homepage: "https://github.com/YoriKv/celpix"
+categories:
+  - "game-development"
+  - "graphics"
+release:
+  current: "1.2.13"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.2.13"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/YoriKv/celpix/releases/download/v1.2.13/celpix-x86_64.AppImage"
+          verification:
+            digest: "9ebec0019c82bbe3e164badf0ac8596602c09d2633243ac9eb64e288b32f1964"
+            source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/652063698"
+application:
+  executable:
+    path: "appimage"
+    name: "celpix"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Graphics"

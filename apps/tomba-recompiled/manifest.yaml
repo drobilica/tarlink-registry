@@ -9,24 +9,35 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.12.3-alpha"
-  archive: "zip"
+  current: "0.20.0-alpha"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.20.0-alpha"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/TombaRecomp/releases/download/v0.20.0-alpha/TombaRecomp-v0.20.0-alpha-linux-x86_64.AppImage"
+          verification:
+            digest: "73c0b0c594a640dcc7b4167cd7f78585e2d59a821e69105c4b677f607196e9ba"
+            source: "https://api.github.com/repos/mstan/TombaRecomp/releases/assets/623409293"
+          archive: "appimage"
     - version: "0.12.3-alpha"
+      executable:
+        path: "Tomba__Recompiled"
+        create-bin-link: false
       artifacts:
         linux-amd64:
           url: "https://github.com/mstan/TombaRecomp/releases/download/v0.12.3-alpha/tomba-0.12.3-alpha-linux-x64.zip"
           verification:
             digest: "bfeea3de357ae203a7864ec9b3502b3e77c3ab44ec96ebb4a4190d1a09cd2aa5"
             source: "https://api.github.com/repos/mstan/TombaRecomp/releases/assets/531508428"
+          archive: "zip"
 application:
   executable:
-    path: "Tomba__Recompiled"
+    path: "appimage"
+    name: "tomba-recompiled"
     create-bin-link: false
 desktop:
-  executable: "Tomba__Recompiled"
   working-directory: "application-root"
   categories:
     - "Game"

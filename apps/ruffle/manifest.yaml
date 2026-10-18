@@ -6,11 +6,23 @@ homepage: "https://ruffle.rs/"
 categories:
   - "games"
 release:
-  current: "0.6.0"
+  current: "0.7.1"
   archive: "tar.gz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.7.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ruffle-rs/ruffle/releases/download/v0.7.1/ruffle-0.7.1-linux-x86_64.tar.gz"
+          verification:
+            digest: "67950dfdde643f9087ae478eb3637fe52e0deefc79bdb55fe43cd69dab9fdd99"
+            source: "https://api.github.com/repos/ruffle-rs/ruffle/releases/assets/619542605"
+        linux-arm64:
+          url: "https://github.com/ruffle-rs/ruffle/releases/download/v0.7.1/ruffle-0.7.1-linux-aarch64.tar.gz"
+          verification:
+            digest: "36b222a53062709772c8dcd454fdd1dafa67ab743497e38a0a5d2ed8c0a6597f"
+            source: "https://api.github.com/repos/ruffle-rs/ruffle/releases/assets/619539731"
     - version: "0.6.0"
       artifacts:
         linux-amd64:

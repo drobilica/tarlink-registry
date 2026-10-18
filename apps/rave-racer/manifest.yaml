@@ -1,0 +1,30 @@
+schema: 5
+id: "rave-racer"
+name: "Rave Racer"
+summary: "Native source port of Rave Racer (Namco System 22)"
+homepage: "https://github.com/spacestate1/namco22-decompile"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.9.0"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.9.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/RaveRacer-x86_64.AppImage"
+          verification:
+            digest: "38c15f1d97093f99e004c835609df64637f8be17849b68edbef33e1d05e11628"
+            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018373"
+application:
+  executable:
+    path: "appimage"
+    name: "rave-racer"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

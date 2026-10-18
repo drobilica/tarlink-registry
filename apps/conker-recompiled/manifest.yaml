@@ -1,0 +1,32 @@
+schema: 5
+id: "conker-recompiled"
+name: "Conker's Bad Fur Day Recompiled"
+summary: "Native recompiled Conker's Bad Fur Day runtime"
+homepage: "https://github.com/sciaschi/CBFD-Recompiled"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.1.6"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.1.6"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/sciaschi/CBFD-Recompiled/releases/download/V0.1.6/ConkerRecompiled-V0.1.6-Linux.tar.gz"
+          verification:
+            digest: "4fc3b53bf422385c11eadea14415445ca5c72dd32795a22ce200c5713368a422"
+            source: "https://api.github.com/repos/sciaschi/CBFD-Recompiled/releases/assets/638377483"
+application:
+  executable:
+    path: "ConkerRecomp"
+    create-bin-link: false
+desktop:
+  executable: "ConkerRecomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"

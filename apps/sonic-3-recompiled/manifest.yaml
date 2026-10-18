@@ -1,0 +1,31 @@
+schema: 5
+id: "sonic-3-recompiled"
+name: "Sonic 3 Recompiled"
+summary: "Native recompile of Sonic the Hedgehog 3"
+homepage: "https://github.com/mstan/Sonic3AndKnucklesRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.5.2"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.5.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/Sonic3AndKnucklesRecomp/releases/download/v0.5.2/Sonic3Recomp-linux-x86_64-v0.5.2.AppImage"
+          verification:
+            digest: "78182f49a16ddb82f8316cbb2697f289bacda519a0673543437c195c316800ef"
+            source: "https://github.com/mstan/Sonic3AndKnucklesRecomp/releases/download/v0.5.2/SHA256SUMS.txt"
+application:
+  executable:
+    path: "appimage"
+    name: "sonic-3-recompiled"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

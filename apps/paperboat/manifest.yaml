@@ -1,0 +1,33 @@
+schema: 5
+id: "paperboat"
+name: "PaperBoat"
+summary: "Native port of Paper Mario"
+homepage: "https://github.com/HarbourMasters/PaperBoat"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.3"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/HarbourMasters/PaperBoat/releases/download/1.0.3/Paperboat-Mulberry-Delta-Linux.zip"
+          verification:
+            digest: "f6c72564e8c1485df6022aed24e33c5122815c9c6c90589411f3fbd23e56ffa2"
+            source: "https://api.github.com/repos/HarbourMasters/PaperBoat/releases/assets/631379018"
+application:
+  executable:
+    path: "Paperboat.AppImage"
+    name: "paperboat"
+    create-bin-link: false
+desktop:
+  executable: "paperboat"
+  working-directory: "application-root"
+  categories:
+    - "Game"

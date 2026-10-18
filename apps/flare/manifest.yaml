@@ -1,0 +1,28 @@
+schema: 5
+id: "flare"
+name: "Flare"
+summary: "Free fantasy action RPG built on the FLARE engine"
+homepage: "https://flarerpg.org/"
+categories:
+  - "games"
+release:
+  current: "1.15"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.15"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/flareteam/flare-game/releases/download/v1.15/flare-linux64-v1.15.AppImage"
+          verification:
+            digest: "155cd3a58f0e510e5bbb9db1a093469c88e52c05295afef53c24854cc5bbaf82"
+            source: "https://api.github.com/repos/flareteam/flare-game/releases/assets/415459181"
+application:
+  executable:
+    path: "appimage"
+    name: "flare"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

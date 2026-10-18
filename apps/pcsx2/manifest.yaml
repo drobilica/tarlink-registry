@@ -10,13 +10,21 @@ release:
   default-channel: "stable"
   channels:
     nightly:
-      current: "2.7.525"
+      current: "2.9.129"
     stable:
       current: "2.8.2"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - channel: "nightly"
+      version: "2.9.129"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.9.129/pcsx2-v2.9.129-linux-appimage-x64-Qt.AppImage"
+          verification:
+            digest: "b7ca976bd5c560151304ec66d602d9ea755fd4b4ef9744d98250f7e74c5b249d"
+            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/647974681"
     - channel: "stable"
       version: "2.8.2"
       artifacts:

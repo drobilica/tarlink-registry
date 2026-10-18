@@ -1,0 +1,30 @@
+schema: 5
+id: "jgenesis"
+name: "jgenesis"
+summary: "Sega Genesis, Sega CD, 32X, Master System and Game Gear emulator"
+homepage: "https://github.com/jsgroth/jgenesis"
+categories:
+  - "emulation"
+  - "games"
+release:
+  current: "0.14.1"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.14.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/jsgroth/jgenesis/releases/download/v0.14.1/jgenesis_0.14.1_x86_64.AppImage"
+          verification:
+            digest: "4d9181d5e7d8068cd2bc8b99324e0e29cdc3b672c2b14f85053dc8ab9e942c78"
+            source: "https://api.github.com/repos/jsgroth/jgenesis/releases/assets/525277252"
+application:
+  executable:
+    path: "appimage"
+    name: "jgenesis"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Game"
+    - "Emulator"

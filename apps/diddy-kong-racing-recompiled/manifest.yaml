@@ -9,11 +9,23 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.0.4"
+  current: "1.0.6"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.0.6"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-x86_64.AppImage"
+          verification:
+            digest: "ae07be937ae0445c17f1d0018e45647e023aa4b8f9c0067f0a74c38ba2832ad0"
+            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169508"
+        linux-arm64:
+          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-aarch64.AppImage"
+          verification:
+            digest: "7c19d0189780c3dd4839794d7aa97dd8e43afffffac1582fcd419c762e34a506"
+            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169166"
     - version: "1.0.4"
       artifacts:
         linux-amd64:
