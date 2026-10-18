@@ -1,0 +1,30 @@
+schema: 5
+id: "bloodborne-bbport"
+name: "Bloodborne (bbport)"
+summary: "Native Bloodborne port (bbport)"
+homepage: "https://github.com/deadinside28/bloodborne_pc"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.51"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.51"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/deadinside28/bloodborne_pc/releases/download/0.51/Bloodborne-bbport-x86_64.AppImage"
+          verification:
+            digest: "3dbbec828aebd542622cf25f0ea10a16f50b13f8b5338fb6596a1a69a635fcce"
+            source: "https://github.com/deadinside28/bloodborne_pc/releases/download/0.51/SHA256SUMS"
+application:
+  executable:
+    path: "appimage"
+    name: "bloodborne-bbport"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

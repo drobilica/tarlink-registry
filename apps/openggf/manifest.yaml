@@ -1,0 +1,31 @@
+schema: 5
+id: "openggf"
+name: "OpenGGF"
+summary: "Native engine for Sonic the Hedgehog (Genesis) games"
+homepage: "https://github.com/OpenGGF/OpenGGF"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.6.20260917"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.6.20260917"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/OpenGGF/OpenGGF/releases/download/v0.6.20260917/OpenGGF-linux.tar.gz"
+          verification:
+            digest: "e9e9b43509a2d0f620f82f407fab280b28869c491edebca5cd8c8d75909b88a3"
+            source: "https://api.github.com/repos/OpenGGF/OpenGGF/releases/assets/571344232"
+application:
+  executable:
+    path: "OpenGGF"
+    create-bin-link: false
+desktop:
+  executable: "OpenGGF"
+  working-directory: "application-root"
+  categories:
+    - "Game"

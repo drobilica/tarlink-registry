@@ -2,32 +2,39 @@ schema: 5
 id: "2ship2harkinian"
 name: "2Ship2Harkinian"
 summary: "Native recompile of The Legend of Zelda: Majora's Mask"
-homepage: "https://github.com/HarbourMasters/2ship2harkinian"
+homepage: "https://github.com/2ship2harkinian/2ship2harkinian"
 categories:
   - "games"
   - "recompilation"
 requirements:
   - "original-game-data"
 release:
-  current: "5.0.0"
+  current: "5.0.1"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "5.0.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/2ship2harkinian/2ship2harkinian/releases/download/5.0.1/2Ship-Battler-Bravo-Linux.zip"
+          verification:
+            digest: "6cdd4fe06f3f9b095e99c86fef70b9265cc921fb6faa7ba1e18e94e90ed0b345"
+            source: "https://api.github.com/repos/2ship2harkinian/2ship2harkinian/releases/assets/529568907"
     - version: "5.0.0"
       artifacts:
         linux-amd64:
-          url: "https://github.com/HarbourMasters/2ship2harkinian/releases/download/5.0.0/2Ship-Battler-Alfa-Linux.zip"
+          url: "https://github.com/2ship2harkinian/2ship2harkinian/releases/download/5.0.0/2Ship-Battler-Alfa-Linux.zip"
           verification:
             digest: "2718b32d60b3f4fc539b1b1628af6554f33e2c0f1c23235548587f6b5ecfef4d"
-            source: "https://api.github.com/repos/HarbourMasters/2ship2harkinian/releases/assets/510235021"
+            source: "https://api.github.com/repos/2ship2harkinian/2ship2harkinian/releases/assets/510235021"
     - version: "4.0.2"
       artifacts:
         linux-amd64:
-          url: "https://github.com/HarbourMasters/2ship2harkinian/releases/download/4.0.2/2Ship-Keiichi-Charlie-Linux.zip"
+          url: "https://github.com/2ship2harkinian/2ship2harkinian/releases/download/4.0.2/2Ship-Keiichi-Charlie-Linux.zip"
           verification:
             digest: "c97fc9440f5584f350c911ec7385778394aa62f651c6613cee0b74c0141932cb"
-            source: "https://api.github.com/repos/HarbourMasters/2ship2harkinian/releases/assets/365002966"
+            source: "https://api.github.com/repos/2ship2harkinian/2ship2harkinian/releases/assets/365002966"
 application:
   executable:
     path: "2ship.appimage"
@@ -38,5 +45,5 @@ desktop:
   categories:
     - "Game"
   icon:
-    url: "https://raw.githubusercontent.com/HarbourMasters/2ship2harkinian/acfd617302ebb74e63f26f0049b53400a644c8e8/mm/linux/2s2hIcon.png"
+    url: "https://raw.githubusercontent.com/2ship2harkinian/2ship2harkinian/acfd617302ebb74e63f26f0049b53400a644c8e8/mm/linux/2s2hIcon.png"
     sha256: "7e71a3c899f64ea760c6899e4fc282817d6a989fd976feaec66865958f3819e0"

@@ -1,0 +1,32 @@
+schema: 5
+id: "ogre-battle-64-recompiled"
+name: "Ogre Battle 64 Recompiled"
+summary: "Native recompiled Ogre Battle 64 runtime"
+homepage: "https://github.com/lfarroco/ogre-battle-64-recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.8.3"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.8.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/lfarroco/ogre-battle-64-recomp/releases/download/v0.8.3/ogre-battle-64-recomp-linux-x86_64.tar.gz"
+          verification:
+            digest: "48d158ca2f32c411d8897f2dce72002523420e5acfc4220240ce3dc7725e8d6f"
+            source: "https://api.github.com/repos/lfarroco/ogre-battle-64-recomp/releases/assets/640244574"
+application:
+  executable:
+    path: "ogrebattle64"
+    create-bin-link: false
+desktop:
+  executable: "ogrebattle64"
+  working-directory: "application-root"
+  categories:
+    - "Game"

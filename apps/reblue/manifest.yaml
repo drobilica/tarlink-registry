@@ -9,11 +9,23 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.2.1"
+  current: "1.3.1"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.3.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/zolaware/reblue/releases/download/v1.3.1/reblue-1.3.1-x86_64.AppImage"
+          verification:
+            digest: "0e39e46fcab6bc442b166ddeba3448a5311d893b96ca9c60e629261c65e62ca8"
+            source: "https://api.github.com/repos/zolaware/reblue/releases/assets/612750650"
+        linux-arm64:
+          url: "https://github.com/zolaware/reblue/releases/download/v1.3.1/reblue-1.3.1-aarch64.AppImage"
+          verification:
+            digest: "84d020c208a3120022b32743c33f5f7c6a169b2f8a58987330b506d3ffe76ec3"
+            source: "https://api.github.com/repos/zolaware/reblue/releases/assets/612750655"
     - version: "1.2.1"
       artifacts:
         linux-amd64:

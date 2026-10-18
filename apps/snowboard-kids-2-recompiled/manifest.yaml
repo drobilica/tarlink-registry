@@ -9,11 +9,23 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "1.0.5"
+  current: "2.0.2"
   archive: "tar.gz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "2.0.2"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/cdlewis/snowboardkids2-recomp/releases/download/v2.0.2/SnowboardKids2Recompiled-Linux-X64.tar.gz"
+          verification:
+            digest: "be89a751c26e33f1d467d014bb784848402596ef4d219f262f7b9518f5b3690e"
+            source: "https://api.github.com/repos/cdlewis/snowboardkids2-recomp/releases/assets/651095699"
+        linux-arm64:
+          url: "https://github.com/cdlewis/snowboardkids2-recomp/releases/download/v2.0.2/SnowboardKids2Recompiled-Linux-ARM64.tar.gz"
+          verification:
+            digest: "735c5fa8fe2f7555d5553d94509eb6838a3cc4fe030df7c224bbda7e181aa487"
+            source: "https://api.github.com/repos/cdlewis/snowboardkids2-recomp/releases/assets/651095695"
     - version: "1.0.5"
       artifacts:
         linux-amd64:

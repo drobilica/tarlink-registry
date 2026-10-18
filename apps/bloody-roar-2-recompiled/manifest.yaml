@@ -9,12 +9,22 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.5.0"
+  current: "0.7.1"
   archive: "zip"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.7.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/novapowers0/BloodyRoar2Recomp/releases/download/v0.7.1/BloodyRoar2-linux-x64-0.7.1.zip"
+          verification:
+            digest: "19892a26be947eef2fc21a7ed47bd8e7c239f26f5aa5968da84c66595a72f551"
+            source: "https://api.github.com/repos/novapowers0/BloodyRoar2Recomp/releases/assets/590352665"
     - version: "0.5.0"
+      executable:
+        path: "BloodyRoar2_Recompiled_USA"
+        create-bin-link: false
       artifacts:
         linux-amd64:
           url: "https://github.com/novapowers0/BloodyRoar2Recomp/releases/download/v0.5.0/BloodyRoar2-US-Linux-v0.5.0.zip"
@@ -23,10 +33,9 @@ release:
             source: "https://api.github.com/repos/novapowers0/BloodyRoar2Recomp/releases/assets/520781621"
 application:
   executable:
-    path: "BloodyRoar2_Recompiled_USA"
+    path: "BloodyRoar2_Recompiled"
     create-bin-link: false
 desktop:
-  executable: "BloodyRoar2_Recompiled_USA"
   working-directory: "application-root"
   categories:
     - "Game"

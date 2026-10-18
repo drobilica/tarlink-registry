@@ -1,0 +1,31 @@
+schema: 5
+id: "fzero-snes-recompiled"
+name: "F-Zero SNES Recompiled"
+summary: "Native recompile of F-Zero (SNES)"
+homepage: "https://github.com/mstan/FZeroSNESRecomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.8.3"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.8.3"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/mstan/FZeroSNESRecomp/releases/download/v1.8.3/FZeroSNESRecomp-linux-1.8.3-x86_64.AppImage"
+          verification:
+            digest: "2ac0438d7637d664a4aa0fd364c9d0604e5ac24dbec19db5e8cbfc3db7c82087"
+            source: "https://api.github.com/repos/mstan/FZeroSNESRecomp/releases/assets/580473675"
+application:
+  executable:
+    path: "appimage"
+    name: "fzero-snes-recompiled"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

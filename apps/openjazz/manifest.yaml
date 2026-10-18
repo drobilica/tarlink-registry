@@ -1,0 +1,31 @@
+schema: 5
+id: "openjazz"
+name: "OpenJazz"
+summary: "Native engine for Jazz Jackrabbit"
+homepage: "https://github.com/AlisterT/openjazz"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "20260301"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "20260301"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/AlisterT/openjazz/releases/download/20260301/openjazz-linux-glibc2.35-x86_64.zip"
+          verification:
+            digest: "15aad6459d4b455a63b9ab9383482dc1b0055851c33588df820d63197ccbc6de"
+            source: "https://api.github.com/repos/AlisterT/openjazz/releases/assets/364374421"
+application:
+  executable:
+    path: "OpenJazz"
+    create-bin-link: false
+desktop:
+  executable: "OpenJazz"
+  working-directory: "application-root"
+  categories:
+    - "Game"

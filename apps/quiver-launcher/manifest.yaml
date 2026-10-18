@@ -6,11 +6,23 @@ homepage: "https://github.com/tgeorgiadis/quiver-launcher"
 categories:
   - "utilities"
 release:
-  current: "3.4.5"
+  current: "3.5.1"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "3.5.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/tgeorgiadis/quiver-launcher/releases/download/v3.5.1/QuiverLauncher-linux-x64.AppImage"
+          verification:
+            digest: "a8cd5398b6dae924bcec09ece1781c03cbfd73298675476f26fc1c072d3c629b"
+            source: "https://api.github.com/repos/tgeorgiadis/quiver-launcher/releases/assets/643679619"
+        linux-arm64:
+          url: "https://github.com/tgeorgiadis/quiver-launcher/releases/download/v3.5.1/QuiverLauncher-linux-arm64.AppImage"
+          verification:
+            digest: "d1d84d2dc38e68999dc65d7a53cf09005bf7db5f17e85b585c1d3e170822fb18"
+            source: "https://api.github.com/repos/tgeorgiadis/quiver-launcher/releases/assets/643679476"
     - version: "3.4.5"
       artifacts:
         linux-amd64:

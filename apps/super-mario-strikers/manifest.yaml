@@ -1,0 +1,36 @@
+schema: 5
+id: "super-mario-strikers"
+name: "Super Mario Strikers"
+summary: "Native port of Super Mario Strikers (GameCube)"
+homepage: "https://github.com/new-coke/strikers"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.3.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.3.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/new-coke/strikers/releases/download/v1.3.0/strikers-linux-x86_64.tar.gz"
+          verification:
+            digest: "196de1cfdeb47db3cffc643331a67db64064e19d3e0ad734d98b589c385d290d"
+            source: "https://github.com/new-coke/strikers/releases/download/v1.3.0/SHA256SUMS"
+        linux-arm64:
+          url: "https://github.com/new-coke/strikers/releases/download/v1.3.0/strikers-linux-arm64.tar.gz"
+          verification:
+            digest: "05dbccd7a43ab677d765ab9c330cbda24d5ab62be95fa65691ed41938bf5a2be"
+            source: "https://github.com/new-coke/strikers/releases/download/v1.3.0/SHA256SUMS"
+application:
+  executable:
+    path: "strikers"
+    create-bin-link: false
+desktop:
+  executable: "strikers"
+  working-directory: "application-root"
+  categories:
+    - "Game"

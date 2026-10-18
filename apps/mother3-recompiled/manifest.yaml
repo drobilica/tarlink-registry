@@ -1,0 +1,34 @@
+schema: 5
+id: "mother3-recompiled"
+name: "MOTHER 3 Recompiled"
+summary: "Native recompiled MOTHER 3 runtime"
+homepage: "https://github.com/josiahg2502-glitch/Mother3Recomp"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.0.6"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.0.6"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/Mother3Recomp-v1.0.6-linux-x86_64.tar.gz"
+          verification:
+            digest: "418315caeef0999388bcc7eced5672162f19d75f62f4065930d167938e42f829"
+            source: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/SHA256SUMS.txt"
+application:
+  executable:
+    path: "Mother3Recomp"
+    create-bin-link: false
+desktop:
+  executable: "Mother3Recomp"
+  working-directory: "application-root"
+  categories:
+    - "Game"
+  icon:
+    path: "assets/img/icon.png"

@@ -1,0 +1,32 @@
+schema: 5
+id: "earthbound-native"
+name: "EarthBound Native"
+summary: "Native recompiled EarthBound runtime"
+homepage: "https://github.com/seanstaggsQU/EarthboundNativePublic"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "1.7.4"
+  archive: "zip"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.7.4"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/seanstaggsQU/EarthboundNativePublic/releases/download/v1.7.4/EarthBound-Linux.zip"
+          verification:
+            digest: "95f43e4f976ffb12cdb7c2a18dc499bb672483de9d9818bb7d8b62577713346d"
+            source: "https://api.github.com/repos/seanstaggsQU/EarthboundNativePublic/releases/assets/548048880"
+application:
+  executable:
+    path: "earthbound-linux"
+    create-bin-link: false
+desktop:
+  executable: "earthbound-linux"
+  working-directory: "application-root"
+  categories:
+    - "Game"

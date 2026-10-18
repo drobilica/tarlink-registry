@@ -1,0 +1,30 @@
+schema: 5
+id: "time-crisis"
+name: "Time Crisis"
+summary: "Native source port of Time Crisis (Namco System 22)"
+homepage: "https://github.com/spacestate1/namco22-decompile"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.9.0"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.9.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/TimeCrisis-x86_64.AppImage"
+          verification:
+            digest: "bc6768fb3ad6227962b820aaa6842312477eab9e30c834e6fecf58d61fa2467c"
+            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018422"
+application:
+  executable:
+    path: "appimage"
+    name: "time-crisis"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

@@ -8,21 +8,33 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "9.2.3"
-  archive: "zip"
+  current: "9.3.0"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "9.3.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/HarbourMasters/Shipwright/releases/download/9.3.0/SoH-Dewey-Alpha.appimage"
+          verification:
+            digest: "8507bb70413e130e452ebaf5f156bfd78013ee0144364b7968680e8cf064a0fa"
+            source: "https://api.github.com/repos/HarbourMasters/Shipwright/releases/assets/622282680"
+          archive: "appimage"
     - version: "9.2.3"
+      executable:
+        name: "shipwright"
+        path: "soh.appimage"
+        create-bin-link: false
       artifacts:
         linux-amd64:
           url: "https://github.com/HarbourMasters/Shipwright/releases/download/9.2.3/SoH-Ackbar-Delta-Linux.zip"
           verification:
             digest: "f81cde8052142d6abbbaaffa70699d6748e4cde3f158be8f268c3aab338ee315"
             source: "https://api.github.com/repos/HarbourMasters/Shipwright/releases/assets/397244014"
+          archive: "zip"
 application:
   executable:
-    path: "soh.appimage"
+    path: "appimage"
     name: "shipwright"
     create-bin-link: false
 desktop:

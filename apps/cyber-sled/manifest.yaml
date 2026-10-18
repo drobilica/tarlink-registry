@@ -1,0 +1,30 @@
+schema: 5
+id: "cyber-sled"
+name: "Cyber Sled"
+summary: "Native source port of Cyber Sled (Namco System 22)"
+homepage: "https://github.com/spacestate1/namco22-decompile"
+categories:
+  - "games"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.9.0"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.9.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/CyberSled-x86_64.AppImage"
+          verification:
+            digest: "7f7e4a2b3f6b664796a269338bc8f415e216173d4d2a6d5e90191f696136991c"
+            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017505"
+application:
+  executable:
+    path: "appimage"
+    name: "cyber-sled"
+    create-bin-link: false
+desktop:
+  categories:
+    - "Game"

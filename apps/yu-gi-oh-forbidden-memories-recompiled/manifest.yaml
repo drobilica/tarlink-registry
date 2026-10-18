@@ -1,0 +1,32 @@
+schema: 5
+id: "yu-gi-oh-forbidden-memories-recompiled"
+name: "Yu-Gi-Oh! Forbidden Memories Recompiled"
+summary: "Native recompiled Yu-Gi-Oh! Forbidden Memories runtime"
+homepage: "https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled"
+categories:
+  - "games"
+  - "recompilation"
+requirements:
+  - "original-game-data"
+release:
+  current: "0.3.0"
+  archive: "tar.gz"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "0.3.0"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled/releases/download/v0.3.0/yfm-redecomp-v0.3.0-linux.tar.gz"
+          verification:
+            digest: "4b205351fb753882660174986ce7cdc92279d89c382b809be27678344cd89d73"
+            source: "https://api.github.com/repos/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled/releases/assets/631054072"
+application:
+  executable:
+    path: "memories-pc"
+    create-bin-link: false
+desktop:
+  executable: "memories-pc"
+  working-directory: "application-root"
+  categories:
+    - "Game"
