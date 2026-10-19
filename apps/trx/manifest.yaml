@@ -29,3 +29,6 @@ desktop:
   working-directory: "application-root"
   categories:
     - "Game"
+  icon:
+    url: https://raw.githubusercontent.com/lostartefacts/trx/fa7807f2db852773313c9840f44bab33a3314352/data/trx/icon.png
+    sha256: 8509f4aefbb41c0ec9bff8e2338dad09cb35fe61539052f837e3d9cde8db0b02

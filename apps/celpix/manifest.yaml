@@ -27,3 +27,6 @@ application:
 desktop:
   categories:
     - "Graphics"
+  icon:
+    url: https://raw.githubusercontent.com/yorikv/celpix/eb4a2fe23aacb3b628df67f3ad588f02cc6dcbb0/src/celpix/resources/icons/app.png
+    sha256: f8b85eca507dd2687e324b1bd3e4144730d25c89205b7a88b8f97e7e3d06ed12
