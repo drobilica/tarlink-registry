@@ -9,10 +9,24 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.3.89"
+  current: "0.3.91"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.3.91"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-x86_64.AppImage"
+          verification:
+            digest: "a7c0d5a8f850b5935682e47d3a3fed704991c0d5681856282d2f11eaa2966276"
+            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
+          archive: "appimage"
+        linux-arm64:
+          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-arm64.AppImage"
+          verification:
+            digest: "5dc45fca00db8062eee329511b1bc1cf7ef0573bab8e7aea4eb166f2706f1d14"
+            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
+          archive: "appimage"
     - version: "0.3.89"
       artifacts:
         linux-amd64:

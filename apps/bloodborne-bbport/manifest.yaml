@@ -8,11 +8,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.51"
+  current: "0.6"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.6"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/deadinside28/bloodborne_pc/releases/download/0.6/Bloodborne-bbport-x86_64.AppImage"
+          verification:
+            digest: "a28f87543d3e6d316ad158525333be08f9c7c362ed19b57c5f3550c69d058f62"
+            source: "https://github.com/deadinside28/bloodborne_pc/releases/download/0.6/SHA256SUMS"
     - version: "0.51"
       artifacts:
         linux-amd64:

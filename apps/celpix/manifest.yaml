@@ -7,11 +7,18 @@ categories:
   - "game-development"
   - "graphics"
 release:
-  current: "1.2.13"
+  current: "1.2.14"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "1.2.14"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/YoriKv/celpix/releases/download/v1.2.14/celpix-x86_64.AppImage"
+          verification:
+            digest: "6d928c0c603ef35e822682784514007859486e85bca803640403fa429ef304fd"
+            source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/654622671"
     - version: "1.2.13"
       artifacts:
         linux-amd64:

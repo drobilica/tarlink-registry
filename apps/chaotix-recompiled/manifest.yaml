@@ -9,11 +9,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "0.4.3"
+  current: "0.4.4"
   archive: "tar.gz"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.4.4"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/YuutaTsubasa/ChaotixRecompiled/releases/download/v0.4.4/ChaotixRecompiled-0.4.4-linux-x64.tar.gz"
+          verification:
+            digest: "c9a69add9a46d761b6f75ca090cf24ec8c6718521ecd9d095cc3b848ad9b1ba1"
+            source: "https://api.github.com/repos/YuutaTsubasa/ChaotixRecompiled/releases/assets/653247633"
     - version: "0.4.3"
       artifacts:
         linux-amd64:
