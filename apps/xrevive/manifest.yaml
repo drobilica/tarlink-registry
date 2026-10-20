@@ -7,11 +7,18 @@ categories:
   - "emulation"
   - "games"
 release:
-  current: "0.1.14"
+  current: "0.1.20"
   archive: "appimage"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "0.1.20"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.20/xrevive_0.1.20_amd64.AppImage"
+          verification:
+            digest: "c12ed5a9c6ff979c8c27af7229ed910bdcde8375e504a6d01aa5e9b5d43b9d5e"
+            source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/657423435"
     - version: "0.1.14"
       artifacts:
         linux-amd64:

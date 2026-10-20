@@ -8,10 +8,18 @@ categories:
 requirements:
   - "original-game-data"
 release:
-  current: "9.3.0"
+  current: "9.3.1"
   verification:
     algorithm: "sha256"
   releases:
+    - version: "9.3.1"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/HarbourMasters/Shipwright/releases/download/9.3.1/SoH-Dewey-Bravo.appimage"
+          verification:
+            digest: "e4bb775c9a0c3629ebac57e4b6ccba6d0b621d71ab201e9105aceef9141ad1f4"
+            source: "https://api.github.com/repos/HarbourMasters/Shipwright/releases/assets/656565940"
+          archive: "appimage"
     - version: "9.3.0"
       artifacts:
         linux-amd64:

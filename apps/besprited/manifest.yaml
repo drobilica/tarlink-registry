@@ -1,0 +1,29 @@
+schema: 5
+id: "besprited"
+name: "Besprited"
+summary: "Pixel art editor and sprite animation tool derived from LibreSprite"
+homepage: "https://github.com/veritaware/Besprited"
+categories:
+  - "game-development"
+  - "graphics"
+release:
+  current: "1.26.09"
+  archive: "appimage"
+  verification:
+    algorithm: "sha256"
+  releases:
+    - version: "1.26.09"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/veritaware/Besprited/releases/download/v1.26.09/Besprited-v1.26.09-anylinux-x86_64.AppImage"
+          verification:
+            digest: "6ee2e904833354aec085b76950b7292b17572b9954940d7a9ff092c3c4709988"
+            source: "https://api.github.com/repos/veritaware/Besprited/releases/assets/538622650"
+application:
+  executable:
+    path: "appimage"
+    name: "besprited"
+    create-bin-link: true
+desktop:
+  categories:
+    - "Graphics"
