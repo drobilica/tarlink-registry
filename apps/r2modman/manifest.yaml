@@ -4,42 +4,50 @@ name: "r2modman"
 summary: "Mod manager for games using Thunderstore"
 homepage: "https://github.com/ebkr/r2modmanPlus"
 categories:
-  - "games"
+    - "games"
 release:
-  current: "3.2.20"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "3.2.20"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.20/r2modman-3.2.20.AppImage"
-          verification:
-            digest: "a349eaf091b37243204d0e05ee59b4bf3cd42857eb2ca452d03b09c86b516a92"
-            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/581314996"
-    - version: "3.2.19"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.AppImage"
-          verification:
-            digest: "138712790e61a26ac8323d43c7d3344c6b693ad19be51fb3dda91460cc573bd3"
-            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523453224"
-    - version: "3.2.18"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.AppImage"
-          verification:
-            digest: "6d0be05ba24af0849c3368943a1ff5db8a4ff4b26217a5541f2436aab20fbf43"
-            source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185045"
+    current: "3.2.21"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "3.2.20"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.20/r2modman-3.2.20.AppImage"
+                verification:
+                    digest: "a349eaf091b37243204d0e05ee59b4bf3cd42857eb2ca452d03b09c86b516a92"
+                    source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/581314996"
+        - version: "3.2.19"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.19/r2modman-3.2.19.AppImage"
+                verification:
+                    digest: "138712790e61a26ac8323d43c7d3344c6b693ad19be51fb3dda91460cc573bd3"
+                    source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/523453224"
+        - version: "3.2.18"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.18/r2modman-3.2.18.AppImage"
+                verification:
+                    digest: "6d0be05ba24af0849c3368943a1ff5db8a4ff4b26217a5541f2436aab20fbf43"
+                    source: "https://api.github.com/repos/ebkr/r2modmanPlus/releases/assets/457185045"
+        - channel: ""
+          version: 3.2.21
+          artifacts:
+            linux-amd64:
+                url: https://github.com/ebkr/r2modmanPlus/releases/download/v3.2.21/r2modman-3.2.21.AppImage
+                verification:
+                    digest: ff2562c9503c48417d2ca3358967030dbf3e9f318ebe1c5547191457e09d31b6
+                    source: https://api.github.com/repos/ebkr/r2modmanplus/releases/assets/684251860
 application:
-  executable:
-    path: "appimage"
-    name: "r2modman"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "r2modman"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-  icon:
-    url: "https://raw.githubusercontent.com/ebkr/r2modmanPlus/4a36a32257ac07a0bb324386c9b171634a520af5/src-electron/icons/linux-512x512.png"
-    sha256: "e10669586873faeb4465ceb02609d3e907dd777b0cf5ca665170740b04de46e3"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/ebkr/r2modmanPlus/4a36a32257ac07a0bb324386c9b171634a520af5/src-electron/icons/linux-512x512.png"
+        sha256: "e10669586873faeb4465ceb02609d3e907dd777b0cf5ca665170740b04de46e3"

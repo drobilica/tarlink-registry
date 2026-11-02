@@ -4,37 +4,45 @@ name: "Mega Man X SNES Recomp"
 summary: "Native recompile of Mega Man X (SNES)"
 homepage: "https://github.com/mstan/MegaManXSNESRecomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "1.6.6"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "1.6.6"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/mstan/MegaManXSNESRecomp/releases/download/v1.6.6/MegaManXSNESRecomp-linux-1.6.6-x86_64.AppImage"
-          verification:
-            digest: "2d9ac49c4475e60e65efb3447120d48e1f126e722729edd9ee5989b3567d4420"
-            source: "https://api.github.com/repos/mstan/MegaManXSNESRecomp/releases/assets/587159084"
-    - version: "1.4.3"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/mstan/MegaManXSNESRecomp/releases/download/v1.4.3/MegaManXSNESRecomp-linux-1.4.3-x86_64.AppImage"
-          verification:
-            digest: "4c615851411983b92d832a0bb59bd9d459e6deb68714dc4cc270a7c8400d8cf8"
-            source: "https://api.github.com/repos/mstan/MegaManXSNESRecomp/releases/assets/516573084"
+    current: "2.3.3"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "1.6.6"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/mstan/MegaManXSNESRecomp/releases/download/v1.6.6/MegaManXSNESRecomp-linux-1.6.6-x86_64.AppImage"
+                verification:
+                    digest: "2d9ac49c4475e60e65efb3447120d48e1f126e722729edd9ee5989b3567d4420"
+                    source: "https://api.github.com/repos/mstan/MegaManXSNESRecomp/releases/assets/587159084"
+        - version: "1.4.3"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/mstan/MegaManXSNESRecomp/releases/download/v1.4.3/MegaManXSNESRecomp-linux-1.4.3-x86_64.AppImage"
+                verification:
+                    digest: "4c615851411983b92d832a0bb59bd9d459e6deb68714dc4cc270a7c8400d8cf8"
+                    source: "https://api.github.com/repos/mstan/MegaManXSNESRecomp/releases/assets/516573084"
+        - channel: ""
+          version: 2.3.3
+          artifacts:
+            linux-amd64:
+                url: https://github.com/mstan/MegaManXSNESRecomp/releases/download/v2.3.3/MegaManXSNESRecomp-linux-2.3.3-x86_64.AppImage
+                verification:
+                    digest: 39c022a4088a1efd0f12d5a7272451df8ca1abbb82a25d159ab96282b4d0c3d3
+                    source: https://api.github.com/repos/mstan/megamanxsnesrecomp/releases/assets/668103981
 application:
-  executable:
-    path: "appimage"
-    name: "mega-man-x-snes-recomp"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "mega-man-x-snes-recomp"
+        create-bin-link: false
 desktop:
-  executable: "mega-man-x-snes-recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"
+    executable: "mega-man-x-snes-recomp"
+    working-directory: "application-root"
+    categories:
+        - "Game"

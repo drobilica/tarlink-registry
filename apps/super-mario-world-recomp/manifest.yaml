@@ -4,37 +4,45 @@ name: "Super Mario World Recomp"
 summary: "Native recompile of Super Mario World"
 homepage: "https://github.com/mstan/SuperMarioWorldRecomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.14.2"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.14.2"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.14.2/SuperMarioWorldRecomp-linux-0.14.2-x86_64.AppImage"
-          verification:
-            digest: "7fa57304b85e38b4b0c06c27611d77fe1c8c49422bb196e642f18ff03a9a3ac3"
-            source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/581510421"
-    - version: "0.11.1"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.11.1/SuperMarioWorldRecomp-linux-0.11.1-x86_64.AppImage"
-          verification:
-            digest: "f24eb5594eac811697206a7464ec2b2b448651e8f3eaef2408d029061a17217c"
-            source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/528700365"
+    current: "0.15.6"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.14.2"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.14.2/SuperMarioWorldRecomp-linux-0.14.2-x86_64.AppImage"
+                verification:
+                    digest: "7fa57304b85e38b4b0c06c27611d77fe1c8c49422bb196e642f18ff03a9a3ac3"
+                    source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/581510421"
+        - version: "0.11.1"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.11.1/SuperMarioWorldRecomp-linux-0.11.1-x86_64.AppImage"
+                verification:
+                    digest: "f24eb5594eac811697206a7464ec2b2b448651e8f3eaef2408d029061a17217c"
+                    source: "https://api.github.com/repos/mstan/SuperMarioWorldRecomp/releases/assets/528700365"
+        - channel: ""
+          version: 0.15.6
+          artifacts:
+            linux-amd64:
+                url: https://github.com/mstan/SuperMarioWorldRecomp/releases/download/v0.15.6/SuperMarioWorldRecomp-linux-0.15.6-x86_64.AppImage
+                verification:
+                    digest: 893828a7aabbef1c9514d4e435e22be8963ff34c0ff121efbb1200fd03968243
+                    source: https://api.github.com/repos/mstan/supermarioworldrecomp/releases/assets/700822456
 application:
-  executable:
-    path: "appimage"
-    name: "super-mario-world-recomp"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "super-mario-world-recomp"
+        create-bin-link: false
 desktop:
-  executable: "super-mario-world-recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"
+    executable: "super-mario-world-recomp"
+    working-directory: "application-root"
+    categories:
+        - "Game"
