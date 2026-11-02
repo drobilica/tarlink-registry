@@ -1,0 +1,29 @@
+schema: 5
+id: uncharted-linux
+name: "Uncharted: The Nathan Drake Collection"
+summary: "Native Linux port of the Uncharted trilogy for PlayStation 4"
+homepage: "https://github.com/spacepepperoni/uncharted_Linux"
+categories: [games]
+requirements: [original-game-data]
+release:
+  current: "0.3.11-linux.157"
+  archive: appimage
+  verification:
+    algorithm: sha256
+  releases:
+    - version: "0.3.11-linux.157"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/spacepepperoni/uncharted_Linux/releases/download/v0.3.11-linux.157/Uncharted-x86_64.AppImage"
+          verification:
+            digest: "2c12b34bf5cd7acc9e4301547b9cd30e2c8d1cae687a5f7a4070ce001703c25c"
+            source: "https://github.com/spacepepperoni/uncharted_Linux/releases/tag/v0.3.11-linux.157"
+application:
+  executable:
+    path: appimage
+    create-bin-link: false
+desktop:
+  categories: [Game]
+  icon:
+    url: "https://raw.githubusercontent.com/spacepepperoni/uncharted_Linux/c58c6c201c895412304171eba8c608bcd1c06e60/launcher/uncharted.png"
+    sha256: "ca9eb782fa4f6445516ace08c5f7534a1b89d7d1609935420ee70c4f50e6cda0"
