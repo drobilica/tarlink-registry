@@ -4,38 +4,47 @@ name: "Rage Racer PC"
 summary: "Native PC port of Rage Racer"
 homepage: "https://github.com/khasinski/rage-racer-pc"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.6.5-alpha"
-  archive: "zip"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.6.5-alpha"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6.5-alpha/Rage-Racer-0.6.5-alpha-linux-x86_64.zip"
-          verification:
-            digest: "8a509a273c8fcb379d154eeedf0f1177fd16d5ded8a2a860441e760a2575818e"
-            source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/553761864"
-    - version: "0.6-alpha"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6-alpha/Rage-Racer-0.6-alpha-linux-x86_64.zip"
-          verification:
-            digest: "0fdf5023ec6b24820eab7b40ceb1778192f067313168df589c703f921dba76f4"
-            source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/533805563"
+    current: "0.6.13-alpha"
+    archive: "zip"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.6.5-alpha"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6.5-alpha/Rage-Racer-0.6.5-alpha-linux-x86_64.zip"
+                verification:
+                    digest: "8a509a273c8fcb379d154eeedf0f1177fd16d5ded8a2a860441e760a2575818e"
+                    source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/553761864"
+        - version: "0.6-alpha"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/khasinski/rage-racer-pc/releases/download/0.6-alpha/Rage-Racer-0.6-alpha-linux-x86_64.zip"
+                verification:
+                    digest: "0fdf5023ec6b24820eab7b40ceb1778192f067313168df589c703f921dba76f4"
+                    source: "https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/533805563"
+        - channel: ""
+          version: 0.6.13-alpha
+          artifacts:
+            linux-amd64:
+                url: https://github.com/khasinski/rage-racer-pc/releases/download/0.6.13-alpha/Rage-Racer-0.6.13-alpha-linux-x86_64.zip
+                verification:
+                    digest: e57510fbb2f4f2e56d5266cfffe3bd6d59ad06cc9702e7fab6dfa7b2e85c43d0
+                    source: https://github.com/khasinski/rage-racer-pc/releases/download/0.6.13-alpha/Rage-Racer-0.6.13-alpha-linux-x86_64.zip
 application:
-  executable:
-    path: "rage-racer"
-    create-bin-link: false
+    executable:
+        path: "rage-racer"
+        create-bin-link: false
 desktop:
-  executable: "rage-racer"
-  working-directory: "application-root"
-  categories:
-    - "Game"
-  icon:
-    path: "rage-racer.png"
+    executable: "rage-racer"
+    working-directory: "application-root"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/khasinski/rage-racer-pc/e6b6de9a157094848074c8979c32a33a4f980c2a/packaging/icon/rage-racer.png"
+        sha256: "81dab39b5845a37c099f306fdae1555b7ec9a1bbdc464b0a6d9571db90b16eb7"
