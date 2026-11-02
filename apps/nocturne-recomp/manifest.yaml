@@ -45,12 +45,12 @@ release:
                 url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-amd64.tar.gz
                 verification:
                     digest: b1c6818e2b49d3aa8f49403492b36655e510f86d45128f5f4174164c99c12e14
-                    source: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-amd64.tar.gz
+                    source: https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/695325372
             linux-arm64:
                 url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-arm64.tar.gz
                 verification:
                     digest: 9599bdc3c69b66c9348419d89af32022cffd5eb26211ef58ede06e48a2f68ce5
-                    source: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-arm64.tar.gz
+                    source: https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/695325365
 application:
     executable:
         path: "nocturnerecomp"

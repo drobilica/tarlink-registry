@@ -28,7 +28,7 @@ release:
                 url: https://github.com/alondero/aerogauge-recomp/releases/download/v0.7.0/aerogauge-recomp-linux-x64.zip
                 verification:
                     digest: aaa4532a8c69611ad13de702ea89fb7361f5fe9215e1c62c424f1ae8f027bba2
-                    source: https://github.com/alondero/aerogauge-recomp/releases/download/v0.7.0/aerogauge-recomp-linux-x64.zip
+                    source: https://api.github.com/repos/alondero/aerogauge-recomp/releases/assets/679623062
 application:
     executable:
         path: "aerogauge_modern"

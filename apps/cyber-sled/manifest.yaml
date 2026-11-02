@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberSled-x86_64.AppImage
                 verification:
                     digest: ef7fe76fe95eede74c20638d0d387048869a5e61450c6be71f1c16b68c2a0af0
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberSled-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686640641
 application:
     executable:
         path: "appimage"

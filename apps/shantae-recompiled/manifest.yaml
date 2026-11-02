@@ -33,12 +33,12 @@ release:
                 url: https://github.com/vibecodekun/shantaerecomp/releases/download/v0.2.0/Shantae_Recomp-0.2.0-x86_64.AppImage
                 verification:
                     digest: ecd5025b2e9b333485925c5a395e98b05b6c147f740ac3b2e4a5acb1d1633266
-                    source: https://github.com/vibecodekun/shantaerecomp/releases/download/v0.2.0/Shantae_Recomp-0.2.0-x86_64.AppImage
+                    source: https://api.github.com/repos/vibecodekun/shantaerecomp/releases/assets/666149364
             linux-arm64:
                 url: https://github.com/vibecodekun/shantaerecomp/releases/download/v0.2.0/Shantae_Recomp-0.2.0-aarch64.AppImage
                 verification:
                     digest: 8cc461c3f2ff199cdaf42a10bca2a36d743a2ef633b84d1a21fbfb1d36af029d
-                    source: https://github.com/vibecodekun/shantaerecomp/releases/download/v0.2.0/Shantae_Recomp-0.2.0-aarch64.AppImage
+                    source: https://api.github.com/repos/vibecodekun/shantaerecomp/releases/assets/666151147
 application:
     executable:
         path: "appimage"

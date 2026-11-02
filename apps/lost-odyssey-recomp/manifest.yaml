@@ -42,7 +42,7 @@ release:
                 url: https://github.com/freefrank/LostOdysseyRecomp/releases/download/v1.1.0/LostOdysseyRecomp-linux-x64-v1.1.0.AppImage
                 verification:
                     digest: 2f123063a3829bd47d2bd95e5dd64762980ae653775b7b59380eebf3d66d4fb9
-                    source: https://github.com/freefrank/LostOdysseyRecomp/releases/download/v1.1.0/LostOdysseyRecomp-linux-x64-v1.1.0.AppImage
+                    source: https://api.github.com/repos/freefrank/LostOdysseyRecomp/releases/assets/676608226
 application:
     executable:
         path: "appimage"

@@ -96,7 +96,7 @@ release:
                 url: https://github.com/PCSX2/pcsx2/releases/download/v2.9.152/pcsx2-v2.9.152-linux-appimage-x64-Qt.AppImage
                 verification:
                     digest: 45011a69f76501ff8e9b0165ac4e9d1df40851301f73389e6c746d6e86080d8f
-                    source: https://github.com/PCSX2/pcsx2/releases/download/v2.9.152/pcsx2-v2.9.152-linux-appimage-x64-Qt.AppImage
+                    source: https://api.github.com/repos/PCSX2/pcsx2/releases/assets/697513791
 application:
     executable:
         path: "appimage"

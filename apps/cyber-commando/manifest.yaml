@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberCommando-x86_64.AppImage
                 verification:
                     digest: bd1e604837ab95487ee616b2289b3b86ec301b758800ea33953977edeca478cb
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberCommando-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686640600
 application:
     executable:
         path: "appimage"

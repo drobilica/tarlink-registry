@@ -47,12 +47,12 @@ release:
                 url: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-x86_64.AppImage
                 verification:
                     digest: 61a44fce7b43fe46c63b20651e613c8f602adc75d805981f9fa53074f46300f2
-                    source: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-x86_64.AppImage
+                    source: https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/682460602
             linux-arm64:
                 url: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-aarch64.AppImage
                 verification:
                     digest: 734494dc22674aee25117e836d59cee51ff3af8c137d873066b8d80b95bcfb22
-                    source: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-aarch64.AppImage
+                    source: https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/682460273
 application:
     executable:
         path: "appimage"

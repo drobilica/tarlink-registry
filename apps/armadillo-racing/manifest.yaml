@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/ArmadilloRacing-x86_64.AppImage
                 verification:
                     digest: 3efdca78f1e6f208f5f4be1623cb0ed7fa79d088fa0ebdc97e5f5858886ef05b
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/ArmadilloRacing-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686640505
 application:
     executable:
         path: "appimage"

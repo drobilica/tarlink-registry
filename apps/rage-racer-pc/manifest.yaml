@@ -35,7 +35,7 @@ release:
                 url: https://github.com/khasinski/rage-racer-pc/releases/download/0.6.13-alpha/Rage-Racer-0.6.13-alpha-linux-x86_64.zip
                 verification:
                     digest: e57510fbb2f4f2e56d5266cfffe3bd6d59ad06cc9702e7fab6dfa7b2e85c43d0
-                    source: https://github.com/khasinski/rage-racer-pc/releases/download/0.6.13-alpha/Rage-Racer-0.6.13-alpha-linux-x86_64.zip
+                    source: https://api.github.com/repos/khasinski/rage-racer-pc/releases/assets/690235338
 application:
     executable:
         path: "rage-racer"

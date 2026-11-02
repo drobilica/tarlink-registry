@@ -45,12 +45,12 @@ release:
                 url: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-x86_64.AppImage
                 verification:
                     digest: 220282aacf09b30b35c55ba900a774fb6940c70deca1408bc70a4c9cc67c322f
-                    source: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-x86_64.AppImage
+                    source: https://api.github.com/repos/xemu-project/xemu/releases/assets/663870237
             linux-arm64:
                 url: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-aarch64.AppImage
                 verification:
                     digest: 5f132b3a97c365bf22e8dc286954586ee0cf2202d63958dfcebc8fe9d742ecd4
-                    source: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-aarch64.AppImage
+                    source: https://api.github.com/repos/xemu-project/xemu/releases/assets/663870230
 application:
     executable:
         path: "appimage"

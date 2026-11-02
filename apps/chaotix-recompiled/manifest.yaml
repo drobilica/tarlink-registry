@@ -35,7 +35,7 @@ release:
                 url: https://github.com/YuutaTsubasa/ChaotixRecompiled/releases/download/v0.15.18/ChaotixRecompiled-0.15.18-linux-x64.tar.gz
                 verification:
                     digest: 64872732e41c65d7fef97e3b2c19027a932502e82ff73e49f938a4a9bf429ea4
-                    source: https://github.com/YuutaTsubasa/ChaotixRecompiled/releases/download/v0.15.18/ChaotixRecompiled-0.15.18-linux-x64.tar.gz
+                    source: https://api.github.com/repos/YuutaTsubasa/ChaotixRecompiled/releases/assets/699373496
 application:
     executable:
         path: "ChaotixRecompiled"

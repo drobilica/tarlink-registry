@@ -35,7 +35,7 @@ release:
                 url: https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.8/Mother3Recomp-v1.0.8-linux-x86_64.tar.gz
                 verification:
                     digest: c2558ca5abf57d56d8b3268540df3916e9a4c09e264aaa14482c4ae877d7a8f0
-                    source: https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.8/Mother3Recomp-v1.0.8-linux-x86_64.tar.gz
+                    source: https://api.github.com/repos/josiahg2502-glitch/Mother3Recomp/releases/assets/685948198
 application:
     executable:
         path: "Mother3Recomp"
