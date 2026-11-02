@@ -4,52 +4,65 @@ name: "Diddy Kong Racing Recompiled"
 summary: "Native recompile of Diddy Kong Racing"
 homepage: "https://github.com/ThatGuyMcd/DKR-R"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "1.0.6"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "1.0.6"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-x86_64.AppImage"
-          verification:
-            digest: "ae07be937ae0445c17f1d0018e45647e023aa4b8f9c0067f0a74c38ba2832ad0"
-            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169508"
-        linux-arm64:
-          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-aarch64.AppImage"
-          verification:
-            digest: "7c19d0189780c3dd4839794d7aa97dd8e43afffffac1582fcd419c762e34a506"
-            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169166"
-    - version: "1.0.4"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/DKR-R-1.0.4-Linux-x86_64.AppImage"
-          verification:
-            digest: "9da1e72dd23eaf7b6e096f19bc2bb215065e2ef7c5fd35a2601c9d430fe25ee0"
-            source: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/SHA256SUMS"
-    - version: "1.0.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.0/DKR-R-1.0.0-Linux-x86_64.AppImage"
-          verification:
-            digest: "a228cc7ff5d3a84074e01cfbde54bae1a1ee0a93c3b94d278f59e917506e3d2f"
-            source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/508438526"
+    current: "1.0.12"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "1.0.6"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-x86_64.AppImage"
+                verification:
+                    digest: "ae07be937ae0445c17f1d0018e45647e023aa4b8f9c0067f0a74c38ba2832ad0"
+                    source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169508"
+            linux-arm64:
+                url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.6/DKR-R-1.0.6-Linux-aarch64.AppImage"
+                verification:
+                    digest: "7c19d0189780c3dd4839794d7aa97dd8e43afffffac1582fcd419c762e34a506"
+                    source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/633169166"
+        - version: "1.0.4"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/DKR-R-1.0.4-Linux-x86_64.AppImage"
+                verification:
+                    digest: "9da1e72dd23eaf7b6e096f19bc2bb215065e2ef7c5fd35a2601c9d430fe25ee0"
+                    source: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.4/SHA256SUMS"
+        - version: "1.0.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.0/DKR-R-1.0.0-Linux-x86_64.AppImage"
+                verification:
+                    digest: "a228cc7ff5d3a84074e01cfbde54bae1a1ee0a93c3b94d278f59e917506e3d2f"
+                    source: "https://api.github.com/repos/ThatGuyMcd/DKR-R/releases/assets/508438526"
+        - channel: ""
+          version: 1.0.12
+          artifacts:
+            linux-amd64:
+                url: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-x86_64.AppImage
+                verification:
+                    digest: 61a44fce7b43fe46c63b20651e613c8f602adc75d805981f9fa53074f46300f2
+                    source: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-x86_64.AppImage
+            linux-arm64:
+                url: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-aarch64.AppImage
+                verification:
+                    digest: 734494dc22674aee25117e836d59cee51ff3af8c137d873066b8d80b95bcfb22
+                    source: https://github.com/ThatGuyMcd/DKR-R/releases/download/Version1.0.12/DKR-R-1.0.12-Linux-aarch64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "DKR-R"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "DKR-R"
+        create-bin-link: false
 desktop:
-  executable: "DKR-R"
-  working-directory: "application-root"
-  categories:
-    - "Game"
-  icon:
-    url: "https://raw.githubusercontent.com/ThatGuyMcd/DKR-R/8085dbb/assets/ui/Icons/256x256.png"
-    sha256: "387d609472ae381bbcab640c1edcb03c0c83f2bbbb787860ddb32e7442696e2f"
+    executable: "DKR-R"
+    working-directory: "application-root"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/ThatGuyMcd/DKR-R/8085dbb/assets/ui/Icons/256x256.png"
+        sha256: "387d609472ae381bbcab640c1edcb03c0c83f2bbbb787860ddb32e7442696e2f"

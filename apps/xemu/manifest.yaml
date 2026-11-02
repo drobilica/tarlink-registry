@@ -4,49 +4,62 @@ name: "xemu"
 summary: "Original Xbox emulator"
 homepage: "https://xemu.app/"
 categories:
-  - "emulation"
-  - "games"
+    - "emulation"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.8.137"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.8.137"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/xemu-project/xemu/releases/download/v0.8.137/xemu-0.8.137-x86_64.AppImage"
-          verification:
-            digest: "47752e236c4b11dc587cf0d3396448def3924acf474582b141b28be376d66d49"
-            source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/648321120"
-        linux-arm64:
-          url: "https://github.com/xemu-project/xemu/releases/download/v0.8.137/xemu-0.8.137-aarch64.AppImage"
-          verification:
-            digest: "3cd8b4baa0472d3a1ce3ec2c4bc78e11395802618b96707e94ee7975dfd2a5a9"
-            source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/648321130"
-    - version: "0.8.136"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136-x86_64.AppImage"
-          verification:
-            digest: "ac77363a599109194ba2af3caa695348d199f515cf1d0fde091beb629e0c3103"
-            source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/441463414"
-        linux-arm64:
-          url: "https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136-aarch64.AppImage"
-          verification:
-            digest: "8d2598bab0680ddd36c2d15ecccb70523e29adb852cd75e35bc5943dc0eb4816"
-            source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/441463418"
+    current: "0.8.139"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.8.137"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/xemu-project/xemu/releases/download/v0.8.137/xemu-0.8.137-x86_64.AppImage"
+                verification:
+                    digest: "47752e236c4b11dc587cf0d3396448def3924acf474582b141b28be376d66d49"
+                    source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/648321120"
+            linux-arm64:
+                url: "https://github.com/xemu-project/xemu/releases/download/v0.8.137/xemu-0.8.137-aarch64.AppImage"
+                verification:
+                    digest: "3cd8b4baa0472d3a1ce3ec2c4bc78e11395802618b96707e94ee7975dfd2a5a9"
+                    source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/648321130"
+        - version: "0.8.136"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136-x86_64.AppImage"
+                verification:
+                    digest: "ac77363a599109194ba2af3caa695348d199f515cf1d0fde091beb629e0c3103"
+                    source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/441463414"
+            linux-arm64:
+                url: "https://github.com/xemu-project/xemu/releases/download/v0.8.136/xemu-0.8.136-aarch64.AppImage"
+                verification:
+                    digest: "8d2598bab0680ddd36c2d15ecccb70523e29adb852cd75e35bc5943dc0eb4816"
+                    source: "https://api.github.com/repos/xemu-project/xemu/releases/assets/441463418"
+        - channel: ""
+          version: 0.8.139
+          artifacts:
+            linux-amd64:
+                url: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-x86_64.AppImage
+                verification:
+                    digest: 220282aacf09b30b35c55ba900a774fb6940c70deca1408bc70a4c9cc67c322f
+                    source: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-x86_64.AppImage
+            linux-arm64:
+                url: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-aarch64.AppImage
+                verification:
+                    digest: 5f132b3a97c365bf22e8dc286954586ee0cf2202d63958dfcebc8fe9d742ecd4
+                    source: https://github.com/xemu-project/xemu/releases/download/v0.8.139/xemu-0.8.139-aarch64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "xemu"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "xemu"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-    - "Emulator"
-  icon:
-    url: "https://raw.githubusercontent.com/xemu-project/xemu/fc24584ce88f0915ad7f04775bb7712c2e3f49ee/ui/icons/xemu_512x512.png"
-    sha256: "a6995ffec85bbb9f4a1d5fc922dd6192864e367340438b04d5793134e6b33c9f"
+    categories:
+        - "Game"
+        - "Emulator"
+    icon:
+        url: "https://raw.githubusercontent.com/xemu-project/xemu/fc24584ce88f0915ad7f04775bb7712c2e3f49ee/ui/icons/xemu_512x512.png"
+        sha256: "a6995ffec85bbb9f4a1d5fc922dd6192864e367340438b04d5793134e6b33c9f"
