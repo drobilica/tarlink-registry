@@ -41,7 +41,7 @@ release:
                 url: https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.7/OpenRCT2-v0.5.7-linux-x86_64.AppImage
                 verification:
                     digest: d02ecb52d946d1e5f00db53a164fadbd41bbb8636f6f5cdddb44d954a3bcdb64
-                    source: https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.7/OpenRCT2-v0.5.7-linux-x86_64.AppImage
+                    source: https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/698061167
 application:
     executable:
         path: "appimage"

@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/PropCycle-x86_64.AppImage
                 verification:
                     digest: 36d9e0cb4fc463911cc8b50a8d52684b83fdecd2ae4211b0ebe38cc3694f3926
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/PropCycle-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686641503
 application:
     executable:
         path: "appimage"

@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/RaveRacer-x86_64.AppImage
                 verification:
                     digest: 72cf501b050aa1f7d322a084ab22320b799cd56dbf11eba529544a9343e3184c
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/RaveRacer-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686641519
 application:
     executable:
         path: "appimage"

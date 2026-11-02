@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TimeCrisis2-x86_64.AppImage
                 verification:
                     digest: 008171d8e5d9272a57d73dcedac398241f3463951cc5a5ae2116745ea332975c
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TimeCrisis2-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686641655
 application:
     executable:
         path: "appimage"

@@ -33,7 +33,7 @@ release:
                 url: https://github.com/YoriKv/celpix/releases/download/v1.2.17/celpix-x86_64.AppImage
                 verification:
                     digest: 4cf67751113a895c74218bc73691af0cb31c018d2d8c6a68505df93e091ca30f
-                    source: https://github.com/YoriKv/celpix/releases/download/v1.2.17/celpix-x86_64.AppImage
+                    source: https://api.github.com/repos/YoriKv/celpix/releases/assets/694347318
 application:
     executable:
         path: "appimage"

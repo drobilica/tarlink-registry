@@ -40,7 +40,7 @@ release:
                 url: https://github.com/Teraflopping/xrevive/releases/download/v0.3.5/xrevive_0.3.5_amd64.AppImage
                 verification:
                     digest: 44e7c5289341cefdf911d254b39b509705b0274096414e3bdf9b8db08a863490
-                    source: https://github.com/Teraflopping/xrevive/releases/download/v0.3.5/xrevive_0.3.5_amd64.AppImage
+                    source: https://api.github.com/repos/Teraflopping/xrevive/releases/assets/699006237
 application:
     executable:
         path: "appimage"

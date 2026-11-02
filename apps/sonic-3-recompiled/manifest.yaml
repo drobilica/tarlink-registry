@@ -28,7 +28,7 @@ release:
                 url: https://github.com/mstan/Sonic3AndKnucklesRecomp/releases/download/v0.6.3/Sonic3Recomp-linux-x86_64-v0.6.3.AppImage
                 verification:
                     digest: 261b95037529939946a363b968d3052c64f91d144234007e17b691563c3b7782
-                    source: https://github.com/mstan/Sonic3AndKnucklesRecomp/releases/download/v0.6.3/Sonic3Recomp-linux-x86_64-v0.6.3.AppImage
+                    source: https://api.github.com/repos/mstan/Sonic3AndKnucklesRecomp/releases/assets/699146855
 application:
     executable:
         path: "appimage"

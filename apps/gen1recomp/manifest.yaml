@@ -113,13 +113,13 @@ release:
                 archive: appimage
                 verification:
                     digest: dd8803ee2c61ac17c163d9df801666dd6467c074c0f901f814b4125216a88979
-                    source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-x86_64.AppImage
+                    source: https://api.github.com/repos/bryanthaboi/gen1recomp/releases/assets/696733305
             linux-arm64:
                 url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-arm64.AppImage
                 archive: appimage
                 verification:
                     digest: 80b69161021d2d5eefa526bbfe24b2df4845a797b39108ddc3fe6b474b2aed64
-                    source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-arm64.AppImage
+                    source: https://api.github.com/repos/bryanthaboi/gen1recomp/releases/assets/696733284
 application:
     executable:
         path: "appimage"

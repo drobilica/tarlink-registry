@@ -27,7 +27,7 @@ release:
                 url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/AceDriver-x86_64.AppImage
                 verification:
                     digest: b38a522fc07b5f63b0359045b8a88104d1131ef440cc37b1213419849750ca1c
-                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/AceDriver-x86_64.AppImage
+                    source: https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/686640463
 application:
     executable:
         path: "appimage"

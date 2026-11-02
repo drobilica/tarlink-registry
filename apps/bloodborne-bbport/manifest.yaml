@@ -34,7 +34,7 @@ release:
                 url: https://github.com/deadinside28/bloodborne_pc/releases/download/0.7/Bloodborne-bbport-0.7-x86_64.AppImage
                 verification:
                     digest: 883f5543e48ff2edfb077f0478eea1421db57148f1bdb5e0df680e88ad71146c
-                    source: https://github.com/deadinside28/bloodborne_pc/releases/download/0.7/Bloodborne-bbport-0.7-x86_64.AppImage
+                    source: https://api.github.com/repos/deadinside28/bloodborne_pc/releases/assets/686753189
 application:
     executable:
         path: "appimage"
