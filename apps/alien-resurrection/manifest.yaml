@@ -1,0 +1,27 @@
+schema: 5
+id: alien-resurrection
+name: "Alien Resurrection"
+summary: "Native Linux port of Alien Resurrection for PlayStation"
+homepage: "https://github.com/DiegoDeDios/AlienReRecomp"
+categories: [games]
+requirements: [original-game-data]
+release:
+  current: "0.1.8"
+  archive: tar.gz
+  verification:
+    algorithm: sha256
+  releases:
+    - version: "0.1.8"
+      artifacts:
+        linux-amd64:
+          url: "https://github.com/DiegoDeDios/AlienReRecomp/releases/download/v0.1.8/AlienResurrection-0.1.8-linux-x86_64.tar.gz"
+          verification:
+            digest: "12c5790d50dee8a64ed03b5f7780f14e4a75612773b6dbc5b252d0f0545b007d"
+            source: "https://github.com/DiegoDeDios/AlienReRecomp/releases/tag/v0.1.8"
+application:
+  executable:
+    path: AlienResurrection
+    create-bin-link: false
+desktop:
+  working-directory: application-root
+  categories: [Game]
