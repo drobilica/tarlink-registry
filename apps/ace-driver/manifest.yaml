@@ -4,27 +4,35 @@ name: "Ace Driver"
 summary: "Native source port of Ace Driver (Namco System 22)"
 homepage: "https://github.com/spacestate1/namco22-decompile"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.9.0"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.9.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/AceDriver-x86_64.AppImage"
-          verification:
-            digest: "f8c313b3d61812fea185198b5d37c6bc33743c362f8d9180eed3d43caceebfd1"
-            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017375"
+    current: "0.10.0"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.9.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/AceDriver-x86_64.AppImage"
+                verification:
+                    digest: "f8c313b3d61812fea185198b5d37c6bc33743c362f8d9180eed3d43caceebfd1"
+                    source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017375"
+        - channel: ""
+          version: 0.10.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/AceDriver-x86_64.AppImage
+                verification:
+                    digest: b38a522fc07b5f63b0359045b8a88104d1131ef440cc37b1213419849750ca1c
+                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/AceDriver-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "ace-driver"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "ace-driver"
+        create-bin-link: false
 desktop:
-  categories:
-    - "Game"
+    categories:
+        - "Game"

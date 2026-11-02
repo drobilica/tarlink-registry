@@ -4,31 +4,39 @@ name: "AeroGauge Recompiled"
 summary: "Native recompiled AeroGauge runtime"
 homepage: "https://github.com/alondero/aerogauge-recomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.6.2"
-  archive: "zip"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.6.2"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/alondero/aerogauge-recomp/releases/download/v0.6.2/aerogauge-recomp-linux-x64.zip"
-          verification:
-            digest: "3c4f4f19a8d79b95884aea34446161442949a68d7a6aff190289be429ec557e3"
-            source: "https://api.github.com/repos/alondero/aerogauge-recomp/releases/assets/610259714"
+    current: "0.7.0"
+    archive: "zip"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.6.2"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/alondero/aerogauge-recomp/releases/download/v0.6.2/aerogauge-recomp-linux-x64.zip"
+                verification:
+                    digest: "3c4f4f19a8d79b95884aea34446161442949a68d7a6aff190289be429ec557e3"
+                    source: "https://api.github.com/repos/alondero/aerogauge-recomp/releases/assets/610259714"
+        - channel: ""
+          version: 0.7.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/alondero/aerogauge-recomp/releases/download/v0.7.0/aerogauge-recomp-linux-x64.zip
+                verification:
+                    digest: aaa4532a8c69611ad13de702ea89fb7361f5fe9215e1c62c424f1ae8f027bba2
+                    source: https://github.com/alondero/aerogauge-recomp/releases/download/v0.7.0/aerogauge-recomp-linux-x64.zip
 application:
-  executable:
-    path: "aerogauge_modern"
-    create-bin-link: false
+    executable:
+        path: "aerogauge_modern"
+        create-bin-link: false
 desktop:
-  executable: "aerogauge_modern"
-  working-directory: "application-root"
-  categories:
-    - "Game"
-  icon:
-    path: "assets/aerogauge-icon.png"
+    executable: "aerogauge_modern"
+    working-directory: "application-root"
+    categories:
+        - "Game"
+    icon:
+        path: "assets/aerogauge-icon.png"

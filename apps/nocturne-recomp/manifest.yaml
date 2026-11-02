@@ -4,46 +4,59 @@ name: "NocturneRecomp"
 summary: "Native recompiled Castlevania: Symphony of the Night runtime"
 homepage: "https://github.com/birabittoh/NocturneRecomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "1.4.5"
-  archive: "tar.gz"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "1.4.5"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.5/nocturnerecomp-v1.4.5-linux-x64.tar.gz"
-          verification:
-            digest: "3ac18750a351efdbc1a49adb90dd1b2b69250bcd12b778d7e7f3ff3cd0c111f9"
-            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/532990721"
-        linux-arm64:
-          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.5/nocturnerecomp-v1.4.5-linux-arm64.tar.gz"
-          verification:
-            digest: "d3dc4fd05e011f253ebbb72d3a88c2481c909933fdf50f260e01231dbed0d07e"
-            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/532990723"
-    - version: "1.4.3"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-x64.tar.gz"
-          verification:
-            digest: "77d1ae43e29a8ac8b9a433ec077f3795290c14aff85c6b7f2b2de11d8c7ceff8"
-            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434748"
-        linux-arm64:
-          url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-arm64.tar.gz"
-          verification:
-            digest: "32a4f6bd8ed0af9720cbf7f1c96937a7698db9190d89e5a855e7dac3b02337ba"
-            source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434752"
+    current: "1.5.0"
+    archive: "tar.gz"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "1.4.5"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.5/nocturnerecomp-v1.4.5-linux-x64.tar.gz"
+                verification:
+                    digest: "3ac18750a351efdbc1a49adb90dd1b2b69250bcd12b778d7e7f3ff3cd0c111f9"
+                    source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/532990721"
+            linux-arm64:
+                url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.5/nocturnerecomp-v1.4.5-linux-arm64.tar.gz"
+                verification:
+                    digest: "d3dc4fd05e011f253ebbb72d3a88c2481c909933fdf50f260e01231dbed0d07e"
+                    source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/532990723"
+        - version: "1.4.3"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-x64.tar.gz"
+                verification:
+                    digest: "77d1ae43e29a8ac8b9a433ec077f3795290c14aff85c6b7f2b2de11d8c7ceff8"
+                    source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434748"
+            linux-arm64:
+                url: "https://github.com/birabittoh/NocturneRecomp/releases/download/v1.4.3/nocturnerecomp-v1.4.3-linux-arm64.tar.gz"
+                verification:
+                    digest: "32a4f6bd8ed0af9720cbf7f1c96937a7698db9190d89e5a855e7dac3b02337ba"
+                    source: "https://api.github.com/repos/birabittoh/NocturneRecomp/releases/assets/518434752"
+        - channel: ""
+          version: 1.5.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-amd64.tar.gz
+                verification:
+                    digest: b1c6818e2b49d3aa8f49403492b36655e510f86d45128f5f4174164c99c12e14
+                    source: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-amd64.tar.gz
+            linux-arm64:
+                url: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-arm64.tar.gz
+                verification:
+                    digest: 9599bdc3c69b66c9348419d89af32022cffd5eb26211ef58ede06e48a2f68ce5
+                    source: https://github.com/birabittoh/NocturneRecomp/releases/download/v1.5.0/nocturnerecomp-v1.5.0-linux-arm64.tar.gz
 application:
-  executable:
-    path: "nocturnerecomp"
-    create-bin-link: false
+    executable:
+        path: "nocturnerecomp"
+        create-bin-link: false
 desktop:
-  executable: "nocturnerecomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"
+    executable: "nocturnerecomp"
+    working-directory: "application-root"
+    categories:
+        - "Game"

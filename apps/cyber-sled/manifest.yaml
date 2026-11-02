@@ -4,27 +4,35 @@ name: "Cyber Sled"
 summary: "Native source port of Cyber Sled (Namco System 22)"
 homepage: "https://github.com/spacestate1/namco22-decompile"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.9.0"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.9.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/CyberSled-x86_64.AppImage"
-          verification:
-            digest: "7f7e4a2b3f6b664796a269338bc8f415e216173d4d2a6d5e90191f696136991c"
-            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017505"
+    current: "0.10.0"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.9.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/CyberSled-x86_64.AppImage"
+                verification:
+                    digest: "7f7e4a2b3f6b664796a269338bc8f415e216173d4d2a6d5e90191f696136991c"
+                    source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017505"
+        - channel: ""
+          version: 0.10.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberSled-x86_64.AppImage
+                verification:
+                    digest: ef7fe76fe95eede74c20638d0d387048869a5e61450c6be71f1c16b68c2a0af0
+                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberSled-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "cyber-sled"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "cyber-sled"
+        create-bin-link: false
 desktop:
-  categories:
-    - "Game"
+    categories:
+        - "Game"

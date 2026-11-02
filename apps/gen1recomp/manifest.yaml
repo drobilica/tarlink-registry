@@ -4,116 +4,131 @@ name: "Gen1Recomp"
 summary: "Native LÖVE2D recreation of Pokémon Red, Blue, and Yellow"
 homepage: "https://github.com/bryanthaboi/gen1recomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.3.91"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.3.91"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-x86_64.AppImage"
-          verification:
-            digest: "a7c0d5a8f850b5935682e47d3a3fed704991c0d5681856282d2f11eaa2966276"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
-          archive: "appimage"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-arm64.AppImage"
-          verification:
-            digest: "5dc45fca00db8062eee329511b1bc1cf7ef0573bab8e7aea4eb166f2706f1d14"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.3.89"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/gen1recomp-0.3.89-linux-x86_64.AppImage"
-          verification:
-            digest: "d433e83c2706306d7c5ca5cfa4a468bab6474980fdc4e87d8071f72dac2d6520"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/sha256sums.txt"
-          archive: "appimage"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/gen1recomp-0.3.89-linux-arm64.AppImage"
-          verification:
-            digest: "a2198f540fd9e917c83d2ffe24a2379b25f4cf11900505897db5ed3c965fa33c"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.3.41"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/gen1recomp-0.3.41-linux-x86_64.AppImage"
-          verification:
-            digest: "ce3c7b1a36a675b43d73de4c383fd9b32d3605ae19e56787228b7d94fd76f791"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/sha256sums.txt"
-          archive: "appimage"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/gen1recomp-0.3.41-linux-arm64.AppImage"
-          verification:
-            digest: "f58c1fd68d369d83d576a083f4b5d18571d617dd34d4d27e10460b7b22544dcd"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.2.56"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/gen1recomp-0.2.56-linux-x86_64.AppImage"
-          verification:
-            digest: "decf92cb4c7a7f2db7d0848c8d58cbf74f8d77466f10a65a5d2024cc6c4175c5"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/sha256sums.txt"
-          archive: "appimage"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/gen1recomp-0.2.56-linux-arm64.AppImage"
-          verification:
-            digest: "c5629d6d81452bb89e8c2a55561de158173fccc16fc17028d4fbcd65fb26635a"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.2.38"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/gen1recomp-0.2.38-linux-x86_64.AppImage"
-          verification:
-            digest: "b747f19e891e2d8d687ba0216572e8a565ae91947025b1e8fb90332d58da9e21"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/sha256sums.txt"
-          archive: "appimage"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/gen1recomp-0.2.38-linux-arm64.AppImage"
-          verification:
-            digest: "768d0e193cf33a72bc24bbaca7a0a796f6b4c10c64d46b944f8ac2f424c3bfb1"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.2.20"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux.zip"
-          verification:
-            digest: "cdd493937d8b5b6f6b377440026c15285b070cc64b05b67a9fcacf8cdc39cca8"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/sha256sums.txt"
-          archive: "zip"
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux-arm64.AppImage"
-          verification:
-            digest: "023276a1fabd43f8d074d4615fc3ea013f59c39ce1defd66725224d4619cc748"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/sha256sums.txt"
-          archive: "appimage"
-    - version: "0.2.19"
-      artifacts:
-        linux-arm64:
-          url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/gen1recomp-0.2.19-linux-arm64.AppImage"
-          verification:
-            digest: "e0d7dc6cc6cab29d69bfac22aa90a4ea1cf10efd6a47c289406e54ad28803112"
-            source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/sha256sums.txt"
-          archive: "appimage"
+    current: "0.3.99"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.3.91"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-x86_64.AppImage"
+                verification:
+                    digest: "a7c0d5a8f850b5935682e47d3a3fed704991c0d5681856282d2f11eaa2966276"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
+                archive: "appimage"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/gen1recomp-0.3.91-linux-arm64.AppImage"
+                verification:
+                    digest: "5dc45fca00db8062eee329511b1bc1cf7ef0573bab8e7aea4eb166f2706f1d14"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.91/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.3.89"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/gen1recomp-0.3.89-linux-x86_64.AppImage"
+                verification:
+                    digest: "d433e83c2706306d7c5ca5cfa4a468bab6474980fdc4e87d8071f72dac2d6520"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/sha256sums.txt"
+                archive: "appimage"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/gen1recomp-0.3.89-linux-arm64.AppImage"
+                verification:
+                    digest: "a2198f540fd9e917c83d2ffe24a2379b25f4cf11900505897db5ed3c965fa33c"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.89/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.3.41"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/gen1recomp-0.3.41-linux-x86_64.AppImage"
+                verification:
+                    digest: "ce3c7b1a36a675b43d73de4c383fd9b32d3605ae19e56787228b7d94fd76f791"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/sha256sums.txt"
+                archive: "appimage"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/gen1recomp-0.3.41-linux-arm64.AppImage"
+                verification:
+                    digest: "f58c1fd68d369d83d576a083f4b5d18571d617dd34d4d27e10460b7b22544dcd"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.41/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.2.56"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/gen1recomp-0.2.56-linux-x86_64.AppImage"
+                verification:
+                    digest: "decf92cb4c7a7f2db7d0848c8d58cbf74f8d77466f10a65a5d2024cc6c4175c5"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/sha256sums.txt"
+                archive: "appimage"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/gen1recomp-0.2.56-linux-arm64.AppImage"
+                verification:
+                    digest: "c5629d6d81452bb89e8c2a55561de158173fccc16fc17028d4fbcd65fb26635a"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.56/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.2.38"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/gen1recomp-0.2.38-linux-x86_64.AppImage"
+                verification:
+                    digest: "b747f19e891e2d8d687ba0216572e8a565ae91947025b1e8fb90332d58da9e21"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/sha256sums.txt"
+                archive: "appimage"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/gen1recomp-0.2.38-linux-arm64.AppImage"
+                verification:
+                    digest: "768d0e193cf33a72bc24bbaca7a0a796f6b4c10c64d46b944f8ac2f424c3bfb1"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.38/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.2.20"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux.zip"
+                verification:
+                    digest: "cdd493937d8b5b6f6b377440026c15285b070cc64b05b67a9fcacf8cdc39cca8"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/sha256sums.txt"
+                archive: "zip"
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/gen1recomp-0.2.20-linux-arm64.AppImage"
+                verification:
+                    digest: "023276a1fabd43f8d074d4615fc3ea013f59c39ce1defd66725224d4619cc748"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.20/sha256sums.txt"
+                archive: "appimage"
+        - version: "0.2.19"
+          artifacts:
+            linux-arm64:
+                url: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/gen1recomp-0.2.19-linux-arm64.AppImage"
+                verification:
+                    digest: "e0d7dc6cc6cab29d69bfac22aa90a4ea1cf10efd6a47c289406e54ad28803112"
+                    source: "https://github.com/bryanthaboi/gen1recomp/releases/download/v0.2.19/sha256sums.txt"
+                archive: "appimage"
+        - channel: ""
+          version: 0.3.99
+          artifacts:
+            linux-amd64:
+                url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-x86_64.AppImage
+                archive: appimage
+                verification:
+                    digest: dd8803ee2c61ac17c163d9df801666dd6467c074c0f901f814b4125216a88979
+                    source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-x86_64.AppImage
+            linux-arm64:
+                url: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-arm64.AppImage
+                archive: appimage
+                verification:
+                    digest: 80b69161021d2d5eefa526bbfe24b2df4845a797b39108ddc3fe6b474b2aed64
+                    source: https://github.com/bryanthaboi/gen1recomp/releases/download/v0.3.99/gen1recomp-0.3.99-linux-arm64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "gen1recomp"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "gen1recomp"
+        create-bin-link: false
 desktop:
-  executable: "gen1recomp"
-  categories:
-    - "Game"
-  icon:
-    url: "https://raw.githubusercontent.com/bryanthaboi/gen1recomp/116a6ba450dd65f25c9be150952fc3c27be904c0/mobile/android/love/src/jni/SDL2/Xcode-iOS/Demos/Icon.png"
-    sha256: "518d4922881cb735d0d81391cb778898a567052f7e7dcb724fd633fea36626dc"
+    executable: "gen1recomp"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/bryanthaboi/gen1recomp/116a6ba450dd65f25c9be150952fc3c27be904c0/mobile/android/love/src/jni/SDL2/Xcode-iOS/Demos/Icon.png"
+        sha256: "518d4922881cb735d0d81391cb778898a567052f7e7dcb724fd633fea36626dc"

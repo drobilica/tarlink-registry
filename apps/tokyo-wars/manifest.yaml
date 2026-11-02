@@ -4,27 +4,35 @@ name: "Tokyo Wars"
 summary: "Native source port of Tokyo Wars (Namco System 22)"
 homepage: "https://github.com/spacestate1/namco22-decompile"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.9.0"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.9.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/TokyoWars-x86_64.AppImage"
-          verification:
-            digest: "c3ee051c3629c424f21cc9e09db139ede95825d6d49542dd723f7139de79e91c"
-            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018531"
+    current: "0.10.0"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.9.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/TokyoWars-x86_64.AppImage"
+                verification:
+                    digest: "c3ee051c3629c424f21cc9e09db139ede95825d6d49542dd723f7139de79e91c"
+                    source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018531"
+        - channel: ""
+          version: 0.10.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TokyoWars-x86_64.AppImage
+                verification:
+                    digest: 19c0f136fe2cf33d1a20cba88dbed95b46464eb904d26d71f6179e8d25dd0e32
+                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TokyoWars-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "tokyo-wars"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "tokyo-wars"
+        create-bin-link: false
 desktop:
-  categories:
-    - "Game"
+    categories:
+        - "Game"
