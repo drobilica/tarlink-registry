@@ -9,7 +9,7 @@ categories:
 requirements:
     - "original-game-data"
 release:
-    current: "0.6.3"
+    current: "0.7.0"
     archive: "appimage"
     verification:
         algorithm: "sha256"
@@ -29,6 +29,14 @@ release:
                 verification:
                     digest: 261b95037529939946a363b968d3052c64f91d144234007e17b691563c3b7782
                     source: https://api.github.com/repos/mstan/Sonic3AndKnucklesRecomp/releases/assets/699146855
+        - channel: ""
+          version: 0.7.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/mstan/Sonic3AndKnucklesRecomp/releases/download/v0.7.0/Sonic3Recomp-linux-x86_64-v0.7.0.AppImage
+                verification:
+                    digest: 476c40fb612adec514ce960a9031544e1e9bd5789d2d55ed7ebc9a53107d5a1a
+                    source: https://api.github.com/repos/mstan/sonic3andknucklesrecomp/releases/assets/700843720
 application:
     executable:
         path: "appimage"

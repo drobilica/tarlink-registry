@@ -4,33 +4,46 @@ name: "Steam ROM Manager"
 summary: "Bulk game importer and artwork manager for Steam"
 homepage: "https://github.com/SteamGridDB/steam-rom-manager"
 categories:
-  - "games"
+    - "games"
 release:
-  current: "2.5.44"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "2.5.44"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.5.44/Steam-ROM-Manager-2.5.44.AppImage"
-          verification:
-            digest: "fcb736dda2adb35aaed9282ce71a045fb371f4ed22e77c58f30a10a3222d64c1"
-            source: "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/assets/504256505"
-        linux-arm64:
-          url: "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.5.44/Steam-ROM-Manager-2.5.44-arm64.AppImage"
-          verification:
-            digest: "c8556ed3214b2fecc888df9edd27ca254206303998f32b1f9b7ae19b46b3189a"
-            source: "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/assets/504257354"
+    current: "2.6.2"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "2.5.44"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.5.44/Steam-ROM-Manager-2.5.44.AppImage"
+                verification:
+                    digest: "fcb736dda2adb35aaed9282ce71a045fb371f4ed22e77c58f30a10a3222d64c1"
+                    source: "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/assets/504256505"
+            linux-arm64:
+                url: "https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.5.44/Steam-ROM-Manager-2.5.44-arm64.AppImage"
+                verification:
+                    digest: "c8556ed3214b2fecc888df9edd27ca254206303998f32b1f9b7ae19b46b3189a"
+                    source: "https://api.github.com/repos/SteamGridDB/steam-rom-manager/releases/assets/504257354"
+        - channel: ""
+          version: 2.6.2
+          artifacts:
+            linux-amd64:
+                url: https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.6.2/Steam-ROM-Manager-2.6.2.AppImage
+                verification:
+                    digest: 0d1a6aa6660374a1929ed40de6dd4d966f64f773a33136eab8535cc29aaca424
+                    source: https://api.github.com/repos/steamgriddb/steam-rom-manager/releases/assets/700046283
+            linux-arm64:
+                url: https://github.com/SteamGridDB/steam-rom-manager/releases/download/v2.6.2/Steam-ROM-Manager-2.6.2-arm64.AppImage
+                verification:
+                    digest: 1211e4ab26eb355d90a4080add6b0c3519cbc595e524c4c3a5fac59f8bd0840c
+                    source: https://api.github.com/repos/steamgriddb/steam-rom-manager/releases/assets/700047260
 application:
-  executable:
-    path: "appimage"
-    name: "steam-rom-manager"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "steam-rom-manager"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-  icon:
-    url: "https://raw.githubusercontent.com/SteamGridDB/steam-rom-manager/7f0f4024bf829a22a2fba56c6e6dce5182b76af4/src/assets/icons/512x512.png"
-    sha256: "371dbd9c9dbee38018ad32cff823660c91407f6b23ac7eec7d8860f5f271daaa"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/SteamGridDB/steam-rom-manager/7f0f4024bf829a22a2fba56c6e6dce5182b76af4/src/assets/icons/512x512.png"
+        sha256: "371dbd9c9dbee38018ad32cff823660c91407f6b23ac7eec7d8860f5f271daaa"
