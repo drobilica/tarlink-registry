@@ -4,100 +4,108 @@ name: "PCSX2"
 summary: "PlayStation 2 emulator"
 homepage: "https://pcsx2.net/"
 categories:
-  - "emulation"
-  - "games"
+    - "emulation"
+    - "games"
 release:
-  default-channel: "stable"
-  channels:
-    nightly:
-      current: "2.9.131"
-    stable:
-      current: "2.8.2"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - channel: "nightly"
-      version: "2.9.131"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.9.131/pcsx2-v2.9.131-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "e0668d35b39d275da52447fb3ea0c4d6c708cbed9b31b6d45b14125bb35e1530"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/657978488"
-    - channel: "nightly"
-      version: "2.9.129"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.9.129/pcsx2-v2.9.129-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "b7ca976bd5c560151304ec66d602d9ea755fd4b4ef9744d98250f7e74c5b249d"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/647974681"
-    - channel: "stable"
-      version: "2.8.2"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.8.2/pcsx2-v2.8.2-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "0c46bb6a88aa2782b10853a7b07cf3387ba99cbef2b966372cd2315b8571abea"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/544610698"
-    - channel: "stable"
-      version: "2.8.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.8.0/pcsx2-v2.8.0-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "f0e36b31fc885c9ccdb5339274f1d998a9e69bf736b92dd8674134091f992a3f"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534396714"
-    - channel: "nightly"
-      version: "2.7.525"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.525/pcsx2-v2.7.525-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "abe1010e62f90a959fb46702ba4a55309e2a87f83902a40daa50adb738c35d6d"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534312034"
-    - channel: "stable"
-      version: "2.6.3"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.6.3/pcsx2-v2.6.3-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "8ce7de8613c17b00b01028a512dd1b81998b6626ebbe93a067e0eb20aeedd5bf"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/347252753"
-    - channel: "nightly"
-      version: "2.7.524"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.524/pcsx2-v2.7.524-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "21e54d0d42e9bf93a6e00bd97fd84562bc7ddd9f2b0713857448cf76250ca749"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/524079812"
-    - channel: "nightly"
-      version: "2.7.519"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.519/pcsx2-v2.7.519-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "fc8492d0aa40973501aba9d1a9ea4672e2ee9ab82c7cc8e16d5d6d0021a34147"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/507997552"
-    - channel: "nightly"
-      version: "2.7.523"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.523/pcsx2-v2.7.523-linux-appimage-x64-Qt.AppImage"
-          verification:
-            digest: "a45328bb50dcfb931e4588122e38aeef253995b37b421e932dd5ee8f513b3fa1"
-            source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/520805190"
+    default-channel: "stable"
+    channels:
+        nightly:
+            current: "2.9.152"
+        stable:
+            current: "2.8.2"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - channel: "nightly"
+          version: "2.9.131"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.9.131/pcsx2-v2.9.131-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "e0668d35b39d275da52447fb3ea0c4d6c708cbed9b31b6d45b14125bb35e1530"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/657978488"
+        - channel: "nightly"
+          version: "2.9.129"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.9.129/pcsx2-v2.9.129-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "b7ca976bd5c560151304ec66d602d9ea755fd4b4ef9744d98250f7e74c5b249d"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/647974681"
+        - channel: "stable"
+          version: "2.8.2"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.8.2/pcsx2-v2.8.2-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "0c46bb6a88aa2782b10853a7b07cf3387ba99cbef2b966372cd2315b8571abea"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/544610698"
+        - channel: "stable"
+          version: "2.8.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.8.0/pcsx2-v2.8.0-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "f0e36b31fc885c9ccdb5339274f1d998a9e69bf736b92dd8674134091f992a3f"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534396714"
+        - channel: "nightly"
+          version: "2.7.525"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.525/pcsx2-v2.7.525-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "abe1010e62f90a959fb46702ba4a55309e2a87f83902a40daa50adb738c35d6d"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/534312034"
+        - channel: "stable"
+          version: "2.6.3"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.6.3/pcsx2-v2.6.3-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "8ce7de8613c17b00b01028a512dd1b81998b6626ebbe93a067e0eb20aeedd5bf"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/347252753"
+        - channel: "nightly"
+          version: "2.7.524"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.524/pcsx2-v2.7.524-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "21e54d0d42e9bf93a6e00bd97fd84562bc7ddd9f2b0713857448cf76250ca749"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/524079812"
+        - channel: "nightly"
+          version: "2.7.519"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.519/pcsx2-v2.7.519-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "fc8492d0aa40973501aba9d1a9ea4672e2ee9ab82c7cc8e16d5d6d0021a34147"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/507997552"
+        - channel: "nightly"
+          version: "2.7.523"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/PCSX2/pcsx2/releases/download/v2.7.523/pcsx2-v2.7.523-linux-appimage-x64-Qt.AppImage"
+                verification:
+                    digest: "a45328bb50dcfb931e4588122e38aeef253995b37b421e932dd5ee8f513b3fa1"
+                    source: "https://api.github.com/repos/PCSX2/pcsx2/releases/assets/520805190"
+        - channel: nightly
+          version: 2.9.152
+          artifacts:
+            linux-amd64:
+                url: https://github.com/PCSX2/pcsx2/releases/download/v2.9.152/pcsx2-v2.9.152-linux-appimage-x64-Qt.AppImage
+                verification:
+                    digest: 45011a69f76501ff8e9b0165ac4e9d1df40851301f73389e6c746d6e86080d8f
+                    source: https://github.com/PCSX2/pcsx2/releases/download/v2.9.152/pcsx2-v2.9.152-linux-appimage-x64-Qt.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "pcsx2"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "pcsx2"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-    - "Emulator"
-  icon:
-    url: "https://raw.githubusercontent.com/PCSX2/pcsx2/bc8151d2a46d4aba039ea5580afbfc7bfcf6d730/bin/resources/icons/AppIconLarge.png"
-    sha256: "956278a74b5ed2e6ea7a17dfa95f984282af3252a61838e7cb4cf2e0ed80ca87"
+    categories:
+        - "Game"
+        - "Emulator"
+    icon:
+        url: "https://raw.githubusercontent.com/PCSX2/pcsx2/bc8151d2a46d4aba039ea5580afbfc7bfcf6d730/bin/resources/icons/AppIconLarge.png"
+        sha256: "956278a74b5ed2e6ea7a17dfa95f984282af3252a61838e7cb4cf2e0ed80ca87"

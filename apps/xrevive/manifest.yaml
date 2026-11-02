@@ -4,41 +4,49 @@ name: "xrevive"
 summary: "Desktop launcher for original Xbox games recompiled with XRecomp"
 homepage: "https://github.com/Teraflopping/xrevive"
 categories:
-  - "emulation"
-  - "games"
+    - "emulation"
+    - "games"
 release:
-  current: "0.1.20"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.1.20"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.20/xrevive_0.1.20_amd64.AppImage"
-          verification:
-            digest: "c12ed5a9c6ff979c8c27af7229ed910bdcde8375e504a6d01aa5e9b5d43b9d5e"
-            source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/657423435"
-    - version: "0.1.14"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.14/xrevive_0.1.14_amd64.AppImage"
-          verification:
-            digest: "ae59c4adf34498d1a2c9e2692dc98396c5b4792b2606c28fc747d02d5a644b12"
-            source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/648272018"
-    - version: "0.1.13"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.13/xrevive_0.1.13_amd64.AppImage"
-          verification:
-            digest: "f783f58b9df4e7fd774f520fbacf0dfa90bbbe9fca12f58c9036fa2e4ffad786"
-            source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/645804352"
+    current: "0.3.5"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.1.20"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.20/xrevive_0.1.20_amd64.AppImage"
+                verification:
+                    digest: "c12ed5a9c6ff979c8c27af7229ed910bdcde8375e504a6d01aa5e9b5d43b9d5e"
+                    source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/657423435"
+        - version: "0.1.14"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.14/xrevive_0.1.14_amd64.AppImage"
+                verification:
+                    digest: "ae59c4adf34498d1a2c9e2692dc98396c5b4792b2606c28fc747d02d5a644b12"
+                    source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/648272018"
+        - version: "0.1.13"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/Teraflopping/xrevive/releases/download/v0.1.13/xrevive_0.1.13_amd64.AppImage"
+                verification:
+                    digest: "f783f58b9df4e7fd774f520fbacf0dfa90bbbe9fca12f58c9036fa2e4ffad786"
+                    source: "https://api.github.com/repos/Teraflopping/xrevive/releases/assets/645804352"
+        - channel: ""
+          version: 0.3.5
+          artifacts:
+            linux-amd64:
+                url: https://github.com/Teraflopping/xrevive/releases/download/v0.3.5/xrevive_0.3.5_amd64.AppImage
+                verification:
+                    digest: 44e7c5289341cefdf911d254b39b509705b0274096414e3bdf9b8db08a863490
+                    source: https://github.com/Teraflopping/xrevive/releases/download/v0.3.5/xrevive_0.3.5_amd64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "xrevive"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "xrevive"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-    - "Emulator"
+    categories:
+        - "Game"
+        - "Emulator"

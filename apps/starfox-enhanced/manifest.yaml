@@ -4,36 +4,44 @@ name: "Star Fox Enhanced"
 summary: "Native enhanced port of Star Fox"
 homepage: "https://github.com/kandowontu2/starfox-enhanced"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.0.8.7"
-  archive: "zip"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.0.8.7"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/kandowontu2/starfox-enhanced/releases/download/v0.0.8.7/StarFoxEnhanced-0.0.8.7-linux-x64.zip"
-          verification:
-            digest: "90e8663ee30865d275a0b05063cde0c92f3f7cbccc91b5f0f88905feddfa8ae0"
-            source: "https://api.github.com/repos/kandowontu2/starfox-enhanced/releases/assets/648310886"
-    - version: "0.0.6.5"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/kandowontu/starfox-enhanced/releases/download/v0.0.6.5/StarFoxEnhanced-0.0.6.5-linux-x64.zip"
-          verification:
-            digest: "93e65ac362ae7995ea2b2e6519245a2cc64bbf8b8f2c2594242e59ce2db7ebed"
-            source: "https://api.github.com/repos/kandowontu/starfox-enhanced/releases/assets/552035400"
+    current: "0.0.8.8.3"
+    archive: "zip"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.0.8.7"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/kandowontu2/starfox-enhanced/releases/download/v0.0.8.7/StarFoxEnhanced-0.0.8.7-linux-x64.zip"
+                verification:
+                    digest: "90e8663ee30865d275a0b05063cde0c92f3f7cbccc91b5f0f88905feddfa8ae0"
+                    source: "https://api.github.com/repos/kandowontu2/starfox-enhanced/releases/assets/648310886"
+        - version: "0.0.6.5"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/kandowontu/starfox-enhanced/releases/download/v0.0.6.5/StarFoxEnhanced-0.0.6.5-linux-x64.zip"
+                verification:
+                    digest: "93e65ac362ae7995ea2b2e6519245a2cc64bbf8b8f2c2594242e59ce2db7ebed"
+                    source: "https://api.github.com/repos/kandowontu/starfox-enhanced/releases/assets/552035400"
+        - channel: ""
+          version: 0.0.8.8.3
+          artifacts:
+            linux-amd64:
+                url: https://github.com/kandowontu2/starfox-enhanced/releases/download/v0.0.8.8.3/StarFoxEnhanced-0.0.8.8.3-linux-x64.zip
+                verification:
+                    digest: 58d88194b7c9646fb9fceab421efbce4ba22f675d3ef62cef98804cc66ef3adf
+                    source: https://github.com/kandowontu2/starfox-enhanced/releases/download/v0.0.8.8.3/StarFoxEnhanced-0.0.8.8.3-linux-x64.zip
 application:
-  executable:
-    path: "StarFoxEnhanced-linux-x64/starfox_pc"
-    create-bin-link: false
+    executable:
+        path: "StarFoxEnhanced-linux-x64/starfox_pc"
+        create-bin-link: false
 desktop:
-  executable: "starfox_pc"
-  working-directory: "application-root"
-  categories:
-    - "Game"
+    executable: "starfox_pc"
+    working-directory: "application-root"
+    categories:
+        - "Game"

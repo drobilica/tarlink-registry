@@ -4,27 +4,35 @@ name: "Time Crisis"
 summary: "Native source port of Time Crisis (Namco System 22)"
 homepage: "https://github.com/spacestate1/namco22-decompile"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.9.0"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.9.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/TimeCrisis-x86_64.AppImage"
-          verification:
-            digest: "bc6768fb3ad6227962b820aaa6842312477eab9e30c834e6fecf58d61fa2467c"
-            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018422"
+    current: "0.10.0"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.9.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/TimeCrisis-x86_64.AppImage"
+                verification:
+                    digest: "bc6768fb3ad6227962b820aaa6842312477eab9e30c834e6fecf58d61fa2467c"
+                    source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642018422"
+        - channel: ""
+          version: 0.10.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TimeCrisis-x86_64.AppImage
+                verification:
+                    digest: c4942e5233c54d9e9549efa5f76fec8e5cf220ed335f2d5d7b2d326ffc4bb913
+                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/TimeCrisis-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "time-crisis"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "time-crisis"
+        create-bin-link: false
 desktop:
-  categories:
-    - "Game"
+    categories:
+        - "Game"

@@ -4,27 +4,35 @@ name: "Cyber Commando"
 summary: "Native source port of Cyber Commando (Namco System 22)"
 homepage: "https://github.com/spacestate1/namco22-decompile"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.9.0"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.9.0"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/CyberCommando-x86_64.AppImage"
-          verification:
-            digest: "12e955128a1f56019d9b6f9dee36803710e0d00cd520914882a41a9c77e1e58d"
-            source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017474"
+    current: "0.10.0"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.9.0"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/spacestate1/namco22-decompile/releases/download/0.9.0/CyberCommando-x86_64.AppImage"
+                verification:
+                    digest: "12e955128a1f56019d9b6f9dee36803710e0d00cd520914882a41a9c77e1e58d"
+                    source: "https://api.github.com/repos/spacestate1/namco22-decompile/releases/assets/642017474"
+        - channel: ""
+          version: 0.10.0
+          artifacts:
+            linux-amd64:
+                url: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberCommando-x86_64.AppImage
+                verification:
+                    digest: bd1e604837ab95487ee616b2289b3b86ec301b758800ea33953977edeca478cb
+                    source: https://github.com/spacestate1/namco22-decompile/releases/download/0.10.0/CyberCommando-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "cyber-commando"
-    create-bin-link: false
+    executable:
+        path: "appimage"
+        name: "cyber-commando"
+        create-bin-link: false
 desktop:
-  categories:
-    - "Game"
+    categories:
+        - "Game"

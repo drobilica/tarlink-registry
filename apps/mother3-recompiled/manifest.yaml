@@ -4,38 +4,46 @@ name: "MOTHER 3 Recompiled"
 summary: "Native recompiled MOTHER 3 runtime"
 homepage: "https://github.com/josiahg2502-glitch/Mother3Recomp"
 categories:
-  - "games"
-  - "recompilation"
+    - "games"
+    - "recompilation"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "1.0.7"
-  archive: "tar.gz"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "1.0.7"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.7/Mother3Recomp-v1.0.7-linux-x86_64.tar.gz"
-          verification:
-            digest: "abe855f7e622612f2c207a632dc70a39b315360113a5c3ece5e0b94d00626990"
-            source: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.7/SHA256SUMS.txt"
-    - version: "1.0.6"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/Mother3Recomp-v1.0.6-linux-x86_64.tar.gz"
-          verification:
-            digest: "418315caeef0999388bcc7eced5672162f19d75f62f4065930d167938e42f829"
-            source: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/SHA256SUMS.txt"
+    current: "1.0.8"
+    archive: "tar.gz"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "1.0.7"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.7/Mother3Recomp-v1.0.7-linux-x86_64.tar.gz"
+                verification:
+                    digest: "abe855f7e622612f2c207a632dc70a39b315360113a5c3ece5e0b94d00626990"
+                    source: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.7/SHA256SUMS.txt"
+        - version: "1.0.6"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/Mother3Recomp-v1.0.6-linux-x86_64.tar.gz"
+                verification:
+                    digest: "418315caeef0999388bcc7eced5672162f19d75f62f4065930d167938e42f829"
+                    source: "https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.6/SHA256SUMS.txt"
+        - channel: ""
+          version: 1.0.8
+          artifacts:
+            linux-amd64:
+                url: https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.8/Mother3Recomp-v1.0.8-linux-x86_64.tar.gz
+                verification:
+                    digest: c2558ca5abf57d56d8b3268540df3916e9a4c09e264aaa14482c4ae877d7a8f0
+                    source: https://github.com/josiahg2502-glitch/Mother3Recomp/releases/download/v1.0.8/Mother3Recomp-v1.0.8-linux-x86_64.tar.gz
 application:
-  executable:
-    path: "Mother3Recomp"
-    create-bin-link: false
+    executable:
+        path: "Mother3Recomp"
+        create-bin-link: false
 desktop:
-  executable: "Mother3Recomp"
-  working-directory: "application-root"
-  categories:
-    - "Game"
-  icon:
-    path: "assets/img/icon.png"
+    executable: "Mother3Recomp"
+    working-directory: "application-root"
+    categories:
+        - "Game"
+    icon:
+        path: "assets/img/icon.png"

@@ -4,44 +4,52 @@ name: "OpenRCT2"
 summary: "Open source re-implementation of RollerCoaster Tycoon 2"
 homepage: "https://openrct2.org/"
 categories:
-  - "games"
+    - "games"
 requirements:
-  - "original-game-data"
+    - "original-game-data"
 release:
-  current: "0.5.6"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "0.5.6"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.6/OpenRCT2-v0.5.6-linux-x86_64.AppImage"
-          verification:
-            digest: "8198b5ef8b9b07685fc860f3f04ce88a5f07ce6c1e5a9e2badffa811ed0f2eba"
-            source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/627924156"
-    - version: "0.5.5"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.5/OpenRCT2-v0.5.5-linux-x86_64.AppImage"
-          verification:
-            digest: "f3debb61bd9b6cc4c85e4ca4f17c46f76834a1e89f1faac2b694e0a563d9ad7c"
-            source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/547039529"
-    - version: "0.5.4"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.4/OpenRCT2-v0.5.4-linux-x86_64.AppImage"
-          verification:
-            digest: "aec44e248dc88e50ed6c9897226053631f5b94bf99f45ccb85bae56d52e01688"
-            source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/498826809"
+    current: "0.5.7"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "0.5.6"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.6/OpenRCT2-v0.5.6-linux-x86_64.AppImage"
+                verification:
+                    digest: "8198b5ef8b9b07685fc860f3f04ce88a5f07ce6c1e5a9e2badffa811ed0f2eba"
+                    source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/627924156"
+        - version: "0.5.5"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.5/OpenRCT2-v0.5.5-linux-x86_64.AppImage"
+                verification:
+                    digest: "f3debb61bd9b6cc4c85e4ca4f17c46f76834a1e89f1faac2b694e0a563d9ad7c"
+                    source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/547039529"
+        - version: "0.5.4"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.4/OpenRCT2-v0.5.4-linux-x86_64.AppImage"
+                verification:
+                    digest: "aec44e248dc88e50ed6c9897226053631f5b94bf99f45ccb85bae56d52e01688"
+                    source: "https://api.github.com/repos/OpenRCT2/OpenRCT2/releases/assets/498826809"
+        - channel: ""
+          version: 0.5.7
+          artifacts:
+            linux-amd64:
+                url: https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.7/OpenRCT2-v0.5.7-linux-x86_64.AppImage
+                verification:
+                    digest: d02ecb52d946d1e5f00db53a164fadbd41bbb8636f6f5cdddb44d954a3bcdb64
+                    source: https://github.com/OpenRCT2/OpenRCT2/releases/download/v0.5.7/OpenRCT2-v0.5.7-linux-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "openrct2"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "openrct2"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Game"
-  icon:
-    url: "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/4a7ee146caab8888eb31e56a33c0559db89b17bd/resources/logo/icon_x512.png"
-    sha256: "14547c761454ddaeaed45a798d33d7354105e9d47095ab240bd131385f27ecec"
+    categories:
+        - "Game"
+    icon:
+        url: "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/4a7ee146caab8888eb31e56a33c0559db89b17bd/resources/logo/icon_x512.png"
+        sha256: "14547c761454ddaeaed45a798d33d7354105e9d47095ab240bd131385f27ecec"

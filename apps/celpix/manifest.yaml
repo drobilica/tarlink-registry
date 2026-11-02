@@ -4,33 +4,41 @@ name: "celPix"
 summary: "ROM graphics, palette, tilemap and compression editor"
 homepage: "https://github.com/YoriKv/celpix"
 categories:
-  - "game-development"
-  - "graphics"
+    - "game-development"
+    - "graphics"
 release:
-  current: "1.2.14"
-  archive: "appimage"
-  verification:
-    algorithm: "sha256"
-  releases:
-    - version: "1.2.14"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/YoriKv/celpix/releases/download/v1.2.14/celpix-x86_64.AppImage"
-          verification:
-            digest: "6d928c0c603ef35e822682784514007859486e85bca803640403fa429ef304fd"
-            source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/654622671"
-    - version: "1.2.13"
-      artifacts:
-        linux-amd64:
-          url: "https://github.com/YoriKv/celpix/releases/download/v1.2.13/celpix-x86_64.AppImage"
-          verification:
-            digest: "9ebec0019c82bbe3e164badf0ac8596602c09d2633243ac9eb64e288b32f1964"
-            source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/652063698"
+    current: "1.2.17"
+    archive: "appimage"
+    verification:
+        algorithm: "sha256"
+    releases:
+        - version: "1.2.14"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/YoriKv/celpix/releases/download/v1.2.14/celpix-x86_64.AppImage"
+                verification:
+                    digest: "6d928c0c603ef35e822682784514007859486e85bca803640403fa429ef304fd"
+                    source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/654622671"
+        - version: "1.2.13"
+          artifacts:
+            linux-amd64:
+                url: "https://github.com/YoriKv/celpix/releases/download/v1.2.13/celpix-x86_64.AppImage"
+                verification:
+                    digest: "9ebec0019c82bbe3e164badf0ac8596602c09d2633243ac9eb64e288b32f1964"
+                    source: "https://api.github.com/repos/YoriKv/celpix/releases/assets/652063698"
+        - channel: ""
+          version: 1.2.17
+          artifacts:
+            linux-amd64:
+                url: https://github.com/YoriKv/celpix/releases/download/v1.2.17/celpix-x86_64.AppImage
+                verification:
+                    digest: 4cf67751113a895c74218bc73691af0cb31c018d2d8c6a68505df93e091ca30f
+                    source: https://github.com/YoriKv/celpix/releases/download/v1.2.17/celpix-x86_64.AppImage
 application:
-  executable:
-    path: "appimage"
-    name: "celpix"
-    create-bin-link: true
+    executable:
+        path: "appimage"
+        name: "celpix"
+        create-bin-link: true
 desktop:
-  categories:
-    - "Graphics"
+    categories:
+        - "Graphics"
