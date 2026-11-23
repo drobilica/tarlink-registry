@@ -31,3 +31,6 @@ desktop:
   working-directory: "application-root"
   categories:
     - "Game"
+  icon:
+    url: https://raw.githubusercontent.com/harbourmasters/paperboat/7f038b8552b1bf5c297a5fd06738d8f245851833/logo.png
+    sha256: b02956a5791697fe470f33b02e913bbde7ccb735a41abce6f79d14a7d31867d5
